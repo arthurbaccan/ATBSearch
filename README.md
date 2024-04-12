@@ -1,2 +1,2 @@
 # Medicine Finder
-Um seletor de antiflamatorios de acordo com o tempo de duração, ácidos usados e seletividade COX
+Um software para filtrar os antibióticos de acordo com o tipo e com a morfologia bacteriana
