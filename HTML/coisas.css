@@ -1,0 +1,42 @@
+select.custom-select {
+    width: 20px; /* largura desejada */
+    height: 25px; /* altura desejada */
+    padding: 5px; /* espaçamento interno */
+    font-size: 16px; /* tamanho da fonte */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 4px; /* borda arredondada */
+    background-color: #fff; /* cor de fundo */
+    color: #333; /* cor do texto */
+    appearance: filtrar; /* remove estilos padrão do sistema */
+}
+
+/* Estilização do hover e foco */
+select.custom-select:hover, select.custom-select:focus {
+    border-color: #999; /* cor da borda ao passar o mouse ou focar */
+}
+
+input.custom-input {
+    width: 90px; 
+    height: 25px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 20px; 
+    padding: 0px; 
+    outline: none; 
+}
+
+input.custom-input:hover, input.custom-input:focus {
+    border-color: #999; 
+}
+
+.background-title {
+	background-color: green;
+	color: white;
+	font-size: 100px;
+	margin: 0px;
+	text-align: center;
+}
+
+body {
+    margin: 0; /* garante que não haja margem no corpo do documento */
+}
