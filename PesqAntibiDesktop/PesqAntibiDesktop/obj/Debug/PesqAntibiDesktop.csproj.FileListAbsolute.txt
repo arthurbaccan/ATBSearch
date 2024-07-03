@@ -1,0 +1,13 @@
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\PesqAntibiDesktop.exe.config
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\PesqAntibiDesktop.exe
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\PesqAntibiDesktop.pdb
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.csproj.AssemblyReference.cache
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.Form1.resources
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.FormTabela.resources
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.Properties.Resources.resources
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.csproj.GenerateResource.cache
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.csproj.CoreCompileInputs.cache
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.exe
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\PesqAntibiDesktop.pdb
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\APP_DATA\Database1.mdf
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\APP_DATA\Database1_log.ldf
