@@ -8,7 +8,8 @@ namespace Dados
 {
     public enum TipoAntibiotico
     {
-        Macrolídeos,
+        // sets the first number to 1
+        Macrolídeos=1,
         Penicilinas,
         Cefalosporinas,
         Carbapenêmicos,
