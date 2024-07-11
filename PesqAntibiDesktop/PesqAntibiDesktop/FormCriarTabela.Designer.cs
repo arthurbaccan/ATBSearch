@@ -550,6 +550,7 @@ namespace PesqAntibiDesktop
             buttonLimparSelecao.TabIndex = 12;
             buttonLimparSelecao.Text = "Limpar Seleção";
             buttonLimparSelecao.UseVisualStyleBackColor = true;
+            buttonLimparSelecao.Click += buttonLimparSelecao_Click;
             // 
             // buttonSelecionarTodos
             // 
@@ -561,6 +562,7 @@ namespace PesqAntibiDesktop
             buttonSelecionarTodos.TabIndex = 11;
             buttonSelecionarTodos.Text = "Selecionar Todos";
             buttonSelecionarTodos.UseVisualStyleBackColor = true;
+            buttonSelecionarTodos.Click += buttonSelecionarTodos_Click;
             // 
             // buttonPesquisar
             // 

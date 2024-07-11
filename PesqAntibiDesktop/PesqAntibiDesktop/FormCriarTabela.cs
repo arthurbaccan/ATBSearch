@@ -25,7 +25,7 @@ namespace PesqAntibiDesktop
         public FormCriarTabela()
         {
             InitializeComponent();
-            
+
         }
 
         private void loadTableAdicionar()
@@ -67,7 +67,7 @@ namespace PesqAntibiDesktop
 
         private int getIdAntibioticoFromGridRow(int rowIndex)
         {
-           foreach (DataRow dataRow in table.Rows)
+            foreach (DataRow dataRow in table.Rows)
             {
                 if (dataRow["nome"].ToString().Trim() == gridAntibiotico.Rows[rowIndex].Cells["nome"].Value.ToString().Trim())
                 {
@@ -76,7 +76,7 @@ namespace PesqAntibiDesktop
             }
             return -1;
         }
-        
+
         private void FormTabela_Load(object sender, EventArgs e)
         {
 
@@ -132,12 +132,12 @@ namespace PesqAntibiDesktop
                 string gramPositiva = GridLoader.getGramPositivaString(row);
 
                 string gramNegativa = GridLoader.getGramNegativaString(row);
-                
+
                 // Change the antibioitc name(char[100]) to a correctly sized string (removes blank spaces)
                 string nome = row["nome"].ToString().Trim();
 
                 gridAntibiotico.Rows.Add(adicionar, nome, tipoAntibiotico, gramPositiva, gramNegativa, row["morfologia"]);
-                
+
                 // change the color of the gram_positva and gram_negativa cells font. Puts the text in green
                 // for the checmark and red for the X
                 GridLoader.setGramForeColor(gridAntibiotico, gramNegativa, gramPositiva);
@@ -190,7 +190,7 @@ namespace PesqAntibiDesktop
 
         private void tabelasPersonalizadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           MenuClickOpen.tabelasPersonalizadasOpen();
+            MenuClickOpen.tabelasPersonalizadasOpen();
         }
 
         private void tabelaDeAntibióticosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -198,5 +198,28 @@ namespace PesqAntibiDesktop
             MenuClickOpen.tabelaDeAntibióticosOpen();
         }
 
+        private void buttonSelecionarTodos_Click(object sender, EventArgs e)
+        {
+            foreach (DataRow row in table.Rows)
+            {
+                int idAntibiotico = getIdAntibioticoFromGridRow(table.Rows.IndexOf(row));
+                updateAdicionarValue(idAntibiotico, true);
+            }
+
+            GridLoader.clearGrid(gridAntibiotico);
+            updateDataGrid();
+        }
+
+        private void buttonLimparSelecao_Click(object sender, EventArgs e)
+        {
+            foreach (DataRow row in table.Rows)
+            {
+                int idAntibiotico = getIdAntibioticoFromGridRow(table.Rows.IndexOf(row));
+                updateAdicionarValue(idAntibiotico, false);
+            }
+
+            GridLoader.clearGrid(gridAntibiotico);
+            updateDataGrid();
+        }
     }
 }
