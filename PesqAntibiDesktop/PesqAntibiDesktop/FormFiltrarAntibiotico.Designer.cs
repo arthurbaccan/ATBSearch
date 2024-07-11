@@ -30,11 +30,12 @@ namespace PesqAntibiDesktop
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             menuStripTelas = new System.Windows.Forms.MenuStrip();
             tabelaDeAntibióticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            tabelasPersonalizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             panelControles = new System.Windows.Forms.Panel();
             splitter1 = new System.Windows.Forms.Splitter();
             panelControlesLabel = new System.Windows.Forms.Panel();
@@ -62,7 +63,7 @@ namespace PesqAntibiDesktop
             checkBoxOxazolidinona = new System.Windows.Forms.CheckBox();
             checkBoxGlicilciclina = new System.Windows.Forms.CheckBox();
             checkBoxAntituberculosos = new System.Windows.Forms.CheckBox();
-            flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            panel1 = new System.Windows.Forms.Panel();
             buttonPesquisar = new System.Windows.Forms.Button();
             textBoxNome = new System.Windows.Forms.TextBox();
             labelPesquisarNome = new System.Windows.Forms.Label();
@@ -77,7 +78,7 @@ namespace PesqAntibiDesktop
             tableLayoutFiltros.SuspendLayout();
             flowLayoutTipoBacteria.SuspendLayout();
             flowLayoutTipoAntibiotico.SuspendLayout();
-            flowLayoutPanel3.SuspendLayout();
+            panel1.SuspendLayout();
             panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridAntibiotico).BeginInit();
             ((System.ComponentModel.ISupportInitialize)antibioticoBindingSource).BeginInit();
@@ -85,7 +86,7 @@ namespace PesqAntibiDesktop
             // 
             // menuStripTelas
             // 
-            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem });
+            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem });
             menuStripTelas.Location = new System.Drawing.Point(0, 0);
             menuStripTelas.Name = "menuStripTelas";
             menuStripTelas.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -98,9 +99,18 @@ namespace PesqAntibiDesktop
             tabelaDeAntibióticosToolStripMenuItem.Name = "tabelaDeAntibióticosToolStripMenuItem";
             tabelaDeAntibióticosToolStripMenuItem.Size = new System.Drawing.Size(135, 20);
             tabelaDeAntibióticosToolStripMenuItem.Text = "Tabela de Antibióticos";
+            tabelaDeAntibióticosToolStripMenuItem.Click += tabelaDeAntibióticosToolStripMenuItem_Click;
+            // 
+            // tabelasPersonalizadasToolStripMenuItem
+            // 
+            tabelasPersonalizadasToolStripMenuItem.Name = "tabelasPersonalizadasToolStripMenuItem";
+            tabelasPersonalizadasToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            tabelasPersonalizadasToolStripMenuItem.Text = "Tabelas Personalizadas";
+            tabelasPersonalizadasToolStripMenuItem.Click += tabelasPersonalizadasToolStripMenuItem_Click;
             // 
             // panelControles
             // 
+            panelControles.BackColor = System.Drawing.SystemColors.Control;
             panelControles.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             panelControles.Controls.Add(splitter1);
             panelControles.Controls.Add(panelControlesLabel);
@@ -109,13 +119,13 @@ namespace PesqAntibiDesktop
             panelControles.Location = new System.Drawing.Point(0, 24);
             panelControles.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             panelControles.Name = "panelControles";
-            panelControles.Size = new System.Drawing.Size(1070, 258);
+            panelControles.Size = new System.Drawing.Size(1070, 279);
             panelControles.TabIndex = 1;
             // 
             // splitter1
             // 
             splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            splitter1.Location = new System.Drawing.Point(0, 125);
+            splitter1.Location = new System.Drawing.Point(0, 146);
             splitter1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             splitter1.Name = "splitter1";
             splitter1.Size = new System.Drawing.Size(1068, 3);
@@ -149,9 +159,8 @@ namespace PesqAntibiDesktop
             // 
             panelFiltrosPesquisar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             panelFiltrosPesquisar.Controls.Add(tableLayoutFiltros);
-            panelFiltrosPesquisar.Controls.Add(flowLayoutPanel3);
             panelFiltrosPesquisar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            panelFiltrosPesquisar.Location = new System.Drawing.Point(0, 128);
+            panelFiltrosPesquisar.Location = new System.Drawing.Point(0, 149);
             panelFiltrosPesquisar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             panelFiltrosPesquisar.Name = "panelFiltrosPesquisar";
             panelFiltrosPesquisar.Size = new System.Drawing.Size(1068, 128);
@@ -166,13 +175,17 @@ namespace PesqAntibiDesktop
             tableLayoutFiltros.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             tableLayoutFiltros.Controls.Add(flowLayoutTipoBacteria, 0, 0);
             tableLayoutFiltros.Controls.Add(flowLayoutTipoAntibiotico, 0, 1);
+            tableLayoutFiltros.Controls.Add(panel1, 0, 2);
             tableLayoutFiltros.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutFiltros.Location = new System.Drawing.Point(0, 0);
             tableLayoutFiltros.Name = "tableLayoutFiltros";
-            tableLayoutFiltros.RowCount = 2;
+            tableLayoutFiltros.RowCount = 3;
             tableLayoutFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37F));
             tableLayoutFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63F));
-            tableLayoutFiltros.Size = new System.Drawing.Size(1068, 97);
+            tableLayoutFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            tableLayoutFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutFiltros.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutFiltros.Size = new System.Drawing.Size(1068, 128);
             tableLayoutFiltros.TabIndex = 3;
             // 
             // flowLayoutTipoBacteria
@@ -186,7 +199,7 @@ namespace PesqAntibiDesktop
             flowLayoutTipoBacteria.Location = new System.Drawing.Point(4, 3);
             flowLayoutTipoBacteria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             flowLayoutTipoBacteria.Name = "flowLayoutTipoBacteria";
-            flowLayoutTipoBacteria.Size = new System.Drawing.Size(1060, 29);
+            flowLayoutTipoBacteria.Size = new System.Drawing.Size(1060, 28);
             flowLayoutTipoBacteria.TabIndex = 11;
             // 
             // labelTipoBacteria
@@ -253,10 +266,10 @@ namespace PesqAntibiDesktop
             flowLayoutTipoAntibiotico.Controls.Add(checkBoxGlicilciclina);
             flowLayoutTipoAntibiotico.Controls.Add(checkBoxAntituberculosos);
             flowLayoutTipoAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
-            flowLayoutTipoAntibiotico.Location = new System.Drawing.Point(4, 38);
+            flowLayoutTipoAntibiotico.Location = new System.Drawing.Point(4, 37);
             flowLayoutTipoAntibiotico.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             flowLayoutTipoAntibiotico.Name = "flowLayoutTipoAntibiotico";
-            flowLayoutTipoAntibiotico.Size = new System.Drawing.Size(1060, 56);
+            flowLayoutTipoAntibiotico.Size = new System.Drawing.Size(1060, 51);
             flowLayoutTipoAntibiotico.TabIndex = 12;
             // 
             // labelTipoAntibiotico
@@ -497,55 +510,53 @@ namespace PesqAntibiDesktop
             checkBoxAntituberculosos.Text = "Antituberculosos";
             checkBoxAntituberculosos.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel3
+            // panel1
             // 
-            flowLayoutPanel3.Controls.Add(buttonPesquisar);
-            flowLayoutPanel3.Controls.Add(textBoxNome);
-            flowLayoutPanel3.Controls.Add(labelPesquisarNome);
-            flowLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            flowLayoutPanel3.Location = new System.Drawing.Point(0, 97);
-            flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            flowLayoutPanel3.Name = "flowLayoutPanel3";
-            flowLayoutPanel3.Size = new System.Drawing.Size(1068, 31);
-            flowLayoutPanel3.TabIndex = 13;
+            panel1.Controls.Add(buttonPesquisar);
+            panel1.Controls.Add(textBoxNome);
+            panel1.Controls.Add(labelPesquisarNome);
+            panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            panel1.Location = new System.Drawing.Point(3, 94);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(1062, 31);
+            panel1.TabIndex = 13;
             // 
             // buttonPesquisar
             // 
-            buttonPesquisar.Location = new System.Drawing.Point(976, 3);
+            buttonPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            buttonPesquisar.Location = new System.Drawing.Point(965, 2);
             buttonPesquisar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             buttonPesquisar.Name = "buttonPesquisar";
             buttonPesquisar.Size = new System.Drawing.Size(88, 27);
-            buttonPesquisar.TabIndex = 2;
+            buttonPesquisar.TabIndex = 6;
             buttonPesquisar.Text = "Pesquisar";
             buttonPesquisar.UseVisualStyleBackColor = true;
             buttonPesquisar.Click += buttonPesquisar_Click;
             // 
             // textBoxNome
             // 
-            textBoxNome.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            textBoxNome.Location = new System.Drawing.Point(745, 7);
+            textBoxNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            textBoxNome.Location = new System.Drawing.Point(734, 5);
             textBoxNome.Margin = new System.Windows.Forms.Padding(4, 3, 12, 3);
             textBoxNome.Name = "textBoxNome";
             textBoxNome.Size = new System.Drawing.Size(215, 23);
-            textBoxNome.TabIndex = 1;
+            textBoxNome.TabIndex = 5;
             // 
             // labelPesquisarNome
             // 
-            labelPesquisarNome.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
-            labelPesquisarNome.Location = new System.Drawing.Point(681, 5);
+            labelPesquisarNome.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            labelPesquisarNome.Location = new System.Drawing.Point(670, 1);
             labelPesquisarNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             labelPesquisarNome.Name = "labelPesquisarNome";
             labelPesquisarNome.Size = new System.Drawing.Size(56, 28);
-            labelPesquisarNome.TabIndex = 0;
+            labelPesquisarNome.TabIndex = 4;
             labelPesquisarNome.Text = "Nome";
             labelPesquisarNome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            labelPesquisarNome.SizeChanged += label1Pesquisar_SizeChanged;
             // 
             // splitterControlesGrid
             // 
             splitterControlesGrid.Dock = System.Windows.Forms.DockStyle.Top;
-            splitterControlesGrid.Location = new System.Drawing.Point(0, 282);
+            splitterControlesGrid.Location = new System.Drawing.Point(0, 303);
             splitterControlesGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             splitterControlesGrid.Name = "splitterControlesGrid";
             splitterControlesGrid.Size = new System.Drawing.Size(1070, 3);
@@ -556,10 +567,10 @@ namespace PesqAntibiDesktop
             // 
             panelGrid.Controls.Add(gridAntibiotico);
             panelGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelGrid.Location = new System.Drawing.Point(0, 285);
+            panelGrid.Location = new System.Drawing.Point(0, 306);
             panelGrid.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             panelGrid.Name = "panelGrid";
-            panelGrid.Size = new System.Drawing.Size(1070, 289);
+            panelGrid.Size = new System.Drawing.Size(1070, 268);
             panelGrid.TabIndex = 3;
             // 
             // gridAntibiotico
@@ -568,37 +579,37 @@ namespace PesqAntibiDesktop
             gridAntibiotico.AllowUserToDeleteRows = false;
             gridAntibiotico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             gridAntibiotico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridAntibiotico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle2;
             gridAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             gridAntibiotico.Location = new System.Drawing.Point(0, 0);
             gridAntibiotico.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             gridAntibiotico.Name = "gridAntibiotico";
             gridAntibiotico.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            gridAntibiotico.Size = new System.Drawing.Size(1070, 289);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            gridAntibiotico.Size = new System.Drawing.Size(1070, 268);
             gridAntibiotico.TabIndex = 0;
             // 
             // antibioticoBindingSource
@@ -631,8 +642,8 @@ namespace PesqAntibiDesktop
             flowLayoutTipoBacteria.PerformLayout();
             flowLayoutTipoAntibiotico.ResumeLayout(false);
             flowLayoutTipoAntibiotico.PerformLayout();
-            flowLayoutPanel3.ResumeLayout(false);
-            flowLayoutPanel3.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridAntibiotico).EndInit();
             ((System.ComponentModel.ISupportInitialize)antibioticoBindingSource).EndInit();
@@ -652,8 +663,6 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.Panel panelControlesLabel;
         private System.Windows.Forms.Label labelTituloTab;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Label labelPesquisarNome;
-        private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.BindingSource antibioticoBindingSource;
         private System.Windows.Forms.CheckBox checkBoxGramPositiva;
         private System.Windows.Forms.Label labelTipoBacteria;
@@ -666,7 +675,6 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.CheckBox checkBoxAminoglicosideos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutTipoAntibiotico;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutTipoBacteria;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.CheckBox checkBoxQuinolonas;
         private System.Windows.Forms.CheckBox checkBoxAnfenicois;
         private System.Windows.Forms.CheckBox checkBoxSulfonamidas;
@@ -677,7 +685,6 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.CheckBox checkBoxOxazolidinona;
         private System.Windows.Forms.CheckBox checkBoxGlicilciclina;
         private System.Windows.Forms.CheckBox checkBoxAntituberculosos;
-        private System.Windows.Forms.Button buttonPesquisar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoantibioticoDataGridViewTextBoxColumn;
@@ -685,5 +692,10 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.DataGridViewTextBoxColumn gramnegativaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn morfologiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutFiltros;
+        private System.Windows.Forms.ToolStripMenuItem tabelasPersonalizadasToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonPesquisar;
+        private System.Windows.Forms.TextBox textBoxNome;
+        private System.Windows.Forms.Label labelPesquisarNome;
     }
 }
