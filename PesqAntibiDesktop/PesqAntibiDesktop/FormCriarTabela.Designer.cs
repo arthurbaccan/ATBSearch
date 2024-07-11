@@ -538,6 +538,7 @@ namespace PesqAntibiDesktop
             buttonCriarTabela.TabIndex = 13;
             buttonCriarTabela.Text = "Criar Tabela";
             buttonCriarTabela.UseVisualStyleBackColor = true;
+            buttonCriarTabela.Click += buttonCriarTabela_Click;
             // 
             // buttonLimparSelecao
             // 

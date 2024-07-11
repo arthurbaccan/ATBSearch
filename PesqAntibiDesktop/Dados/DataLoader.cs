@@ -10,16 +10,7 @@ namespace Dados
             table.Clear();
             try
             {
-                // Specify a connection string.
-                String connectionString =
-                    "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\arthu\\source\\repos\\Pesquisador-de-Antibioticos\\PesqAntibiDesktop\\PesqAntibiDesktop\\APP_DATA\\Database1.mdf;Integrated Security=True";
-
-                // Create a new data adapter based on the specified query.
-                sqlDataAdapter = new SqlDataAdapter(selectCommand, connectionString);
-
-                // Create a command builder to generate SQL update, insert, and
-                // delete commands based on selectCommand.
-                SqlCommandBuilder commandBuilder = new SqlCommandBuilder(sqlDataAdapter);
+                sqlDataAdapter = DataAdapter.getDataAdapter(selectCommand, sqlDataAdapter);
 
                 // Populate the data table and bind it to the BindingSource.
                 sqlDataAdapter.Fill(table);

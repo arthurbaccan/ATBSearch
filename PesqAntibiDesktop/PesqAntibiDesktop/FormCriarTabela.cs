@@ -221,5 +221,10 @@ namespace PesqAntibiDesktop
             GridLoader.clearGrid(gridAntibiotico);
             updateDataGrid();
         }
+
+        private void buttonCriarTabela_Click(object sender, EventArgs e)
+        {
+           DataSaver.saveTabelaPersonalizadaLocal(tableAdicionar, dataAdapter);
+        }
     }
 }
