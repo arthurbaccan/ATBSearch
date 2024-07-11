@@ -4,7 +4,12 @@
 
 /.vs/Pesquisador-de-Antibioticos/v17
 /PesqAntibiDesktop/.vs/PesqAntibiDesktop
-
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
 
 .vs/
 [Bb]in/
