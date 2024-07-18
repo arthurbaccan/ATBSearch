@@ -10,23 +10,27 @@
 <body>
     <div class="background"></div>
     <div align="center">
-    <form class="login" align="left">
-            <h1 >Bem vindo de volta!</h1>
-            <h3 class="no-margin">Email ou telefone do usuário: <b class="red">*</b></h3>
-            <input id="email" class="elements" type="text" required>
-            <br><br>
-            <h3 class="no-margin">Senha: <b class="red">*</b></h3>
-            <input id="password" class="elements" type="password" required>
-            <br>
-            <a href="">Esqueci minha senha</a>
-            <br><br>
-            <button id="entrar" class="enter" type="submit">Entrar</button>
-            <br><br>
-            <h3 class="no-margin">Não tem uma conta? <a href="">Cadastrar-se</a></h3>
-            <br>
-            <a id="voltar" href="index.html">Continuar sem conta</a>
-            <br><br>
-    </form>
+        <table>
+            <tr>
+                <td><form class="login" align="left">
+                    <img class="image" src="imagens/Logo.png" align="left"></img>
+                    <h2 class="title">PESQUISADOR DE ANTIBIÓTICOS</h2>
+                    <input id="email" class="elements" type="text" placeholder="Email ou telefone do usuário:" required>
+                    <br><br>
+                    <input id="password" class="elements" type="password" placeholder="Senha:" required>
+                    <br><br>
+                    <button id="entrar" class="enter" type="submit">Entrar</button>
+                    <br><br>
+                    <a class="links" href="">Esqueci minha senha</a>
+                    <br><br><br>
+                    <h5 class="text-elements">Não tem uma conta? <a class="links" href="">Cadastrar-se</a></h5>
+                    <br>
+                </form></td>
+                <td><form>
+                    
+                </form></td>
+            </tr>
+        </table>
     </div>
     <script src="login.js"></script>
 </body>
