@@ -10,7 +10,25 @@ namespace Dados
             table.Clear();
             try
             {
-                sqlDataAdapter = DataAdapter.getDataAdapter(selectCommand, sqlDataAdapter);
+                sqlDataAdapter = DataAdapter.getDataAdapter(selectCommand, sqlDataAdapter, DataAdapter.connectionString);
+
+                // Populate the data table and bind it to the BindingSource.
+                sqlDataAdapter.Fill(table);
+            }
+            catch (SqlException ex)
+            {
+
+                return false;
+            }
+            return true;
+        }
+
+        public static bool GetDataLocalSafe(SqlCommand selectCommand, SqlDataAdapter sqlDataAdapter, DataTable table)
+        {
+            table.Clear();
+            try
+            {
+                sqlDataAdapter = DataAdapter.getDataAdapteSafe(selectCommand, sqlDataAdapter);
 
                 // Populate the data table and bind it to the BindingSource.
                 sqlDataAdapter.Fill(table);

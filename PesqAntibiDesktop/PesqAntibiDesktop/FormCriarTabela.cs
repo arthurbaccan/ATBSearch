@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Dados;
 using System.Globalization;
+using System.Linq;
 
 namespace PesqAntibiDesktop
 {
@@ -222,9 +223,25 @@ namespace PesqAntibiDesktop
             updateDataGrid();
         }
 
+
         private void buttonCriarTabela_Click(object sender, EventArgs e)
         {
-           DataSaver.saveTabelaPersonalizadaLocal(tableAdicionar, dataAdapter);
+            if (Application.OpenForms.OfType<FormNomeTabela>().Count() > 0)
+            {
+                Application.OpenForms.OfType<FormNomeTabela>().First().BringToFront();
+                return;
+            }
+
+            FormNomeTabela formNomeTabela = new FormNomeTabela(tableAdicionar, dataAdapter, "0");
+            formNomeTabela.Show();
+        }
+
+        private void FormCriarTabela_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Application.OpenForms.OfType<FormNomeTabela>().Count() > 0)
+            {
+                Application.OpenForms.OfType<FormNomeTabela>().First().Close();
+            }
         }
     }
 }

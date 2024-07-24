@@ -675,6 +675,7 @@ namespace PesqAntibiDesktop
             Name = "FormCriarTabela";
             Text = "Pesquisador de Antibióticos";
             WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            FormClosing += FormCriarTabela_FormClosing;
             Load += FormTabela_Load;
             menuStripTelas.ResumeLayout(false);
             menuStripTelas.PerformLayout();
