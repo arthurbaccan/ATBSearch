@@ -156,6 +156,13 @@ namespace PesqAntibiDesktop
                 return;
             }
 
+            // Confirmation message to delete the tables
+            DialogResult dialogResult = MessageBox.Show("Você tem certeza que deseja deletar as tabelas selecionadas?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
             foreach (Button button in selectedButtons)
             {
                 DataDeleter.deleteCustomTable(button.Text, DataAdapter.userId);
