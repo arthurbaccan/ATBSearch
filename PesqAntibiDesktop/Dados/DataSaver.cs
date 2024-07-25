@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Dados
 {
-    public class DataSaver
+    public abstract class DataSaver
     {
 
         public static bool dataTableAdicionarHasNoData(DataTable table)

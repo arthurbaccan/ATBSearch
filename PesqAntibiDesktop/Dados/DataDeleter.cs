@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dados
 {
-    public class DataDeleter
+    public abstract class DataDeleter
     {
         public static void deleteCustomTable(string name, string userId)
         {

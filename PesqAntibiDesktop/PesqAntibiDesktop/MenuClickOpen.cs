@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace PesqAntibiDesktop
 {
-    public class MenuClickOpen
+    public abstract class MenuClickOpen
     {
         public static void tabelasPersonalizadasOpen()
         {

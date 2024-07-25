@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace PesqAntibiDesktop
 {
-    public class FontSizer
+    public abstract class FontSizer
     {
         public static void updateFontSize(Control label, int maxFontSize)
         {

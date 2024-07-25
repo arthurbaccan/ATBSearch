@@ -46,6 +46,9 @@ namespace PesqAntibiDesktop
             labelTipoBacteria = new System.Windows.Forms.Label();
             checkBoxGramNegativa = new System.Windows.Forms.CheckBox();
             checkBoxGramPositiva = new System.Windows.Forms.CheckBox();
+            label1 = new System.Windows.Forms.Label();
+            checkBoxCocos = new System.Windows.Forms.CheckBox();
+            checkBoxBacilos = new System.Windows.Forms.CheckBox();
             flowLayoutTipoAntibiotico = new System.Windows.Forms.FlowLayoutPanel();
             labelTipoAntibiotico = new System.Windows.Forms.Label();
             checkBoxMacrolideos = new System.Windows.Forms.CheckBox();
@@ -64,6 +67,8 @@ namespace PesqAntibiDesktop
             checkBoxGlicilciclina = new System.Windows.Forms.CheckBox();
             checkBoxAntituberculosos = new System.Windows.Forms.CheckBox();
             panel1 = new System.Windows.Forms.Panel();
+            buttonSelecionarTodosFiltros = new System.Windows.Forms.Button();
+            buttonLimparFiltros = new System.Windows.Forms.Button();
             buttonPesquisar = new System.Windows.Forms.Button();
             textBoxNome = new System.Windows.Forms.TextBox();
             labelPesquisarNome = new System.Windows.Forms.Label();
@@ -71,9 +76,6 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
-            label1 = new System.Windows.Forms.Label();
-            checkBoxCocos = new System.Windows.Forms.CheckBox();
-            checkBoxBacilos = new System.Windows.Forms.CheckBox();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -250,6 +252,49 @@ namespace PesqAntibiDesktop
             checkBoxGramPositiva.TabIndex = 3;
             checkBoxGramPositiva.Text = "Gram Positiva";
             checkBoxGramPositiva.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            label1.Location = new System.Drawing.Point(392, 5);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(158, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Morfologia Bacteriana";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBoxCocos
+            // 
+            checkBoxCocos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxCocos.AutoSize = true;
+            checkBoxCocos.Checked = true;
+            checkBoxCocos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxCocos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxCocos.Location = new System.Drawing.Point(558, 3);
+            checkBoxCocos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxCocos.Name = "checkBoxCocos";
+            checkBoxCocos.Size = new System.Drawing.Size(68, 24);
+            checkBoxCocos.TabIndex = 10;
+            checkBoxCocos.Text = "Cocos";
+            checkBoxCocos.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBacilos
+            // 
+            checkBoxBacilos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxBacilos.AutoSize = true;
+            checkBoxBacilos.Checked = true;
+            checkBoxBacilos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxBacilos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxBacilos.Location = new System.Drawing.Point(634, 3);
+            checkBoxBacilos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxBacilos.Name = "checkBoxBacilos";
+            checkBoxBacilos.Size = new System.Drawing.Size(75, 24);
+            checkBoxBacilos.TabIndex = 9;
+            checkBoxBacilos.Text = "Bacilos";
+            checkBoxBacilos.UseVisualStyleBackColor = true;
             // 
             // flowLayoutTipoAntibiotico
             // 
@@ -518,6 +563,8 @@ namespace PesqAntibiDesktop
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonSelecionarTodosFiltros);
+            panel1.Controls.Add(buttonLimparFiltros);
             panel1.Controls.Add(buttonPesquisar);
             panel1.Controls.Add(textBoxNome);
             panel1.Controls.Add(labelPesquisarNome);
@@ -526,6 +573,30 @@ namespace PesqAntibiDesktop
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1062, 31);
             panel1.TabIndex = 13;
+            // 
+            // buttonSelecionarTodosFiltros
+            // 
+            buttonSelecionarTodosFiltros.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            buttonSelecionarTodosFiltros.AutoSize = true;
+            buttonSelecionarTodosFiltros.Location = new System.Drawing.Point(98, 3);
+            buttonSelecionarTodosFiltros.Name = "buttonSelecionarTodosFiltros";
+            buttonSelecionarTodosFiltros.Size = new System.Drawing.Size(106, 25);
+            buttonSelecionarTodosFiltros.TabIndex = 10;
+            buttonSelecionarTodosFiltros.Text = "Selecionar Filtros";
+            buttonSelecionarTodosFiltros.UseVisualStyleBackColor = true;
+            buttonSelecionarTodosFiltros.Click += buttonSelecionarTodosFiltros_Click;
+            // 
+            // buttonLimparFiltros
+            // 
+            buttonLimparFiltros.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            buttonLimparFiltros.AutoSize = true;
+            buttonLimparFiltros.Location = new System.Drawing.Point(3, 3);
+            buttonLimparFiltros.Name = "buttonLimparFiltros";
+            buttonLimparFiltros.Size = new System.Drawing.Size(89, 25);
+            buttonLimparFiltros.TabIndex = 9;
+            buttonLimparFiltros.Text = "Limpar Filtros";
+            buttonLimparFiltros.UseVisualStyleBackColor = true;
+            buttonLimparFiltros.Click += buttonLimparFiltros_Click;
             // 
             // buttonPesquisar
             // 
@@ -622,49 +693,6 @@ namespace PesqAntibiDesktop
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
             // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            label1.Location = new System.Drawing.Point(392, 5);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(158, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Morfologia Bacteriana";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkBoxCocos
-            // 
-            checkBoxCocos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            checkBoxCocos.AutoSize = true;
-            checkBoxCocos.Checked = true;
-            checkBoxCocos.CheckState = System.Windows.Forms.CheckState.Checked;
-            checkBoxCocos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            checkBoxCocos.Location = new System.Drawing.Point(558, 3);
-            checkBoxCocos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            checkBoxCocos.Name = "checkBoxCocos";
-            checkBoxCocos.Size = new System.Drawing.Size(68, 24);
-            checkBoxCocos.TabIndex = 10;
-            checkBoxCocos.Text = "Cocos";
-            checkBoxCocos.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBacilos
-            // 
-            checkBoxBacilos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            checkBoxBacilos.AutoSize = true;
-            checkBoxBacilos.Checked = true;
-            checkBoxBacilos.CheckState = System.Windows.Forms.CheckState.Checked;
-            checkBoxBacilos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            checkBoxBacilos.Location = new System.Drawing.Point(634, 3);
-            checkBoxBacilos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            checkBoxBacilos.Name = "checkBoxBacilos";
-            checkBoxBacilos.Size = new System.Drawing.Size(75, 24);
-            checkBoxBacilos.TabIndex = 9;
-            checkBoxBacilos.Text = "Bacilos";
-            checkBoxBacilos.UseVisualStyleBackColor = true;
-            // 
             // FormAbrirTabelaPersonalizada
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -749,5 +777,7 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxCocos;
         private System.Windows.Forms.CheckBox checkBoxBacilos;
+        private System.Windows.Forms.Button buttonSelecionarTodosFiltros;
+        private System.Windows.Forms.Button buttonLimparFiltros;
     }
 }

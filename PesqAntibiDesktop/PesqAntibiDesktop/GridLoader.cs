@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace PesqAntibiDesktop
 {
-    public class GridLoader
+    public abstract class GridLoader
     {
         public static void addDefaultCollumns(DataGridView grid)
         {

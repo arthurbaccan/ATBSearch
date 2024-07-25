@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Dados
 {
-    public class DataLoader
+    public abstract class DataLoader
     {
         public static bool GetDataLocal(string selectCommand, SqlDataAdapter sqlDataAdapter, DataTable table)
         {

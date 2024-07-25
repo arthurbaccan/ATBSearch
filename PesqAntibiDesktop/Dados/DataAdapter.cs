@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Dados
 {
-    public class DataAdapter
+    public abstract class DataAdapter
     {
         public static string userId = "0";
         public static readonly string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\arthu\\source\\repos\\Pesquisador-de-Antibioticos\\PesqAntibiDesktop\\PesqAntibiDesktop\\APP_DATA\\Database1.mdf;Integrated Security=True";

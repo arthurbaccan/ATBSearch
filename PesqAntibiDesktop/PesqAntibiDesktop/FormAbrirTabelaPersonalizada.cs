@@ -156,5 +156,15 @@ namespace PesqAntibiDesktop
         {
             MenuClickOpen.tabelaDeAntibióticosOpen();
         }
+
+        private void buttonLimparFiltros_Click(object sender, EventArgs e)
+        {
+            FilterControler.cleanFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria, textBoxNome);
+        }
+
+        private void buttonSelecionarTodosFiltros_Click(object sender, EventArgs e)
+        {
+            FilterControler.selectAllFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria);
+        }
     }
 }
