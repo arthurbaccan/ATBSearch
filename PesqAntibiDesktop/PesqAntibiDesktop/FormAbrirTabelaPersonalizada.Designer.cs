@@ -71,6 +71,9 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
+            label1 = new System.Windows.Forms.Label();
+            checkBoxCocos = new System.Windows.Forms.CheckBox();
+            checkBoxBacilos = new System.Windows.Forms.CheckBox();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -195,6 +198,9 @@ namespace PesqAntibiDesktop
             flowLayoutTipoBacteria.Controls.Add(labelTipoBacteria);
             flowLayoutTipoBacteria.Controls.Add(checkBoxGramNegativa);
             flowLayoutTipoBacteria.Controls.Add(checkBoxGramPositiva);
+            flowLayoutTipoBacteria.Controls.Add(label1);
+            flowLayoutTipoBacteria.Controls.Add(checkBoxCocos);
+            flowLayoutTipoBacteria.Controls.Add(checkBoxBacilos);
             flowLayoutTipoBacteria.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutTipoBacteria.Location = new System.Drawing.Point(4, 3);
             flowLayoutTipoBacteria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -616,6 +622,49 @@ namespace PesqAntibiDesktop
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
             // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            label1.Location = new System.Drawing.Point(392, 5);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(158, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Morfologia Bacteriana";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBoxCocos
+            // 
+            checkBoxCocos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxCocos.AutoSize = true;
+            checkBoxCocos.Checked = true;
+            checkBoxCocos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxCocos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxCocos.Location = new System.Drawing.Point(558, 3);
+            checkBoxCocos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxCocos.Name = "checkBoxCocos";
+            checkBoxCocos.Size = new System.Drawing.Size(68, 24);
+            checkBoxCocos.TabIndex = 10;
+            checkBoxCocos.Text = "Cocos";
+            checkBoxCocos.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBacilos
+            // 
+            checkBoxBacilos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxBacilos.AutoSize = true;
+            checkBoxBacilos.Checked = true;
+            checkBoxBacilos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxBacilos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxBacilos.Location = new System.Drawing.Point(634, 3);
+            checkBoxBacilos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxBacilos.Name = "checkBoxBacilos";
+            checkBoxBacilos.Size = new System.Drawing.Size(75, 24);
+            checkBoxBacilos.TabIndex = 9;
+            checkBoxBacilos.Text = "Bacilos";
+            checkBoxBacilos.UseVisualStyleBackColor = true;
+            // 
             // FormAbrirTabelaPersonalizada
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -697,5 +746,8 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.Button buttonPesquisar;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelPesquisarNome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxCocos;
+        private System.Windows.Forms.CheckBox checkBoxBacilos;
     }
 }

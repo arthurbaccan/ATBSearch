@@ -54,6 +54,20 @@ namespace PesqAntibiDesktop
             return Enum.GetName(typeof(TipoAntibiotico), row["tipo_antibiotico"]);
         }
 
+        public static string getMorfologiaString(DataRow row)
+        {
+            string nome = Enum.GetName(typeof(TipoMorfologia), row["morfologia"]);
+            if (nome == null)
+            {
+                return "Não informado";
+            }
+            if (nome == Enum.GetName(typeof(TipoMorfologia), 3))
+            {
+                return "Cocos e Bacilos";
+            }
+            return nome;
+        }
+
         public static void setGramForeColor(DataGridView grid, string gramNegativa, string gramPositiva)
         {
             if (gramNegativa == "❌")

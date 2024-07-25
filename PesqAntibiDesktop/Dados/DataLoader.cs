@@ -41,7 +41,7 @@ namespace Dados
             return true;
         }
 
-        public static string getPesquisaString(string textNome, bool gramNegativa, bool gramPositiva, bool macrolideos,
+        public static string getPesquisaString(string textNome, bool cocos, bool bacilos, bool gramNegativa, bool gramPositiva, bool macrolideos,
                                      bool penicilinas, bool cefalosporinas, bool carbapenemicos, bool aminoglicosideos,
                                      bool quinolonas, bool anfenicois, bool sulfonamidas, bool glicopeptideos,
                                      bool nitroimidazolicos, bool licosamidas, bool polimixinas, bool oxazolidinona,
@@ -82,6 +82,34 @@ namespace Dados
                 else
                 {
                     selectCommand += " gram_positiva = 0";
+                    useAnd = true;
+                }
+                filterSelected = true;
+            }
+
+            if (!cocos)
+            {
+                if (useAnd)
+                {
+                    selectCommand += $" and morfologia != {((int)TipoMorfologia.Cocos)} and morfologia != {((int)TipoMorfologia.Cocos_e_Bacilos)}";
+                }
+                else
+                {
+                    selectCommand += $" morfologia != {((int)TipoMorfologia.Cocos)} and morfologia != {((int)TipoMorfologia.Cocos_e_Bacilos)}";
+                    useAnd = true;
+                }
+                filterSelected = true;
+            }
+
+            if (!bacilos)
+            {
+                if (useAnd)
+                {
+                    selectCommand += $" and morfologia != {((int)TipoMorfologia.Bacilos)} and morfologia !=  {((int)TipoMorfologia.Cocos_e_Bacilos)}";
+                }
+                else
+                {
+                    selectCommand += $" morfologia != {((int)TipoMorfologia.Bacilos)} and morfologia !=  {((int)TipoMorfologia.Cocos_e_Bacilos)}";
                     useAnd = true;
                 }
                 filterSelected = true;

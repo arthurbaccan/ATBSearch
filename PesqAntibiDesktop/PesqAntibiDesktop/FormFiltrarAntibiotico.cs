@@ -36,7 +36,7 @@ namespace PesqAntibiDesktop
             {
                 return;
             }
-            
+
             GridLoader.addDefaultCollumns(gridAntibiotico);
 
             // Populate the columns with formatted the data from the data table
@@ -49,10 +49,12 @@ namespace PesqAntibiDesktop
 
                 string gramNegativa = GridLoader.getGramNegativaString(row);
 
+                string morfologia = GridLoader.getMorfologiaString(row);
+
                 // Change the antibioitc name(char[100]) to a correctly sized string (removes blank spaces)
                 string nome = row["nome"].ToString().Trim();
 
-                gridAntibiotico.Rows.Add(nome, tipoAntibiotico, gramPositiva, gramNegativa, row["morfologia"]);
+                gridAntibiotico.Rows.Add(nome, tipoAntibiotico, gramPositiva, gramNegativa, morfologia);
 
                 // change the color of the gram_positva and gram_negativa cells font. Puts the text in green
                 // for the checmark and red for the X
@@ -81,7 +83,9 @@ namespace PesqAntibiDesktop
 
         private void buttonPesquisar_Click(object sender, EventArgs e)
         {
-            string selectCommand = DataLoader.getPesquisaString(getTextNome(), checkBoxGramNegativa.Checked,
+            string selectCommand = DataLoader.getPesquisaString(getTextNome(), checkBoxCocos.Checked,
+                checkBoxBacilos.Checked,
+                checkBoxGramNegativa.Checked,
                 checkBoxGramPositiva.Checked,
                 checkBoxMacrolideos.Checked,
                 checkBoxPenicilinas.Checked,
@@ -98,7 +102,7 @@ namespace PesqAntibiDesktop
                 checkBoxOxazolidinona.Checked,
                 checkBoxGlicilciclina.Checked,
                 checkBoxAntituberculosos.Checked);
-            
+
 
             DataLoader.GetDataLocal(selectCommand, dataAdapter, table);
             GridLoader.clearGrid(gridAntibiotico);

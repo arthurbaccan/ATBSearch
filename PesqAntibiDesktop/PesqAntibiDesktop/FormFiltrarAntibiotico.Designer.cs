@@ -30,9 +30,9 @@ namespace PesqAntibiDesktop
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             menuStripTelas = new System.Windows.Forms.MenuStrip();
             tabelaDeAntibióticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             tabelasPersonalizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,6 +71,9 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
+            label1 = new System.Windows.Forms.Label();
+            checkBoxCocos = new System.Windows.Forms.CheckBox();
+            checkBoxBacilos = new System.Windows.Forms.CheckBox();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -195,6 +198,9 @@ namespace PesqAntibiDesktop
             flowLayoutTipoBacteria.Controls.Add(labelTipoBacteria);
             flowLayoutTipoBacteria.Controls.Add(checkBoxGramNegativa);
             flowLayoutTipoBacteria.Controls.Add(checkBoxGramPositiva);
+            flowLayoutTipoBacteria.Controls.Add(label1);
+            flowLayoutTipoBacteria.Controls.Add(checkBoxCocos);
+            flowLayoutTipoBacteria.Controls.Add(checkBoxBacilos);
             flowLayoutTipoBacteria.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutTipoBacteria.Location = new System.Drawing.Point(4, 3);
             flowLayoutTipoBacteria.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -579,42 +585,85 @@ namespace PesqAntibiDesktop
             gridAntibiotico.AllowUserToDeleteRows = false;
             gridAntibiotico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             gridAntibiotico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             gridAntibiotico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle8;
             gridAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             gridAntibiotico.Location = new System.Drawing.Point(0, 0);
             gridAntibiotico.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             gridAntibiotico.Name = "gridAntibiotico";
             gridAntibiotico.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             gridAntibiotico.Size = new System.Drawing.Size(1070, 268);
             gridAntibiotico.TabIndex = 0;
             // 
             // antibioticoBindingSource
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            label1.Location = new System.Drawing.Point(392, 5);
+            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(158, 20);
+            label1.TabIndex = 5;
+            label1.Text = "Morfologia Bacteriana";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // checkBoxCocos
+            // 
+            checkBoxCocos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxCocos.AutoSize = true;
+            checkBoxCocos.Checked = true;
+            checkBoxCocos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxCocos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxCocos.Location = new System.Drawing.Point(558, 3);
+            checkBoxCocos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxCocos.Name = "checkBoxCocos";
+            checkBoxCocos.Size = new System.Drawing.Size(68, 24);
+            checkBoxCocos.TabIndex = 7;
+            checkBoxCocos.Text = "Cocos";
+            checkBoxCocos.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxBacilos
+            // 
+            checkBoxBacilos.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            checkBoxBacilos.AutoSize = true;
+            checkBoxBacilos.Checked = true;
+            checkBoxBacilos.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBoxBacilos.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            checkBoxBacilos.Location = new System.Drawing.Point(634, 3);
+            checkBoxBacilos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBoxBacilos.Name = "checkBoxBacilos";
+            checkBoxBacilos.Size = new System.Drawing.Size(75, 24);
+            checkBoxBacilos.TabIndex = 6;
+            checkBoxBacilos.Text = "Bacilos";
+            checkBoxBacilos.UseVisualStyleBackColor = true;
             // 
             // FormTabela
             // 
@@ -697,5 +746,8 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.Button buttonPesquisar;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.Label labelPesquisarNome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxCocos;
+        private System.Windows.Forms.CheckBox checkBoxBacilos;
     }
 }
