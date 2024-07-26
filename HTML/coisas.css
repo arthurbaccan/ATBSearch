@@ -1,42 +1,91 @@
-select.custom-select {
-    width: 20px; /* largura desejada */
-    height: 25px; /* altura desejada */
-    padding: 5px; /* espaçamento interno */
-    font-size: 16px; /* tamanho da fonte */
-    border: 1px solid #ccc; /* borda */
-    border-radius: 4px; /* borda arredondada */
-    background-color: #fff; /* cor de fundo */
-    color: #333; /* cor do texto */
-    appearance: filtrar; /* remove estilos padrão do sistema */
-}
-
-/* Estilização do hover e foco */
-select.custom-select:hover, select.custom-select:focus {
-    border-color: #999; /* cor da borda ao passar o mouse ou focar */
-}
-
-input.custom-input {
-    width: 90px; 
-    height: 25px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    font-size: 20px; 
-    padding: 0px; 
-    outline: none; 
-}
-
-input.custom-input:hover, input.custom-input:focus {
-    border-color: #999; 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .background-title {
-	background-color: green;
-	color: white;
-	font-size: 100px;
-	margin: 0px;
-	text-align: center;
+    background-color: #00adad; /* Light green */
+    color: white;
+    font-size: 2.5rem;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
 }
 
-body {
-    margin: 0; /* garante que não haja margem no corpo do documento */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #006494; /* Light blue */
+    padding: 10px;
+    gap: 20px; /* Espaçamento entre os itens da barra de navegação */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.navbar div {
+    margin: 0 10px;
+}
+
+.navbar h2 a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.navbar h2 a:hover {
+    text-decoration: underline;
+}
+
+.custom-input, .custom-select {
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.custom-input:focus, .custom-select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
