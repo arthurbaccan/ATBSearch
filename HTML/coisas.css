@@ -8,12 +8,20 @@ body {
 
 .background-title {
     background-color: #00adad; /* Light green */
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2.5rem;
     text-align: left;
-    padding: 20px;
     margin: 0;
+    font-family: 'League Spartan';
+    font-weight: bold;
 }
+
+.resize-image-title {
+    padding-left: 5px;
+    width: 2.6em; /* Slightly larger than the font size (2.5rem) */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 .navbar {
     display: flex;
@@ -29,6 +37,13 @@ body {
     margin: 0 10px;
 }
 
+.alinharHorizontalEsquerdaCentro {
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 10px;
+}
+
 .navbar h2 a {
     color: white;
     text-decoration: none;
@@ -39,7 +54,12 @@ body {
     text-decoration: underline;
 }
 
-.custom-input, .custom-select {
+.container-input {
+    position: relative; /* Estabelece um contexto de posicionamento */
+    display: inline-block; /* Faz o container ter largura apenas do tamanho do seu conteúdo */
+}
+
+.entrada-personalizada {
     width: 200px;
     height: 35px;
     padding: 5px;
@@ -47,12 +67,19 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total do elemento */
 }
 
-.custom-input:focus, .custom-select:focus {
-    border-color: #4caf50;
-    outline: none;
+.icone-input {
+    position: absolute; /* Posiciona o ícone dentro do container */
+    right: 15px; /* Posiciona o ícone a 10px da borda direita do container */
+    top: 50%; /* Centraliza verticalmente o ícone */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    width: 30px; /* Tamanho do ícone (ajuste conforme necessário) */
+    height: 30px; /* Mantém a proporção */
 }
+
+
 
 .iframe-container {
     display: flex;

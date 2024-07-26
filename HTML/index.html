@@ -2,31 +2,38 @@
 <html>
 <head>
     <link rel="stylesheet" href="coisas.css">
-    <title>Prototipo</title>
+	<link rel="stylesheet" href="coisas.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <title>Pesquisador de Antibióticos</title>
 </head>
+
 <body>
-    <div class="background-title">
-        Pesquisador de antibióticos
-    </div>
+	<!--<div style="height: 50px; background-color: #00adad;"></div>!-->
+	<div class="alinharHorizontalEsquerdaCentro background-title">
+    	<div>
+        	Pesquisador de antibióticos
+    	</div>
+		<div>
+			<img class="resize-image-title" src="../Imagens/lupa-com-antibiotico-titulo.png">
+		</div>
+	</div>
     <!-- Barra superior com opções de contato, cadastro, login, pesquisa e filtro -->
     <div class="navbar">
         <!-- Campo de entrada para pesquisa -->
-        <div class="alinharHorizontal">
-            <form>
-                <input class="custom-input" type="text" name="pesquisar" placeholder="Pesquisar">
-            </form>
-            <form>    
-                <select value="1px" name="filtrar" class="custom-select">
-                    <option>Tipo de antibiótico</option>
-                    <option>Tipo de bactéria</option>
-                    <option>Morfologia</option>
-                </select>
-            </form>
-        </div>
+		<div class="alinhamento-horizontal">
+			<form>
+				<div class="container-input">
+					<input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
+					<img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
+				</div>
+			</form>
+		</div>
+
+
         <!-- Link para contato -->
-        <div><h2><a href="">Contato</a> |</h2></div>
+        <div><h2><a href="contato.html">Contato</a> |</h2></div>
         <!-- Link para cadastro -->
-        <div><h2><a href="">Cadastrar</a> |</h2></div>
+        <div><h2><a href="cadastro.html">Cadastrar</a> |</h2></div>
         <!-- Link para login -->
         <div><h2><a href="login.html">Login</a> |</h2></div>
     </div>
