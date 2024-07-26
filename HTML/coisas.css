@@ -7,6 +7,12 @@ body {
     
 }
 
+.centralizador {
+    display: flex; /* Usa Flexbox no contêiner */
+    align-items: center; /* Centraliza verticalmente o botão no contêiner */
+    justify-content: center; /* Centraliza horizontalmente o botão no contêiner */
+}
+
 .titulo-inicial {
     font-family: 'Open Sans', sans-serif; /* Define a fonte como Open Sans */
     font-weight: bold; /* Aplica o estilo bold */
@@ -46,6 +52,36 @@ body {
     padding-left: 5px;
     width: 2.6em; /* Slightly larger than the font size (2.5rem) */
     height: auto; /* Maintain aspect ratio */
+}
+
+.redimensionar-imagem-perfil {
+    width: 50px; 
+    height: auto; /* Maintain aspect ratio */
+    padding-right: 10px;
+}
+
+.redimensionar-imagem-Windows {
+    width: 100px; 
+    height: auto; /* Maintain aspect ratio */
+    text-align: center;
+}
+
+.botao-arredondado {
+    background-color: #00adad; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    padding: 15px 30px; /* Aumenta o espaçamento interno (vertical | horizontal) */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 30px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    font-family: 'Open Sans', sans-serif; /* Define a fonte como Open Sans */
+    font-weight: bold; /* Aplica o estilo bold */
+    background: linear-gradient(90deg, #20e63a, #009dcf); /* Gradiente linear da cor #20e63a para #009dcf */
+}
+
+.botao-arredondado:hover {
+    background-color: #008080; /* Cor de fundo ao passar o mouse */
 }
 
 
