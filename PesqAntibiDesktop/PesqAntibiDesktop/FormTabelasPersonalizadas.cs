@@ -13,8 +13,8 @@ namespace PesqAntibiDesktop
         private int maxFontSize = 20;
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private DataTable table = new DataTable();
-        private List<string> listTabelNamesOpen = new List<string>();
         private bool isSelectingTables = false;
+        private Dictionary<string, FormAbrirTabelaPersonalizada> openTables = new Dictionary<string, FormAbrirTabelaPersonalizada>();
         private List<Button> selectedButtons = new List<Button>();
         public FormTabelasPersonalizadas()
         {
@@ -113,14 +113,24 @@ namespace PesqAntibiDesktop
                 return;
             }
 
-            if (listTabelNamesOpen.Contains(tableName))
+            if (openTables.ContainsKey(tableName))
             {
-                return;
+                try {
+                    // Weird trick so the form is always shown on top of the other windows
+                    openTables[tableName].WindowState = FormWindowState.Minimized;
+                    openTables[tableName].Show();
+                    openTables[tableName].WindowState = FormWindowState.Maximized;
+
+                    return; 
+                }
+                catch (Exception ex) { openTables.Remove(tableName); }
+               
             }
 
             FormAbrirTabelaPersonalizada formAbrirTabelaPersonalizada = new FormAbrirTabelaPersonalizada(tableName, DataAdapter.userId);
             formAbrirTabelaPersonalizada.Show();
-            listTabelNamesOpen.Add(tableName);
+            openTables.Add(tableName, formAbrirTabelaPersonalizada);
+            
         }
 
         private void FormTabelasPersonalizadas_Load(object sender, EventArgs e)
