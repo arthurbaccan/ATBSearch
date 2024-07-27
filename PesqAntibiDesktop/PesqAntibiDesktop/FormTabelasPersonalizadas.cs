@@ -14,6 +14,8 @@ namespace PesqAntibiDesktop
         private SqlDataAdapter dataAdapter = new SqlDataAdapter();
         private DataTable table = new DataTable();
         private bool isSelectingTables = false;
+        // Known bug: if the user opens a table and closes it, the table will not be removed from the dictionary
+        // this doesnt affect the user experience in any way.
         private Dictionary<string, FormAbrirTabelaPersonalizada> openTables = new Dictionary<string, FormAbrirTabelaPersonalizada>();
         private List<Button> selectedButtons = new List<Button>();
         public FormTabelasPersonalizadas()
@@ -83,7 +85,6 @@ namespace PesqAntibiDesktop
 
             }
         }
-
         private void selectButton(Button button)
         {
             selectedButtons.Add(button);
