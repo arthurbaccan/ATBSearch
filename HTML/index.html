@@ -38,7 +38,25 @@
 		<img class="redimensionar-imagem-perfil" src="../Imagens/visitante.png">
     </div>
     <h1 class="titulo-inicial">Como usar</h1>
-    <p class="texto-explicativo">Essa ferramenta funciona do seguinte modo Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam similique culpa, dignissimos veritatis ex, dolores tenetur minus autem placeat labore repellat eius iure ab illum rem eligendi? Iste, architecto sed? Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro animi eum aliquam? Unde numquam laudantium distinctio? Molestias fugiat totam sapiente quo iusto nihil, excepturi, sunt minima saepe ea doloremque voluptates!</p>
+    <p class="texto-explicativo">
+        Nossa ferramenta foi projetada para ser intuitiva e fácil de usar, permitindo encontrar rapidamente os antibióticos procurados. Veja como utilizá-la:
+        <b>Tela de Filtros:</b>
+        Para acessar a tela de filtros, clique no ícone de filtro na barra de pesquisa. Isso abrirá uma janela onde você pode selecionar diferentes categorias para filtrar os antibióticos que aparecem na tabela, por exemplo:
+    </p>
+    <div class="center-list">
+        <ul>
+            <li>Tipo de Bactéria (Gram Negativa, Gram Positiva)</li>
+            <li>Morfologia Bacteriana (Cocos, Bacilos)</li>
+            <li>Tipo de Antibiótico (Macrolídeos, Penicilinas, Cefalosporinas, etc.)</li>
+        </ul>
+    </div>
+    <p class="texto-explicativo">
+        <b>Pesquisa por Nome:</b>
+        Se você já sabe o nome do antibiótico que está procurando, basta digitá-lo no campo de pesquisa e clicar em "Pesquisar". A tabela exibirá os resultados correspondentes à sua busca.
+        <b>Combinação de Filtros:</b>
+        É possível combinar todos os filtros, incluindo o texto na caixa de pesquisa.
+    </p>
+    
     <br>
     <div class="iframe-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/97exk0EVZzc?si=IL0LyMI_iTSbgiSF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -66,84 +84,273 @@
                 <th width="25%">Tipo de bactéria</th>
                 <th width="25%">Morfologia</th>
             </tr>
-            <tr>
-                <td>Oxacilina</td>
-                <td>Penicilina</td>
-                <td>Gram Positiva</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
-            <tr>
-                <td>a</td>
-                <td>b</td>
-                <td>c</td>
-                <td>d</td>
-            </tr>
+            <!-- Macrolídeos -->
+    <tr>
+        <td>Azitromicina</td>
+        <td>Macrolídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <tr>
+        <td>Claritromicina</td>
+        <td>Macrolídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <!-- Penicilinas -->
+    <tr>
+        <td>Oxacilina</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva</td>
+        <td>Cocos</td>
+    </tr>
+    <tr>
+        <td>Ampicilina</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Amoxicilina</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Ampicilina + Sulbactam</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Amoxicilina + Clavulanato</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Penicilina G Benzatina</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Penicilina G Cristalina</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Penicilina G Procaína + Potássica</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Piperacilina + Tazobactam</td>
+        <td>Penicilinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Cefalosporinas -->
+    <tr>
+        <td>Cefalotina</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Cefazolina</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Cefoxitina</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Cefuroxima</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Cefotaxima</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Ceftazidima</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Ceftriaxona</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Cefepima</td>
+        <td>Cefalosporinas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Carbapenêmicos -->
+    <tr>
+        <td>Ertapenem</td>
+        <td>Carbapenêmicos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Imipenem-Cilastatina</td>
+        <td>Carbapenêmicos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Meropenem</td>
+        <td>Carbapenêmicos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Aminoglicosídeos -->
+    <tr>
+        <td>Amicacina</td>
+        <td>Aminoglicosídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Gentamicina</td>
+        <td>Aminoglicosídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Neomicina + Bacitracina</td>
+        <td>Aminoglicosídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Quinolonas -->
+    <tr>
+        <td>Ciprofloxacina</td>
+        <td>Quinolonas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <tr>
+        <td>Levofloxacina</td>
+        <td>Quinolonas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Norfloxacina</td>
+        <td>Quinolonas</td>
+        <td>Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <!-- Anfenicóis -->
+    <tr>
+        <td>Cloranfenicol</td>
+        <td>Anfenicóis</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Sulfonamidas -->
+    <tr>
+        <td>Sulfadiazina</td>
+        <td>Sulfonamidas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Sulfametoxazol-Trimetoprima</td>
+        <td>Sulfonamidas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Glicopeptídeos -->
+    <tr>
+        <td>Teicoplanina</td>
+        <td>Glicopeptídeos</td>
+        <td>Gram Positiva</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <tr>
+        <td>Vancomicina</td>
+        <td>Glicopeptídeos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Nitroimidazólicos -->
+    <tr>
+        <td>Metronidazol</td>
+        <td>Nitroimidazólicos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Licosamidas -->
+    <tr>
+        <td>Clindamicina</td>
+        <td>Licosamidas</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Polimixinas -->
+    <tr>
+        <td>Polimixina B</td>
+        <td>Polimixinas</td>
+        <td>Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <!-- Oxazolidinona -->
+    <tr>
+        <td>Linezolida</td>
+        <td>Oxazolidinona</td>
+        <td>Gram Positiva</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Glicilciclina -->
+    <tr>
+        <td>Tigeciclina</td>
+        <td>Glicilciclina</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Cocos e Bacilos</td>
+    </tr>
+    <!-- Antituberculosos -->
+    <tr>
+        <td>Rifampicina</td>
+        <td>Antituberculosos</td>
+        <td>Gram Positiva e Gram Negativa</td>
+        <td>Bacilos</td>
+    </tr>
+    <tr>
+        <td>Isoniazida</td>
+        <td>Antituberculosos</td>
+        <td>Gram Positiva</td>
+        <td>Bacilos</td>
+    </tr>
+    <tr>
+        <td>Pirazinamida</td>
+        <td>Antituberculosos</td>
+        <td>Gram Positiva</td>
+        <td>Bacilos</td>
+    </tr>
+    <tr>
+        <td>Etambutol</td>
+        <td>Antituberculosos</td>
+        <td>Gram Positiva</td>
+        <td>Bacilos</td>
+    </tr>
         </table>
     </div>
 </body>
