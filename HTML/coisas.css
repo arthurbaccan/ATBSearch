@@ -22,6 +22,7 @@ body {
 .containerLadoaLado {
     display: flex; /* Define um contêiner flexível */
     align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: flex-start;
 }
 
 .tamanhoTelaInteira {
@@ -202,7 +203,7 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: lightgrey;
 }
 
 tr:hover {
