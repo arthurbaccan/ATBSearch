@@ -1,55 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="coisas.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <title>Pesquisador de Antibióticos</title>
 </head>
-
 <body>
 
-    
-    <!-- Barra superior com opções de contato, cadastro, login, pesquisa e filtro -->
+    <!-- Barra superior com opções de contato, cadastro, login, pesquisa e filtro
     <div class="navbar">
-        
-        <div class="containerLadoaLado tituloPrincipal" style="position: absolute; left: 0; margin-top: 10px;">
-            <div>
-                Pesquisador de antibióticos
-            </div>
-            <div>
-                <img class="resize-image-title" src="../Imagens/lupa-com-antibiotico-titulo.png">
-            </div> 
+        <div class="containerLadoaLado tituloPrincipal">
+            <div>Pesquisador de antibióticos</div>
+            <img class="resize-image-title" src="../Imagens/lupa-com-antibiotico-titulo.png" alt="Título">
         </div>
-        <!-- Campo de entrada para pesquisa -->
-        
-		<div class="alinhamento-horizontal">
-			<form>
-				<div class="container-input">
-					<input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
-					<img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
-				</div>
-			</form>
-		</div>
 
+        Campo de entrada para pesquisa
+        <div class="alinhamento-horizontal">
+            <form>
+                <div class="container-input">
+                    <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
+                    <img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
+                </div>
+            </form>
+        </div>
 
-        
-        <!-- Link para contato -->
+        Links para suporte, login e cadastro
         <div><h2><a href="contato.html">Suporte</a></h2></div>
-        <!-- Link para cadastro -->
         <div><h2><a href="login.html">Entrar</a></h2></div>
-        <!-- Link para login -->
         <div><h2><a href="cadastro.html">Cadastrar</a></h2></div>
-		<img class="redimensionar-imagem-perfil" src="../Imagens/visitante.png">
+        <img class="redimensionar-imagem-perfil" src="../Imagens/visitante.png" alt="Perfil">
     </div>
 
-    
-    
-        <!--<div class="divVideo">
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/97exk0EVZzc?si=IL0LyMI_iTSbgiSF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>-->
-
-    </div>
+   
 
     <h1 class="titulo-inicial">Como usar</h1>
     <p class="texto-explicativo">
@@ -57,6 +42,7 @@
         <b>Tela de Filtros:</b>
         Para acessar a tela de filtros, clique no ícone de filtro na barra de pesquisa. Isso abrirá uma janela onde você pode selecionar diferentes categorias para filtrar os antibióticos que aparecem na tabela, por exemplo:
     </p>
+
     <div class="center-list">
         <ul>
             <li>Tipo de Bactéria (Gram Negativa, Gram Positiva)</li>
@@ -64,25 +50,42 @@
             <li>Tipo de Antibiótico (Macrolídeos, Penicilinas, Cefalosporinas, etc.)</li>
         </ul>
     </div>
+
     <p class="texto-explicativo">
         <b>Pesquisa por Nome:</b>
         Se você já sabe o nome do antibiótico que está procurando, basta digitá-lo no campo de pesquisa e clicar em "Pesquisar". A tabela exibirá os resultados correspondentes à sua busca.
         <b>Combinação de Filtros:</b>
         É possível combinar todos os filtros, incluindo o texto na caixa de pesquisa.
     </p>
+
+    <div class="centralizador">
+        <button class="botao-arredondado">Versão Pro</button>
+    </div>
+
+    <div class="esquerda">
+        <img src="../Imagens/Windows.png" class="redimensionar-imagem-Windows" alt="Windows">
+    </div>-->
+
+    <div class="barra-superior">
+        Pesquisador de antibióticos
+        <img class="imagem-titulo" src="../Imagens/lupa-com-antibiotico-titulo.png" alt="Título">
+    </div>
+
+    <div class="itens">
+    <form>
+        <div class="itens-input">
+            <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
+            <img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
+        </div>
+    </form>
     
-    <br>
-
-	<br>
-	<div class="centralizador">
-		<button class="botao-arredondado">Versão Pro</button>
-	</div>
-	<br>
-
-	<div style="text-align: left; margin-bottom: 0px;">
-		<img style="display: inline-block;" src="../Imagens/Windows.png" class="redimensionar-imagem-Windows">
-	</div>
-	
+    <!--Links para suporte, login e cadastro-->
+    <div class="itens-texto"><h2><a class="itens-link" href="contato.html">Suporte</a></h2></div>
+    <div class="itens-texto"><h2><a class="itens-link" href="login.html">Entrar</a></h2></div>
+    <div class="itens-texto"><h2><a class="itens-link" href="cadastro.html">Cadastrar</a></h2></div>
+    <img class="redimensionar-imagem-perfil" src="../Imagens/visitante.png" alt="Perfil">
+    </div>
+    
     <h2 class="titulo-tabela">Tabela com antibióticos</h2>
 
     <!-- Tabela de antibióticos -->
