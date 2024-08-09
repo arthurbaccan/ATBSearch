@@ -207,23 +207,19 @@ div.esquerda {
     text-align: left;
 }
 
+/*==================Separando==================*/
 
 .barra-superior{
     padding-left: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #006494;
     color: white;
-    font-size: 40px;
+    font-size: 60px;
     display: flex; /* Define um contêiner flexível */
     align-items: left;
     justify-content: flex-start;
     font-family: 'Open Sans', sans-serif;
-    
-}
-
-.texto-titulo {
-    font-size: 80px;
     
 }
 
@@ -237,15 +233,26 @@ div.esquerda {
     display: flex;
     align-items: right;
     justify-content: flex-end;
-}
-
-.itens-texto {
-    margin-left: 10px;
-    text-decoration: black;
+    background-color: green;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 20px;
+    padding-bottom: 11px;
+    width: 34%;
+    position: absolute;
+    right: 500px;
 }
 
 .itens-link {
-    color: black;
+    margin-left: 20px;
+    margin-top: 17px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.itens-link:hover {
+    text-decoration: underline;
 }
 
 .itens-input {
@@ -255,9 +262,9 @@ div.esquerda {
 }
 
 .redimensionar-imagem-perfil {
-    width: 50px; 
-    height: 50px; /* Maintain aspect ratio */
-    padding-right: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    padding-right: 11px;
+    margin-top: 7px;
+    margin-left: 20px;
 }
