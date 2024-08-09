@@ -229,6 +229,12 @@ div.esquerda {
     margin-left: 12px;
 }
 
+.posicionar-barra-itens{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .itens{
     display: flex;
     align-items: right;
@@ -238,9 +244,9 @@ div.esquerda {
     border-bottom-right-radius: 15px;
     padding-left: 20px;
     padding-bottom: 11px;
-    width: 34%;
+    /*width: 34%;
     position: absolute;
-    right: 500px;
+    right: 500px;*/
 }
 
 .itens-link {
