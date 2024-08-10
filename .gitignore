@@ -11,11 +11,13 @@ bin
 obj
 packages
 
-.vs/
-[Bb]in/
+/PesqAntibiDesktop/.vs/ProjectEvaluation
+\.vs
+\[Bb]in
 /PesqAntibiDesktop/PesqAntibiDesktop/coisas.css
 /PesqAntibiDesktop/PesqAntibiDesktop/contato.html
 /PesqAntibiDesktop/PesqAntibiDesktop/index.html
 /PesqAntibiDesktop/PesqAntibiDesktop/login.css
 /PesqAntibiDesktop/PesqAntibiDesktop/login.html
 /PesqAntibiDesktop/PesqAntibiDesktop/login.js
+
