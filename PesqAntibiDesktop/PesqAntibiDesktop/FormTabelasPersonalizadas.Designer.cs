@@ -31,6 +31,7 @@
             menuStripTelas = new System.Windows.Forms.MenuStrip();
             tabelaDeAntibióticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             tabelasPersonalizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             labelTituloTab = new System.Windows.Forms.Label();
             flowLayoutPanelTables = new System.Windows.Forms.FlowLayoutPanel();
             buttonCriar = new System.Windows.Forms.Button();
@@ -42,7 +43,8 @@
             buttonDeletarTabela = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
-            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            buttonSalvarNuvem = new System.Windows.Forms.Button();
+            buttonCarregarNuvem = new System.Windows.Forms.Button();
             menuStripTelas.SuspendLayout();
             flowLayoutPanelTables.SuspendLayout();
             panelTopWindow.SuspendLayout();
@@ -72,6 +74,13 @@
             tabelasPersonalizadasToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             tabelasPersonalizadasToolStripMenuItem.Text = "Tabelas Personalizadas";
             tabelasPersonalizadasToolStripMenuItem.Click += tabelasPersonalizadasToolStripMenuItem_Click;
+            // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // labelTituloTab
             // 
@@ -127,9 +136,11 @@
             // 
             flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             flowLayoutPanel1.Controls.Add(buttonRecarregar);
+            flowLayoutPanel1.Controls.Add(buttonCarregarNuvem);
             flowLayoutPanel1.Controls.Add(buttonSelecionarTabelas);
             flowLayoutPanel1.Controls.Add(buttonCancelarSelecao);
             flowLayoutPanel1.Controls.Add(buttonDeletarTabela);
+            flowLayoutPanel1.Controls.Add(buttonSalvarNuvem);
             flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             flowLayoutPanel1.Location = new System.Drawing.Point(0, 111);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -150,7 +161,7 @@
             // buttonSelecionarTabelas
             // 
             buttonSelecionarTabelas.AutoSize = true;
-            buttonSelecionarTabelas.Location = new System.Drawing.Point(133, 3);
+            buttonSelecionarTabelas.Location = new System.Drawing.Point(259, 3);
             buttonSelecionarTabelas.Name = "buttonSelecionarTabelas";
             buttonSelecionarTabelas.Size = new System.Drawing.Size(112, 25);
             buttonSelecionarTabelas.TabIndex = 2;
@@ -162,7 +173,7 @@
             // 
             buttonCancelarSelecao.AutoSize = true;
             buttonCancelarSelecao.BackColor = System.Drawing.SystemColors.Control;
-            buttonCancelarSelecao.Location = new System.Drawing.Point(251, 3);
+            buttonCancelarSelecao.Location = new System.Drawing.Point(377, 3);
             buttonCancelarSelecao.Name = "buttonCancelarSelecao";
             buttonCancelarSelecao.Size = new System.Drawing.Size(106, 25);
             buttonCancelarSelecao.TabIndex = 3;
@@ -174,7 +185,7 @@
             // 
             buttonDeletarTabela.AutoSize = true;
             buttonDeletarTabela.BackColor = System.Drawing.SystemColors.Control;
-            buttonDeletarTabela.Location = new System.Drawing.Point(363, 3);
+            buttonDeletarTabela.Location = new System.Drawing.Point(489, 3);
             buttonDeletarTabela.Name = "buttonDeletarTabela";
             buttonDeletarTabela.Size = new System.Drawing.Size(95, 25);
             buttonDeletarTabela.TabIndex = 1;
@@ -198,12 +209,28 @@
             panel2.Size = new System.Drawing.Size(1070, 15);
             panel2.TabIndex = 4;
             // 
-            // loginToolStripMenuItem
+            // buttonSalvarNuvem
             // 
-            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            loginToolStripMenuItem.Text = "Login";
-            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
+            buttonSalvarNuvem.AutoSize = true;
+            buttonSalvarNuvem.BackColor = System.Drawing.SystemColors.Control;
+            buttonSalvarNuvem.Location = new System.Drawing.Point(590, 3);
+            buttonSalvarNuvem.Name = "buttonSalvarNuvem";
+            buttonSalvarNuvem.Size = new System.Drawing.Size(106, 25);
+            buttonSalvarNuvem.TabIndex = 4;
+            buttonSalvarNuvem.Text = "Salvar na Nuvem";
+            buttonSalvarNuvem.UseVisualStyleBackColor = false;
+            buttonSalvarNuvem.Click += buttonSalvarNuvem_Click;
+            // 
+            // buttonCarregarNuvem
+            // 
+            buttonCarregarNuvem.AutoSize = true;
+            buttonCarregarNuvem.BackColor = System.Drawing.SystemColors.Control;
+            buttonCarregarNuvem.Location = new System.Drawing.Point(133, 3);
+            buttonCarregarNuvem.Name = "buttonCarregarNuvem";
+            buttonCarregarNuvem.Size = new System.Drawing.Size(120, 25);
+            buttonCarregarNuvem.TabIndex = 5;
+            buttonCarregarNuvem.Text = "Carregar da Nuvem";
+            buttonCarregarNuvem.UseVisualStyleBackColor = false;
             // 
             // FormTabelasPersonalizadas
             // 
@@ -244,5 +271,7 @@
         private System.Windows.Forms.Button buttonSelecionarTabelas;
         private System.Windows.Forms.Button buttonCancelarSelecao;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.Button buttonCarregarNuvem;
+        private System.Windows.Forms.Button buttonSalvarNuvem;
     }
 }

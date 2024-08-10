@@ -52,7 +52,7 @@
             panelLogin.Controls.Add(textBoxSenha);
             panelLogin.Controls.Add(textBoxEmailTelefone);
             panelLogin.Controls.Add(label1);
-            panelLogin.Location = new System.Drawing.Point(420, 164);
+            panelLogin.Location = new System.Drawing.Point(92, 119);
             panelLogin.Name = "panelLogin";
             panelLogin.Size = new System.Drawing.Size(260, 342);
             panelLogin.TabIndex = 0;
@@ -132,26 +132,26 @@
             // 
             labelTituloTab.BackColor = System.Drawing.SystemColors.Control;
             labelTituloTab.Dock = System.Windows.Forms.DockStyle.Top;
+            labelTituloTab.Font = new System.Drawing.Font("Yu Gothic Medium", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             labelTituloTab.Location = new System.Drawing.Point(0, 0);
             labelTituloTab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             labelTituloTab.Name = "labelTituloTab";
-            labelTituloTab.Size = new System.Drawing.Size(1070, 79);
+            labelTituloTab.Size = new System.Drawing.Size(414, 79);
             labelTituloTab.TabIndex = 1;
-            labelTituloTab.Text = "Pesquisador de Antibióticos";
+            labelTituloTab.Text = "Conectar com a Nuvem";
             labelTituloTab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            labelTituloTab.SizeChanged += labelTituloTab_SizeChanged;
             // 
-            // FormLogin
+            // FormLoginCloud
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1070, 612);
+            ClientSize = new System.Drawing.Size(414, 522);
             Controls.Add(labelTituloTab);
             Controls.Add(panelLogin);
             Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            Name = "FormLogin";
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Name = "FormLoginCloud";
             Text = "Login";
-            WindowState = System.Windows.Forms.FormWindowState.Maximized;
             Load += FormLogin_Load;
             SizeChanged += FormLogin_SizeChanged;
             panelLogin.ResumeLayout(false);

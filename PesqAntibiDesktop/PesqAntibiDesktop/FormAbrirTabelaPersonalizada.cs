@@ -26,37 +26,13 @@ namespace PesqAntibiDesktop
             this.userId = userId;
         }
 
-        private DataTable getCustomAntibioticData(DataTable dataToChooseFrom)
-        {
-            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM tabelaPersonalizada WHERE nomeTabela = @nomeTabela AND idUsuario = @idUsuario");
-            sqlCommand.Parameters.AddWithValue("@nomeTabela", name);
-            sqlCommand.Parameters.AddWithValue("@idUsuario", userId);
-            sqlCommand.Connection = new SqlConnection(DataAdapter.connectionString);
-
-            DataTable tableAntibioticIds = new DataTable();
-
-            // gets the data of the antibiotics that should appear in the user's table
-            DataLoader.GetDataLocalSafe(sqlCommand, dataAdapter, tableAntibioticIds);
-
-            // Changes the data of the table to include only the user chosen antibioitics
-            // (checks if the antibiotic Id is in the other table and removes the row if not)
-            foreach (DataRow row in dataToChooseFrom.Rows)
-            {
-                if (tableAntibioticIds.Select("idAntibiotico = " + row["id"]).Length == 0)
-                {
-                    row.Delete();
-                }
-            }
-
-            return dataToChooseFrom;
-        }
 
         private void FormTabela_Load(object sender, EventArgs e)
         {
             // gets all the antibiotics in the database
             DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, table);
 
-            table = getCustomAntibioticData(table);
+            table = DataLoader.getCustomAntibioticData(table, name, userId, dataAdapter);
 
             updateDataGrid();
 
@@ -142,7 +118,7 @@ namespace PesqAntibiDesktop
 
 
             DataLoader.GetDataLocal(selectCommand, dataAdapter, table);
-            table = getCustomAntibioticData(table);
+            table = DataLoader.getCustomAntibioticData(table, name, userId, dataAdapter);
             GridLoader.clearGrid(gridAntibiotico);
             updateDataGrid();
         }

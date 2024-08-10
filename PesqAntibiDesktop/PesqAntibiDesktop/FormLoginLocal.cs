@@ -114,6 +114,7 @@ namespace PesqAntibiDesktop
 
             if (loginResult == (int)TipoMensagemLogin.LOGIN_SUCESSO)
             {
+                AuthenticationCloud.cleanAuthentication();
                 closeOtherForms();
             }
         }

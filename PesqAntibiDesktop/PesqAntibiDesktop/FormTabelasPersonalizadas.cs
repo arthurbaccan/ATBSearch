@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
 using Dados;
+using MySql.Data.MySqlClient;
 
 namespace PesqAntibiDesktop
 {
@@ -215,6 +216,50 @@ namespace PesqAntibiDesktop
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MenuClickOpen.formLoginOpen();
+        }
+
+        private void showCloudLoginScreen()
+        {
+            if (Application.OpenForms.OfType<FormLoginCloud>().Count() == 0)
+            {
+                FormLoginCloud formLoginCloud = new FormLoginCloud();
+                formLoginCloud.Show();
+            }
+            else
+            {
+                FormShow.forceShowform(Application.OpenForms.OfType<FormLoginCloud>().First(), false);
+            }
+        }
+
+        private void buttonSalvarNuvem_Click(object sender, EventArgs e)
+        {
+            if (!isSelectingTables)
+            {
+                MessageBox.Show("Selecione uma ou mais tabelas para salvar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (AuthenticationCloud.IsAuthenticated == false)
+            {
+                showCloudLoginScreen();
+                return;
+            }
+
+            DataTable allAntibiotics = new DataTable();
+            DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
+
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            DataTable customTable = new DataTable();
+
+            foreach (Button button in selectedButtons)
+            {
+                customTable.Clear();
+                customTable = DataLoader.getCustomAntibioticData(allAntibiotics, button.Text, AuthenticationLocal.userId.ToString(), dataAdapter);
+                DataSaver.saveTabelaPersonalizadaCloud(customTable, button.Text, mySqlDataAdapter, AuthenticationCloud.userId.ToString());
+            }
+
+            MessageBox.Show("Tabelas salvas com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient; 
 
@@ -334,5 +335,32 @@ namespace Dados
             return selectCommand;
         }
 
+        public static DataTable getCustomAntibioticData(DataTable antibioticsData, string tableName, string userId, SqlDataAdapter dataAdapter)
+        {
+            SqlCommand sqlCommand = new SqlCommand("SELECT * FROM tabelaPersonalizada WHERE nomeTabela = @nomeTabela AND idUsuario = @idUsuario");
+            sqlCommand.Parameters.AddWithValue("@nomeTabela", tableName);
+            sqlCommand.Parameters.AddWithValue("@idUsuario", userId);
+            sqlCommand.Connection = new SqlConnection(DataAdapter.connectionString);
+
+            DataTable tableAntibioticIds = new DataTable();
+
+            // gets the data of the antibiotics that should appear in the user's table
+            DataLoader.GetDataLocalSafe(sqlCommand, dataAdapter, tableAntibioticIds);
+
+            // Changes the data of the table to include only the user chosen antibioitics
+            // (checks if the antibiotic Id is in the other table and removes the row if not)
+            foreach (DataRow row in antibioticsData.Rows)
+            {
+                if (tableAntibioticIds.Select("idAntibiotico = " + row["id"]).Length == 0)
+                {
+                    row.Delete();
+                }
+            }
+
+            return antibioticsData;
+        }
+
     }
+
+    
 }

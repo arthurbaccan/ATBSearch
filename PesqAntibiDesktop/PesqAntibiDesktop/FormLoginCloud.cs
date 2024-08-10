@@ -17,11 +17,6 @@ namespace PesqAntibiDesktop
         {
             InitializeComponent();
             InternetConnectionChecker.isInternetConnected();
-
-            if (InternetConnectionChecker.wasThereConnection)
-            {
-                DataSync.syncAllAntibioticsData();
-            }
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
@@ -38,7 +33,7 @@ namespace PesqAntibiDesktop
 
         private void labelTituloTab_SizeChanged(object sender, EventArgs e)
         {
-            FontSizer.updateFontSize(labelTituloTab, maxFontSize);
+           
         }
 
         private void FormLogin_SizeChanged(object sender, EventArgs e)
@@ -70,41 +65,14 @@ namespace PesqAntibiDesktop
             return loginResult;
         }
 
-        private void closeOtherForms()
-        {
-            
-
-            List<Form> formsToClose = new List<Form>();
-
-            // close all open forms except this one
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form.Name != this.Name)
-                {
-                    formsToClose.Add(form);
-                }
-            }
-
-            foreach (Form form in formsToClose)
-            {
-                form.Close();
-            }
-
-            formsToClose.Clear();
-
-
-            FormTabela formTabela = new FormTabela();
-            formTabela.Show();
-            
-        }
-
         private void buttonEntrar_Click(object sender, EventArgs e)
         {
             int loginResult = tryLoginWithInternet();   
 
             if (loginResult == (int)TipoMensagemLogin.LOGIN_SUCESSO)
             {
-                closeOtherForms();
+                MessageBox.Show("Login efetuado com sucesso. \nClique novamente no botão \"Salvar na Nuvem\" se desejar salvar nesta conta.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }

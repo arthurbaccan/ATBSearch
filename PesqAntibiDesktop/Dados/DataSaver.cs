@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Dados
 {
@@ -46,10 +47,7 @@ namespace Dados
             {   
                 try
                 {
-                    if ((bool)row["adicionar"] == false)
-                    {
-                        continue;
-                    }
+
                     // insert the row in the database
                     using (SqlConnection connection = new SqlConnection(DataAdapter.connectionString))
                     {
@@ -71,6 +69,7 @@ namespace Dados
                 }
                 catch (Exception ex)
                 {
+                    throw ex;
                     return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
                 }
                 
@@ -78,6 +77,59 @@ namespace Dados
 
             return 1;
         }
-       
+
+        public static int saveTabelaPersonalizadaCloud(DataTable table, string name, MySqlDataAdapter MysqlDataAdapter, string userId)
+        {
+            // save the table but using the mysql cloud database
+
+            if (table == null || table.Rows.Count == 0)
+            {
+                return 0;
+            }
+
+            // TODO: check if there's already a row in the database with the same name
+
+            foreach (DataRow row in table.Rows)
+            {
+                if (row.RowState == DataRowState.Deleted)
+                {
+                    continue;
+                }
+
+                try
+                {
+                    // insert the row in the database
+                    using (MySqlConnection connection = new MySqlConnection(DataAdapter.connectionStringMySql))
+                    { 
+                        
+
+                        string insertCommand = "INSERT INTO TabelaPersonalizada (idAntibiotico, idUsuario, nomeTabela) VALUES (@idAntibiotico, @idUsuario, @nomeTabela)";
+                        MySqlCommand command = new MySqlCommand(insertCommand, connection);
+                        command.Parameters.AddWithValue("@idAntibiotico", (int)row["id"]);
+                        command.Parameters.AddWithValue("@idUsuario", userId);
+                        command.Parameters.AddWithValue("@nomeTabela", name);
+
+                        connection.Open();
+
+                        int result = command.ExecuteNonQuery();
+
+                        if (result < 0)
+                        {
+                            return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                    return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
+                }
+
+            }
+
+            return 1;
+        }
+
+
     }
 }

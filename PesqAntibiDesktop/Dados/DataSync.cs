@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Data;
 using System.Data.SqlClient;
 
 
@@ -102,5 +103,7 @@ namespace Dados
             exportMySqlAntibioticoTable();
             updateLocalDbFromSqlFile();
         }
+
+        
     }
 }

@@ -17,6 +17,15 @@ namespace Dados
         public static string? email = null;
         public static string? cellphone = null;
 
+        public static void cleanAuthentication()
+        {
+            IsAuthenticated = false;
+            userId = null;
+            email = null;
+            cellphone = null;
+
+        }
+
         public static bool userAccountExists(string credentialEmailCellphone)
         {
             string selectCommand = "SELECT * FROM Usuario WHERE (email = @credentialEmailCellphone OR telefone = @credentialEmailCellphone)";
