@@ -9,8 +9,25 @@ body {
 
 .centralizador {
     display: flex; /* Usa Flexbox no contêiner */
-    align-items: center; /* Centraliza verticalmente o botão no contêiner */
-    justify-content: center; /* Centraliza horizontalmente o botão no contêiner */
+    align-items: left; /* Centraliza verticalmente o botão no contêiner */
+    justify-content: left; /* Centraliza horizontalmente o botão no contêiner */
+}
+
+.divVideo{
+    width: 40%; 
+    height: 50%;
+    margin-right: 15px;
+}
+
+.containerLadoaLado {
+    display: flex; /* Define um contêiner flexível */
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.tamanhoTelaInteira {
+    width: 100%;
+    height: 100vh;
 }
 
 .titulo-inicial {
@@ -57,28 +74,27 @@ body {
     margin: 10px 0;
 }
 
-
-.background-title {
-    background-color: #00adad; /* Light green */
+.backgroundMain{
+    background-color: #00a4a4; /* Light green */
     color: rgb(0, 0, 0);
-    font-size: 2.5rem;
-    text-align: left;
     margin: 0;
+}
+
+.tituloPrincipal{
     font-family: 'League Spartan';
     font-weight: bold;
+    font-size: 3.2rem;
+    text-align: left;
 }
 
 .resize-image-title {
-    padding-left: 5px;
-    width: 2.6em; /* Slightly larger than the font size (2.5rem) */
+    margin-right: 200px;
+    margin-top: 5px;
+    width: 1.3em; /* Slightly larger than the font size (2.5rem) */
     height: auto; /* Maintain aspect ratio */
 }
 
-.redimensionar-imagem-perfil {
-    width: 50px; 
-    height: auto; /* Maintain aspect ratio */
-    padding-right: 10px;
-}
+
 
 .redimensionar-imagem-Windows {
     width: 100px; 
@@ -136,10 +152,7 @@ body {
     text-decoration: underline;
 }
 
-.container-input {
-    position: relative; /* Estabelece um contexto de posicionamento */
-    display: inline-block; /* Faz o container ter largura apenas do tamanho do seu conteúdo */
-}
+
 
 .entrada-personalizada {
     width: 200px;
@@ -159,14 +172,6 @@ body {
     transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
     width: 30px; /* Tamanho do ícone (ajuste conforme necessário) */
     height: 30px; /* Mantém a proporção */
-}
-
-
-
-.iframe-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
 }
 
 .table-container {
@@ -191,10 +196,81 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: lightgrey;
 }
 
 tr:hover {
     background-color: #f5f5f5;
 }
 
+div.esquerda {
+    text-align: left;
+}
+
+/*==================Separando==================*/
+
+.barra-superior{
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #006494;
+    color: white;
+    font-size: 60px;
+    display: flex; /* Define um contêiner flexível */
+    align-items: left;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.imagem-titulo {
+    width: 1.3em;
+    margin-top: 0px;
+    margin-left: 12px;
+}
+
+.posicionar-barra-itens{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.itens{
+    display: flex;
+    align-items: right;
+    justify-content: flex-end;
+    background-color: green;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-left: 20px;
+    padding-bottom: 11px;
+    /*width: 34%;
+    position: absolute;
+    right: 500px;*/
+}
+
+.itens-link {
+    margin-left: 20px;
+    margin-top: 17px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.itens-link:hover {
+    text-decoration: underline;
+}
+
+.itens-input {
+    position: relative; /* Estabelece um contexto de posicionamento */
+    display: inline-block; /* Faz o container ter largura apenas do tamanho do seu conteúdo */
+    margin-top: 15px;
+}
+
+.redimensionar-imagem-perfil {
+    width: 50px;
+    height: 50px;
+    padding-right: 11px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
