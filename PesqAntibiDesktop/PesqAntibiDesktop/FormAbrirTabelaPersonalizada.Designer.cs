@@ -76,6 +76,7 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
+            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -91,7 +92,7 @@ namespace PesqAntibiDesktop
             // 
             // menuStripTelas
             // 
-            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem });
+            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem, loginToolStripMenuItem });
             menuStripTelas.Location = new System.Drawing.Point(0, 0);
             menuStripTelas.Name = "menuStripTelas";
             menuStripTelas.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -693,6 +694,13 @@ namespace PesqAntibiDesktop
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
             // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
+            // 
             // FormAbrirTabelaPersonalizada
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -779,5 +787,6 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.CheckBox checkBoxBacilos;
         private System.Windows.Forms.Button buttonSelecionarTodosFiltros;
         private System.Windows.Forms.Button buttonLimparFiltros;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }

@@ -16,7 +16,7 @@ namespace PesqAntibiDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTabela());
+            Application.Run(new FormLoginLocal());
         }
     }
 }

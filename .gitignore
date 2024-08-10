@@ -4,17 +4,16 @@
 
 /.vs/Pesquisador-de-Antibioticos/v17
 /PesqAntibiDesktop/.vs/PesqAntibiDesktop
+/PesqAntibiDesktop/.vs/ProjectEvaluation
+/PesqAntibiDesktop/.vs
 *.suo
 *.user
 _ReSharper.*
 bin
 obj
 packages
+*.vs
 
-\.vs
-\[Bb]in
-/PesqAntibiDesktop/.vs/ProjectEvaluation
-/PesqAntibiDesktop/.vs
 /PesqAntibiDesktop/PesqAntibiDesktop/coisas.css
 /PesqAntibiDesktop/PesqAntibiDesktop/contato.html
 /PesqAntibiDesktop/PesqAntibiDesktop/index.html

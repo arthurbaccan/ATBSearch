@@ -46,3 +46,8 @@ C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAn
 C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\net8.0-windows\PesqAntibiDesktop.pdb
 C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\net8.0-windows\PesqAntibiDesktop.genruntimeconfig.cache
 C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\net8.0-windows\ref\PesqAntibiDesktop.dll
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\obj\Debug\net8.0-windows\PesqAntibiDesktop.FormLogin.resources
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\net8.0-windows\MySqlBackup.dll
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\net8.0-windows\APP_DATA\Database1 - Copy.mdf
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\net8.0-windows\APP_DATA\Database1_log - Copy (2).ldf
+C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Debug\net8.0-windows\APP_DATA\Database1_log - Copy - Copy.ldf

@@ -59,7 +59,7 @@ namespace PesqAntibiDesktop
 
         private void createButtonOpenTables()
         {
-            string selectString = "SELECT * FROM tabelaPersonalizada where idUsuario='" + DataAdapter.userId + "'";
+            string selectString = "SELECT * FROM tabelaPersonalizada where idUsuario='" + AuthenticationLocal.userId.ToString() + "'";
             dataAdapter = DataAdapter.getDataAdapter(selectString, dataAdapter, DataAdapter.connectionString);
             table.Clear();
             dataAdapter.Fill(table);
@@ -116,22 +116,23 @@ namespace PesqAntibiDesktop
 
             if (openTables.ContainsKey(tableName))
             {
-                try {
+                try
+                {
                     // Weird trick so the form is always shown on top of the other windows
                     openTables[tableName].WindowState = FormWindowState.Minimized;
                     openTables[tableName].Show();
                     openTables[tableName].WindowState = FormWindowState.Maximized;
 
-                    return; 
+                    return;
                 }
                 catch (Exception ex) { openTables.Remove(tableName); }
-               
+
             }
 
-            FormAbrirTabelaPersonalizada formAbrirTabelaPersonalizada = new FormAbrirTabelaPersonalizada(tableName, DataAdapter.userId);
+            FormAbrirTabelaPersonalizada formAbrirTabelaPersonalizada = new FormAbrirTabelaPersonalizada(tableName, AuthenticationLocal.userId.ToString());
             formAbrirTabelaPersonalizada.Show();
             openTables.Add(tableName, formAbrirTabelaPersonalizada);
-            
+
         }
 
         private void FormTabelasPersonalizadas_Load(object sender, EventArgs e)
@@ -176,13 +177,13 @@ namespace PesqAntibiDesktop
 
             foreach (Button button in selectedButtons)
             {
-                DataDeleter.deleteCustomTable(button.Text, DataAdapter.userId);
+                DataDeleter.deleteCustomTable(button.Text, AuthenticationLocal.userId.ToString());
             }
 
             cancelSelection();
 
             refreshCustomTables();
-            
+
         }
 
         private void removeAllTableNameButtons()
@@ -209,6 +210,11 @@ namespace PesqAntibiDesktop
             }
 
             refreshCustomTables();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuClickOpen.formLoginOpen();
         }
     }
 }

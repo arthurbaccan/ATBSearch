@@ -232,11 +232,11 @@ namespace PesqAntibiDesktop
         {
             if (Application.OpenForms.OfType<FormNomeTabela>().Count() > 0)
             {
-                Application.OpenForms.OfType<FormNomeTabela>().First().BringToFront();
+                FormShow.forceShowform(Application.OpenForms.OfType<FormNomeTabela>().First(), false);
                 return;
             }
 
-            FormNomeTabela formNomeTabela = new FormNomeTabela(tableAdicionar, dataAdapter, "0");
+            FormNomeTabela formNomeTabela = new FormNomeTabela(tableAdicionar, dataAdapter, AuthenticationLocal.userId.ToString());
             formNomeTabela.Show();
         }
 
@@ -246,6 +246,21 @@ namespace PesqAntibiDesktop
             {
                 Application.OpenForms.OfType<FormNomeTabela>().First().Close();
             }
+        }
+
+        private void buttonLimparFiltros_Click(object sender, EventArgs e)
+        {
+            FilterControler.cleanFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria, textBoxNome);
+        }
+
+        private void buttonSelecionarTodosFiltros_Click(object sender, EventArgs e)
+        {
+            FilterControler.selectAllFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria);
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuClickOpen.formLoginOpen();
         }
     }
 }

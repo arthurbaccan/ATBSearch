@@ -30,9 +30,9 @@ namespace PesqAntibiDesktop
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             menuStripTelas = new System.Windows.Forms.MenuStrip();
             tabelaDeAntibióticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             tabelasPersonalizadasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +76,7 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
+            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -91,7 +92,7 @@ namespace PesqAntibiDesktop
             // 
             // menuStripTelas
             // 
-            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem });
+            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem, loginToolStripMenuItem });
             menuStripTelas.Location = new System.Drawing.Point(0, 0);
             menuStripTelas.Name = "menuStripTelas";
             menuStripTelas.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -656,42 +657,49 @@ namespace PesqAntibiDesktop
             gridAntibiotico.AllowUserToDeleteRows = false;
             gridAntibiotico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             gridAntibiotico.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             gridAntibiotico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            gridAntibiotico.DefaultCellStyle = dataGridViewCellStyle11;
             gridAntibiotico.Dock = System.Windows.Forms.DockStyle.Fill;
             gridAntibiotico.Location = new System.Drawing.Point(0, 0);
             gridAntibiotico.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             gridAntibiotico.Name = "gridAntibiotico";
             gridAntibiotico.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            gridAntibiotico.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             gridAntibiotico.Size = new System.Drawing.Size(1070, 268);
             gridAntibiotico.TabIndex = 0;
             // 
             // antibioticoBindingSource
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
+            // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // FormTabela
             // 
@@ -779,5 +787,6 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.CheckBox checkBoxBacilos;
         private System.Windows.Forms.Button buttonSelecionarTodosFiltros;
         private System.Windows.Forms.Button buttonLimparFiltros;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }

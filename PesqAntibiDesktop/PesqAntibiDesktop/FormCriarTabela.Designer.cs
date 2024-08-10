@@ -67,6 +67,8 @@ namespace PesqAntibiDesktop
             checkBoxGlicilciclina = new System.Windows.Forms.CheckBox();
             checkBoxAntituberculosos = new System.Windows.Forms.CheckBox();
             panel1 = new System.Windows.Forms.Panel();
+            buttonSelecionarTodosFiltros = new System.Windows.Forms.Button();
+            buttonLimparFiltros = new System.Windows.Forms.Button();
             buttonCriarTabela = new System.Windows.Forms.Button();
             buttonLimparSelecao = new System.Windows.Forms.Button();
             buttonSelecionarTodos = new System.Windows.Forms.Button();
@@ -77,6 +79,7 @@ namespace PesqAntibiDesktop
             panelGrid = new System.Windows.Forms.Panel();
             gridAntibiotico = new System.Windows.Forms.DataGridView();
             antibioticoBindingSource = new System.Windows.Forms.BindingSource(components);
+            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             menuStripTelas.SuspendLayout();
             panelControles.SuspendLayout();
             panelControlesLabel.SuspendLayout();
@@ -92,7 +95,7 @@ namespace PesqAntibiDesktop
             // 
             // menuStripTelas
             // 
-            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem });
+            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem, loginToolStripMenuItem });
             menuStripTelas.Location = new System.Drawing.Point(0, 0);
             menuStripTelas.Name = "menuStripTelas";
             menuStripTelas.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -564,6 +567,8 @@ namespace PesqAntibiDesktop
             // 
             // panel1
             // 
+            panel1.Controls.Add(buttonSelecionarTodosFiltros);
+            panel1.Controls.Add(buttonLimparFiltros);
             panel1.Controls.Add(buttonCriarTabela);
             panel1.Controls.Add(buttonLimparSelecao);
             panel1.Controls.Add(buttonSelecionarTodos);
@@ -576,23 +581,48 @@ namespace PesqAntibiDesktop
             panel1.Size = new System.Drawing.Size(1062, 33);
             panel1.TabIndex = 13;
             // 
+            // buttonSelecionarTodosFiltros
+            // 
+            buttonSelecionarTodosFiltros.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            buttonSelecionarTodosFiltros.AutoSize = true;
+            buttonSelecionarTodosFiltros.Location = new System.Drawing.Point(351, 0);
+            buttonSelecionarTodosFiltros.Name = "buttonSelecionarTodosFiltros";
+            buttonSelecionarTodosFiltros.Size = new System.Drawing.Size(110, 27);
+            buttonSelecionarTodosFiltros.TabIndex = 15;
+            buttonSelecionarTodosFiltros.Text = "Selecionar Filtros";
+            buttonSelecionarTodosFiltros.UseVisualStyleBackColor = true;
+            buttonSelecionarTodosFiltros.Click += buttonSelecionarTodosFiltros_Click;
+            // 
+            // buttonLimparFiltros
+            // 
+            buttonLimparFiltros.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            buttonLimparFiltros.AutoSize = true;
+            buttonLimparFiltros.Location = new System.Drawing.Point(235, 0);
+            buttonLimparFiltros.Name = "buttonLimparFiltros";
+            buttonLimparFiltros.Size = new System.Drawing.Size(110, 27);
+            buttonLimparFiltros.TabIndex = 14;
+            buttonLimparFiltros.Text = "Limpar Filtros";
+            buttonLimparFiltros.UseVisualStyleBackColor = true;
+            buttonLimparFiltros.Click += buttonLimparFiltros_Click;
+            // 
             // buttonCriarTabela
             // 
             buttonCriarTabela.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            buttonCriarTabela.Location = new System.Drawing.Point(236, 2);
+            buttonCriarTabela.BackColor = System.Drawing.Color.LightCyan;
+            buttonCriarTabela.Location = new System.Drawing.Point(468, 0);
             buttonCriarTabela.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             buttonCriarTabela.Name = "buttonCriarTabela";
             buttonCriarTabela.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             buttonCriarTabela.Size = new System.Drawing.Size(110, 27);
             buttonCriarTabela.TabIndex = 13;
             buttonCriarTabela.Text = "Criar Tabela";
-            buttonCriarTabela.UseVisualStyleBackColor = true;
+            buttonCriarTabela.UseVisualStyleBackColor = false;
             buttonCriarTabela.Click += buttonCriarTabela_Click;
             // 
             // buttonLimparSelecao
             // 
             buttonLimparSelecao.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            buttonLimparSelecao.Location = new System.Drawing.Point(118, 2);
+            buttonLimparSelecao.Location = new System.Drawing.Point(1, 0);
             buttonLimparSelecao.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             buttonLimparSelecao.Name = "buttonLimparSelecao";
             buttonLimparSelecao.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -605,7 +635,7 @@ namespace PesqAntibiDesktop
             // buttonSelecionarTodos
             // 
             buttonSelecionarTodos.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            buttonSelecionarTodos.Location = new System.Drawing.Point(0, 2);
+            buttonSelecionarTodos.Location = new System.Drawing.Point(118, 0);
             buttonSelecionarTodos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             buttonSelecionarTodos.Name = "buttonSelecionarTodos";
             buttonSelecionarTodos.Size = new System.Drawing.Size(110, 27);
@@ -710,6 +740,13 @@ namespace PesqAntibiDesktop
             // 
             antibioticoBindingSource.DataMember = "antibiotico";
             // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
+            // 
             // FormCriarTabela
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -798,5 +835,8 @@ namespace PesqAntibiDesktop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBoxCocos;
         private System.Windows.Forms.CheckBox checkBoxBacilos;
+        private System.Windows.Forms.Button buttonSelecionarTodosFiltros;
+        private System.Windows.Forms.Button buttonLimparFiltros;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }

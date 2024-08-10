@@ -126,7 +126,12 @@ namespace PesqAntibiDesktop
 
         private void buttonSelecionarTodosFiltros_Click(object sender, EventArgs e)
         {
-           FilterControler.selectAllFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria);
+            FilterControler.selectAllFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria);
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuClickOpen.formLoginOpen();
         }
     }
 }

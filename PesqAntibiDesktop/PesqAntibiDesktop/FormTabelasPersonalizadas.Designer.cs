@@ -42,6 +42,7 @@
             buttonDeletarTabela = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
+            loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             menuStripTelas.SuspendLayout();
             flowLayoutPanelTables.SuspendLayout();
             panelTopWindow.SuspendLayout();
@@ -50,7 +51,7 @@
             // 
             // menuStripTelas
             // 
-            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem });
+            menuStripTelas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { tabelaDeAntibióticosToolStripMenuItem, tabelasPersonalizadasToolStripMenuItem, loginToolStripMenuItem });
             menuStripTelas.Location = new System.Drawing.Point(0, 0);
             menuStripTelas.Name = "menuStripTelas";
             menuStripTelas.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
@@ -197,6 +198,13 @@
             panel2.Size = new System.Drawing.Size(1070, 15);
             panel2.TabIndex = 4;
             // 
+            // loginToolStripMenuItem
+            // 
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
+            // 
             // FormTabelasPersonalizadas
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -235,5 +243,6 @@
         private System.Windows.Forms.Button buttonDeletarTabela;
         private System.Windows.Forms.Button buttonSelecionarTabelas;
         private System.Windows.Forms.Button buttonCancelarSelecao;
+        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
     }
 }

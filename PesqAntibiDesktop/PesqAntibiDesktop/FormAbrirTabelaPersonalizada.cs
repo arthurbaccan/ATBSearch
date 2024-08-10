@@ -68,7 +68,7 @@ namespace PesqAntibiDesktop
             {
                 return;
             }
-            
+
             GridLoader.addDefaultCollumns(gridAntibiotico);
 
             // Populate the columns with formatted the data from the data table
@@ -165,6 +165,11 @@ namespace PesqAntibiDesktop
         private void buttonSelecionarTodosFiltros_Click(object sender, EventArgs e)
         {
             FilterControler.selectAllFilters(flowLayoutTipoAntibiotico, flowLayoutTipoBacteria);
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MenuClickOpen.formLoginOpen();
         }
     }
 }

@@ -5,8 +5,8 @@ namespace Dados
 {
     public abstract class DataAdapter
     {
-        public static string userId = "0";
         public static readonly string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\arthu\\source\\repos\\Pesquisador-de-Antibioticos\\PesqAntibiDesktop\\PesqAntibiDesktop\\APP_DATA\\Database1.mdf;Integrated Security=True";
+        public static readonly string connectionStringMySql = "server=143.106.241.3;user=cl203248;database=cl203248;password=cl*07062008; Allow Zero Datetime=true";
         /// <summary>
         /// Gets a data adapter based on the specified command and connection string. Works with
         /// Select

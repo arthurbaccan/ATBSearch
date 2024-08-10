@@ -176,6 +176,18 @@
           }
         }
       },
+      "MySqlBackup.NET/2.3.8": {
+        "type": "package",
+        "dependencies": {
+          "MySql.Data": "8.0.32"
+        },
+        "compile": {
+          "lib/net6.0/MySqlBackup.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MySqlBackup.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -633,6 +645,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "MySql.Data": "9.0.0",
+          "MySqlBackup.NET": "2.3.8",
           "System.Data.SqlClient": "4.8.6"
         },
         "compile": {
@@ -927,6 +941,23 @@
         "runtimes/win-x64/native/k5sprt64.dll",
         "runtimes/win-x64/native/krb5_64.dll",
         "runtimes/win-x64/native/krbcc64.dll"
+      ]
+    },
+    "MySqlBackup.NET/2.3.8": {
+      "sha512": "hFnfx3GcMSl/bqYlsW7VLhWlS4KpSX6zi8ZAMAq456h+jUb8aBBO/gVPuGE9y3Lapi1ibiW5rwvTRQT18x4ecA==",
+      "type": "package",
+      "path": "mysqlbackup.net/2.3.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net48/MySqlBackup.dll",
+        "lib/net481/MySqlBackup.dll",
+        "lib/net6.0/MySqlBackup.dll",
+        "lib/netstandard2.0/MySqlBackup.dll",
+        "lib/netstandard2.1/MySqlBackup.dll",
+        "mysqlbackup.net.2.3.8.nupkg.sha512",
+        "mysqlbackup.net.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
