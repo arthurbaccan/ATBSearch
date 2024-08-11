@@ -44,7 +44,12 @@ namespace Dados
             }
 
             foreach (DataRow row in table.Rows)
-            {   
+            {
+                if ((bool)row["Adicionar"] == false)
+                {
+                    continue;
+                }
+
                 try
                 {
 
@@ -68,8 +73,7 @@ namespace Dados
                     }
                 }
                 catch (Exception ex)
-                {
-                    throw ex;
+                { 
                     return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
                 }
                 
@@ -121,7 +125,6 @@ namespace Dados
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
                     return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
                 }
 
