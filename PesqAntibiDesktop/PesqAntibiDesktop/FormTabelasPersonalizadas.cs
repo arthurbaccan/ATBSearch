@@ -245,21 +245,43 @@ namespace PesqAntibiDesktop
                 return;
             }
 
-            DataTable allAntibiotics = new DataTable();
-            DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
+           
 
             MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
-            DataTable customTable = new DataTable();
 
             foreach (Button button in selectedButtons)
             {
-                customTable.Clear();
+                DataTable allAntibiotics = new DataTable();
+                DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
+                DataTable customTable = new DataTable();
                 customTable = DataLoader.getCustomAntibioticData(allAntibiotics, button.Text, AuthenticationLocal.userId.ToString(), dataAdapter);
                 DataSaver.saveTabelaPersonalizadaCloud(customTable, button.Text, mySqlDataAdapter, AuthenticationCloud.userId.ToString());
             }
 
             MessageBox.Show("Tabelas salvas com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
+        }
+
+
+        private static string getTableDataString(DataTable dataTable)
+        {
+            string stringOutput = "";
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                
+                if (row.RowState == DataRowState.Deleted)
+                {
+                    continue;
+                }
+
+                stringOutput += $"ID: {row[0]}, Name: {row[1]}\n";
+                
+            }
+
+            return stringOutput;
+
+
         }
     }
 }
