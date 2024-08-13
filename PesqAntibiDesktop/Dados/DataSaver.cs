@@ -91,21 +91,21 @@ namespace Dados
                 return 0;
             }
 
-            // TODO: check if there's already a row in the database with the same name
 
-            foreach (DataRow row in table.Rows)
+            using (MySqlConnection connection = new MySqlConnection(DataAdapter.connectionStringMySql))
             {
-                if (row.RowState == DataRowState.Deleted)
+                foreach (DataRow row in table.Rows)
                 {
-                    continue;
-                }
+                    if (row.RowState == DataRowState.Deleted)
+                    {
+                        continue;
+                    }
 
-                try
-                {
-                    // insert the row in the database
-                    using (MySqlConnection connection = new MySqlConnection(DataAdapter.connectionStringMySql))
-                    { 
-                        
+                    try
+                    {
+                        // insert the row in the database
+
+
 
                         string insertCommand = "INSERT INTO TabelaPersonalizada (idAntibiotico, idUsuario, nomeTabela) VALUES (@idAntibiotico, @idUsuario, @nomeTabela)";
                         MySqlCommand command = new MySqlCommand(insertCommand, connection);
@@ -113,7 +113,8 @@ namespace Dados
                         command.Parameters.AddWithValue("@idUsuario", userId);
                         command.Parameters.AddWithValue("@nomeTabela", name);
 
-                        connection.Open();
+                        if (connection.State == ConnectionState.Closed) connection.Open();
+
 
                         int result = command.ExecuteNonQuery();
 
@@ -121,11 +122,12 @@ namespace Dados
                         {
                             return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
                         }
+
                     }
-                }
-                catch (Exception ex)
-                {
-                    return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
+                    catch (Exception ex)
+                    {
+                        return (int)TipoErroSalvarTabela.ERRO_DESCONHECIDO;
+                    }
                 }
 
             }

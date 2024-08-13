@@ -1,1 +1,0 @@
-C:\Users\arthu\Source\Repos\Pesquisador-de-Antibioticos\PesqAntibiDesktop\PesqAntibiDesktop\bin\Release\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
