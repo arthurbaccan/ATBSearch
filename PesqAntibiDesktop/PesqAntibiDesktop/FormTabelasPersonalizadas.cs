@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dados;
 using MySql.Data.MySqlClient;
@@ -231,35 +232,60 @@ namespace PesqAntibiDesktop
             }
         }
 
-        private void buttonSalvarNuvem_Click(object sender, EventArgs e)
+        bool isSavingCloud = false;
+
+        private async void buttonSalvarNuvem_Click(object sender, EventArgs e)
         {
+
+            if (isSavingCloud)
+            {
+                MessageBox.Show("Aguarde até que o processo de salvar as tabelas na nuvem seja concluído", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            isSavingCloud = true;
+
             if (!isSelectingTables)
             {
                 MessageBox.Show("Selecione uma ou mais tabelas para salvar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isSavingCloud = false;
                 return;
             }
 
             if (AuthenticationCloud.IsAuthenticated == false)
             {
                 showCloudLoginScreen();
+                isSavingCloud = false;
                 return;
             }
 
-           
-
-            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            // Create a list to hold the tasks
+            List<Task> tasks = new List<Task>();
 
             foreach (Button button in selectedButtons)
             {
-                DataTable allAntibiotics = new DataTable();
-                DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
-                DataTable customTable = new DataTable();
-                customTable = DataLoader.getCustomAntibioticData(allAntibiotics, button.Text, AuthenticationLocal.userId.ToString(), dataAdapter);
-                DataSaver.saveTabelaPersonalizadaCloud(customTable, button.Text, mySqlDataAdapter, AuthenticationCloud.userId.ToString());
+                // Add each task to the list
+                tasks.Add(Task.Run(() => saveCustomTableToCloud(button, dataAdapter)));
             }
 
+            // Wait for all the tasks to complete
+            await Task.WhenAll(tasks);
+
             MessageBox.Show("Tabelas salvas com sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
+            isSavingCloud = false;
+
+        }
+
+        private static void saveCustomTableToCloud(Button button, SqlDataAdapter dataAdapter)
+        {
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            DataTable allAntibiotics = new DataTable();
+            DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
+            DataTable customTable = new DataTable();
+            customTable = DataLoader.getCustomAntibioticData(allAntibiotics, button.Text, AuthenticationLocal.userId.ToString(), dataAdapter);
+            DataDeleter.deleteTableDataCloud(button.Text, AuthenticationCloud.userId.ToString(), mySqlDataAdapter);
+            DataSaver.saveTabelaPersonalizadaCloud(customTable, button.Text, mySqlDataAdapter, AuthenticationCloud.userId.ToString());
         }
 
 
@@ -269,19 +295,47 @@ namespace PesqAntibiDesktop
 
             foreach (DataRow row in dataTable.Rows)
             {
-                
+
                 if (row.RowState == DataRowState.Deleted)
                 {
                     continue;
                 }
 
                 stringOutput += $"ID: {row[0]}, Name: {row[1]}\n";
-                
+
             }
 
             return stringOutput;
 
 
+        }
+
+        private void buttonCarregarNuvem_Click(object sender, EventArgs e)
+        {
+            if (isSavingCloud)
+            {
+                MessageBox.Show("Aguarde até que o processo de salvar as tabelas na nuvem seja concluído", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (AuthenticationCloud.IsAuthenticated == false)
+            {
+                showCloudLoginScreen();
+                return;
+            }
+
+
+        }
+
+        private static void loadCustomTableFromCloud(Button button, SqlDataAdapter dataAdapter)
+        {
+            MySqlDataAdapter mySqlDataAdapter = new MySqlDataAdapter();
+            DataTable allAntibiotics = new DataTable();
+            DataLoader.GetDataLocal("SELECT * FROM antibiotico", dataAdapter, allAntibiotics);
+            DataTable customTable = new DataTable();
+            customTable = DataLoader.getCustomAntibioticData(allAntibiotics, button.Text, AuthenticationLocal.userId.ToString(), dataAdapter);
+            DataDeleter.deleteTableDataCloud(button.Text, AuthenticationCloud.userId.ToString(), mySqlDataAdapter);
+            DataSaver.saveTabelaPersonalizadaCloud(customTable, button.Text, mySqlDataAdapter, AuthenticationCloud.userId.ToString());
         }
     }
 }

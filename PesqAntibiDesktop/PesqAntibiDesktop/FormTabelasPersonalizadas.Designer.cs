@@ -38,13 +38,13 @@
             panelTopWindow = new System.Windows.Forms.Panel();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             buttonRecarregar = new System.Windows.Forms.Button();
+            buttonCarregarNuvem = new System.Windows.Forms.Button();
             buttonSelecionarTabelas = new System.Windows.Forms.Button();
             buttonCancelarSelecao = new System.Windows.Forms.Button();
             buttonDeletarTabela = new System.Windows.Forms.Button();
+            buttonSalvarNuvem = new System.Windows.Forms.Button();
             panel3 = new System.Windows.Forms.Panel();
             panel2 = new System.Windows.Forms.Panel();
-            buttonSalvarNuvem = new System.Windows.Forms.Button();
-            buttonCarregarNuvem = new System.Windows.Forms.Button();
             menuStripTelas.SuspendLayout();
             flowLayoutPanelTables.SuspendLayout();
             panelTopWindow.SuspendLayout();
@@ -158,6 +158,18 @@
             buttonRecarregar.UseVisualStyleBackColor = true;
             buttonRecarregar.Click += buttonRecarregar_Click;
             // 
+            // buttonCarregarNuvem
+            // 
+            buttonCarregarNuvem.AutoSize = true;
+            buttonCarregarNuvem.BackColor = System.Drawing.SystemColors.Control;
+            buttonCarregarNuvem.Location = new System.Drawing.Point(133, 3);
+            buttonCarregarNuvem.Name = "buttonCarregarNuvem";
+            buttonCarregarNuvem.Size = new System.Drawing.Size(120, 25);
+            buttonCarregarNuvem.TabIndex = 5;
+            buttonCarregarNuvem.Text = "Carregar da Nuvem";
+            buttonCarregarNuvem.UseVisualStyleBackColor = false;
+            buttonCarregarNuvem.Click += buttonCarregarNuvem_Click;
+            // 
             // buttonSelecionarTabelas
             // 
             buttonSelecionarTabelas.AutoSize = true;
@@ -193,6 +205,18 @@
             buttonDeletarTabela.UseVisualStyleBackColor = false;
             buttonDeletarTabela.Click += buttonDeletarTabela_Click;
             // 
+            // buttonSalvarNuvem
+            // 
+            buttonSalvarNuvem.AutoSize = true;
+            buttonSalvarNuvem.BackColor = System.Drawing.SystemColors.Control;
+            buttonSalvarNuvem.Location = new System.Drawing.Point(590, 3);
+            buttonSalvarNuvem.Name = "buttonSalvarNuvem";
+            buttonSalvarNuvem.Size = new System.Drawing.Size(106, 25);
+            buttonSalvarNuvem.TabIndex = 4;
+            buttonSalvarNuvem.Text = "Salvar na Nuvem";
+            buttonSalvarNuvem.UseVisualStyleBackColor = false;
+            buttonSalvarNuvem.Click += buttonSalvarNuvem_Click;
+            // 
             // panel3
             // 
             panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -208,29 +232,6 @@
             panel2.Name = "panel2";
             panel2.Size = new System.Drawing.Size(1070, 15);
             panel2.TabIndex = 4;
-            // 
-            // buttonSalvarNuvem
-            // 
-            buttonSalvarNuvem.AutoSize = true;
-            buttonSalvarNuvem.BackColor = System.Drawing.SystemColors.Control;
-            buttonSalvarNuvem.Location = new System.Drawing.Point(590, 3);
-            buttonSalvarNuvem.Name = "buttonSalvarNuvem";
-            buttonSalvarNuvem.Size = new System.Drawing.Size(106, 25);
-            buttonSalvarNuvem.TabIndex = 4;
-            buttonSalvarNuvem.Text = "Salvar na Nuvem";
-            buttonSalvarNuvem.UseVisualStyleBackColor = false;
-            buttonSalvarNuvem.Click += buttonSalvarNuvem_Click;
-            // 
-            // buttonCarregarNuvem
-            // 
-            buttonCarregarNuvem.AutoSize = true;
-            buttonCarregarNuvem.BackColor = System.Drawing.SystemColors.Control;
-            buttonCarregarNuvem.Location = new System.Drawing.Point(133, 3);
-            buttonCarregarNuvem.Name = "buttonCarregarNuvem";
-            buttonCarregarNuvem.Size = new System.Drawing.Size(120, 25);
-            buttonCarregarNuvem.TabIndex = 5;
-            buttonCarregarNuvem.Text = "Carregar da Nuvem";
-            buttonCarregarNuvem.UseVisualStyleBackColor = false;
             // 
             // FormTabelasPersonalizadas
             // 

@@ -71,7 +71,7 @@ namespace PesqAntibiDesktop
 
             if (loginResult == (int)TipoMensagemLogin.LOGIN_SUCESSO)
             {
-                MessageBox.Show("Login efetuado com sucesso. \nClique novamente no botão \"Salvar na Nuvem\" se desejar salvar nesta conta.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login efetuado com sucesso. \nClique no botão \"Salvar na Nuvem\" ou \"Carregar da Nuvem\" se desejar salvar ou carregar desta conta.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
         }
