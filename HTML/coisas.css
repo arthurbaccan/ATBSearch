@@ -213,6 +213,7 @@ div.esquerda {
     padding-left: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
+    width: auto;
     background-color: #006494;
     color: white;
     font-size: 60px;
@@ -273,4 +274,10 @@ div.esquerda {
     padding-right: 11px;
     margin-top: 7px;
     margin-left: 20px;
+}
+
+.texto {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 20px;
 }
