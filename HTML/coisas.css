@@ -209,18 +209,32 @@ div.esquerda {
 
 /*==================Separando==================*/
 
-.barra-superior{
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+.barra-superior {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     background-color: #006494;
     color: white;
-    font-size: 63px;
+    font-size: 53px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
     gap: 20px;
+
+    /* Aplicar o gradiente que vai do azul para a imagem */
+    background: linear-gradient(
+        90deg, 
+        #006494 48%, /* Azul sólido na esquerda */
+        rgba(0, 100, 148, 0) 70%, /* Transição para transparente */
+        rgba(0, 0, 0, 0) 0%, /* Transição para a imagem */
+        rgba(0, 0, 0, 0) 100%
+    ), url("../Imagens/antibioticos2.jpg"); /* Imagem de fundo */
+
+    background-position: right center; /* Posiciona a imagem no canto direito */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    background-size: cover; /* Garante que a imagem cobre o espaço disponível */
 }
+
 
 .imagem-titulo {
     width: 2.1em;
@@ -232,9 +246,10 @@ div.esquerda {
 .imagem-titulo2 {
     width: 100%;
     height: 170px;
-    margin-top: 0px;
+    margin-bottom: 0%;
     object-fit: cover;
-    box-shadow: -30px 10px 30px #00202e;
+    /*box-shadow: -30px -3px 30px #00202e;*/
+    background-image: linear-gradient( 90deg, #006494, #03030d);
 }
 
 .posicionar-barra-itens{
