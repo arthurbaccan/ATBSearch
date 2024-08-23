@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="coisas.css">
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <title>Pesquisador de Antibióticos</title>
@@ -70,29 +70,21 @@
         
         <img class="imagem-titulo" src="../Imagens/lupa-com-antibiotico-titulo.png" alt="Título">
         Pesquisador de antibióticos
-        <!--<img class="imagem-titulo2" src="../Imagens/antibioticos2.jpg" >-->
     </div>
 
     <div class="posicionar-barra-itens">
 
         <div class="itens">
-            <form>
-                <div class="itens-input">
-                    <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
-                    <img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
-                </div>
-            </form>
-
-    
-    
-        <!--Links para suporte, login e cadastro-->
         <a class="itens-link" href="contato.html">Suporte</a>
         <a class="itens-link" href="login.html">Entrar</a>
         <a class="itens-link" href="cadastro.html">Cadastrar</a>
+
         <img class="redimensionar-imagem-perfil" src="../Imagens/visitante.png" alt="Perfil">
         </div>
 
     </div>
+
+    
 
     <br><br>
 
@@ -124,7 +116,14 @@
         <br><br><br>
         <hr>
     
+        
     <h2 class="titulo-tabela">Tabela com antibióticos</h2>
+    <form>
+        <div class="pesquisar">
+            <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
+            <img src="../Imagens/filtro.png" alt="Filtro" class="icone-input">
+        </div>
+    </form>
 
     <!-- Tabela de antibióticos -->
     <div class="table-container">
@@ -404,5 +403,7 @@
     </tr>
         </table>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
