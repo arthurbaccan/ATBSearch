@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    background-color: #006494;
+    padding: 1%;
+
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    gap: 1%;
+}
+
+.imagem-logo{
+    width: 65px;
+}
+
+.navbar {
+    
+}
