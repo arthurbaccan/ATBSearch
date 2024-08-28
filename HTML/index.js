@@ -10,15 +10,33 @@ document.addEventListener('scroll', function() {
     }
 });
 
-const windowWidth = window.innerWidth;
-const windowHeight = window.innerHeight;
+//muda os tamnhos da ogo para deixar responsivo
+function updateWidth() {
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
 
-const logo = document.querySelectorAll(".logo");
+    const logo = document.querySelectorAll(".logo");
+    const imagemLogo = document.querySelectorAll(".imagem-logo");
 
-logo.forEach(logo => {
-    logo.style.fontSize = (2*(windowWidth/100) + (windowWidth/200)) + "px";
+    if(innerWidth >= innerHeight) {
+        logo.forEach(logo => {
+            logo.style.fontSize = (7*(windowWidth/200)) + "px";
+            logo.style.padding = (windowWidth/100) + "px";
+
     
+        })
 
-})
+        imagemLogo.forEach(imagemLogo => {
+            imagemLogo.style.width = (4*(windowWidth/95)) + "px";
+        })
+    }
+    else {
+        
+    }
+}
 
+//sempre chama a função de responsividade quando o site é iniciado
+updateWidth();
 
+//torna a tela responsiva quando é redimensionada
+window.addEventListener('resize', updateWidth);
