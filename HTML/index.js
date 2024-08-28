@@ -10,7 +10,7 @@ document.addEventListener('scroll', function() {
     }
 });
 
-//muda os tamnhos da ogo para deixar responsivo
+//muda os tamnhos da logo para deixar responsivo
 function updateWidth() {
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
@@ -18,20 +18,31 @@ function updateWidth() {
     const logo = document.querySelectorAll(".logo");
     const imagemLogo = document.querySelectorAll(".imagem-logo");
 
-    if(innerWidth >= innerHeight) {
+    if(windowWidth >= windowHeight) {
         logo.forEach(logo => {
-            logo.style.fontSize = (7*(windowWidth/200)) + "px";
-            logo.style.padding = (windowWidth/100) + "px";
+            logo.style.fontSize = ((windowWidth/23)) + "px";
+            logo.style.paddingTop = (windowWidth/130) + "px";    
+            logo.style.paddingBottom = (windowWidth/120) + "px";    
+            logo.style.paddingLeft = 0 + "px";    
 
-    
         })
 
         imagemLogo.forEach(imagemLogo => {
-            imagemLogo.style.width = (4*(windowWidth/95)) + "px";
+            imagemLogo.style.width = (4*(windowWidth/80)) + "px";
         })
     }
-    else {
-        
+    else if(windowHeight > windowWidth) {
+        logo.forEach(logo => {
+            logo.style.fontSize = (3*(windowWidth/45)) + "px";
+            logo.style.paddingTop = (windowWidth/50) + "px";    
+            logo.style.paddingBottom = (windowWidth/50) + "px"; 
+            logo.style.paddingLeft = ((windowWidth/12)) + "px"; 
+            logo.style.gap = (windowWidth/18) + "px";
+        })
+
+        imagemLogo.forEach(imagemLogo => {
+            imagemLogo.style.width = (windowWidth/5) + "px";
+        })
     }
 }
 

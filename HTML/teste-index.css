@@ -5,6 +5,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     background-color: #006494;
 
@@ -17,64 +18,7 @@ body {
   width: 35px;
 }
 
-/*@media (max-width: 925px) {
-  .logo {
-    display: flex;
-    
-    padding-top: 2%;
-    padding-bottom: 2%;
-    
 
-    font-size: 40px;
-    gap: 1%;
-  }
-}
-
-@media (max-width: 675px) {
-  .logo {
-    display: flex;
-    
-    padding-top: 2%;
-    padding-bottom: 2%;
-    
-
-    font-size: 30px;
-    gap: 2%;
-
-  .imagem-logo{
-      width: 45px;
-  }
-}
-
-@media (max-width: 440px) {
-  .logo {
-    display: flex;
-    
-    padding-top: 3%;
-    padding-bottom: 3%;
-    
-
-    font-size: 30px;
-    gap: 5%;
-  }
-}
-
-@media (max-width: 290px) {
-  .logo {
-    display: flex;
-    
-    padding-top: 3%;
-    padding-bottom: 3%;    
-
-    font-size: 20px;
-    gap: 5%;
-  }
-
-  .imagem-logo{
-    width: 35px;
-}
-}
-*/
 
 
 .navbar {
