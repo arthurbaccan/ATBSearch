@@ -8,8 +8,8 @@ body {
     justify-content: center;
 
     background-color: #006494;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 18px;
+    padding-bottom: 18px;
     padding-left: 0;
     gap: 20px;
 
@@ -25,49 +25,116 @@ body {
 /*testado com Galaxy Z fold 5*/
 @media (min-width: 330px) and (max-width: 399px){
   .logo {
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5%;
-    gap: 18px;
+    font-size: 25px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 10%;
+    gap: 20px;
   }
 
   .imagem-logo {
-    width: 60px;
+    width: 65px;
   }
 }
 
 /*testado com iphone 14 pro max*/
 @media (min-width: 400px) and (max-width: 469px) {
   .logo {
-    font-size: 35px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 7%;
-    gap: 21px
+    font-size: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 11%;
+    gap: 25px;
   }
 
   .imagem-logo {
-    width: 65px
+    width: 70px;
   }
 }
 
 @media (min-width: 470px) and (max-width: 549px) {
   .logo {
-    font-size: 40px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 8%;
-    gap: 21px
+    font-size: 35px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 12%;
+    gap: 30px;
   }
 
   .imagem-logo {
-    width: 70px
+    width: 75px;
+}
+}
+
+@media (min-width: 550px) and (max-width: 619px) {
+  .logo {
+    font-size: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 13%;
+    gap: 35px;
+  }
+
+  .imagem-logo {
+    width: 80px;
   }
 }
 
+@media (min-width: 620px) and (max-width: 689px) {
+  .logo {
+    font-size: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 13%;
+    gap: 37px;
+  }
 
+  .imagem-logo {
+    width: 95px;
+  }
+}
 
+@media (min-width: 690px) and (max-width: 759px) {
+  .logo {
+    font-size: 50px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 13%;
+    gap: 42px;
+  }
+
+  .imagem-logo {
+    width: 110px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 829px) {
+  .logo {
+    font-size: 35px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 0%;
+    gap: 15px;
+  }
+
+  .imagem-logo {
+    width: 50px;
+  }
+}
+
+@media (min-width: 830px) and (max-width: 899px) {
+  .logo {
+    font-size: 40px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 0%;
+    gap: 23px;
+  }
+
+  .imagem-logo {
+    width: 60px;
+  }
+}
 
 .navbar {
     
