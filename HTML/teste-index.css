@@ -8,14 +8,62 @@ body {
     justify-content: center;
 
     background-color: #006494;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    gap: 20px;
 
     color: white;
     font-family: 'Open Sans', sans-serif;
-    gap: 1%;
+    font-size: 55px;
 }
 
 .imagem-logo{
-  width: 35px;
+  width: 70px;
+}
+
+/*testado com Galaxy Z fold 5*/
+@media (min-width: 330px) and (max-width: 399px){
+  .logo {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    gap: 18px;
+  }
+
+  .imagem-logo {
+    width: 60px;
+  }
+}
+
+/*testado com iphone 14 pro max*/
+@media (min-width: 400px) and (max-width: 469px) {
+  .logo {
+    font-size: 35px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 7%;
+    gap: 21px
+  }
+
+  .imagem-logo {
+    width: 65px
+  }
+}
+
+@media (min-width: 470px) and (max-width: 549px) {
+  .logo {
+    font-size: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8%;
+    gap: 21px
+  }
+
+  .imagem-logo {
+    width: 70px
+  }
 }
 
 
