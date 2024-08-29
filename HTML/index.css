@@ -7,101 +7,6 @@ body {
     
 }
 
-.centralizador {
-    display: flex; /* Usa Flexbox no contêiner */
-    align-items: left; /* Centraliza verticalmente o botão no contêiner */
-    justify-content: left; /* Centraliza horizontalmente o botão no contêiner */
-}
-
-.divVideo{
-    width: 40%; 
-    height: 50%;
-    margin-right: 15px;
-}
-
-.containerLadoaLado {
-    display: flex; /* Define um contêiner flexível */
-    align-items: left;
-    justify-content: flex-start;
-}
-
-.tamanhoTelaInteira {
-    width: 100%;
-    height: 100vh;
-}
-
-.titulo-inicial {
-    font-family: 'Open Sans', sans-serif; /* Define a fonte como Open Sans */
-    font-weight: bold; /* Aplica o estilo bold */
-    font-size: 3em;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    color: black;
-    text-align: center;
-}
-
-.titulo-tabela {
-    font-family: 'Open Sans', sans-serif; /* Define a fonte como Open Sans */
-    font-weight: bold; /* Aplica o estilo bold */
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: black;
-    text-align: center;
-}
-
-.texto-explicativo {
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-top: 0;
-    margin-bottom: 0px;
-}
-
-.texto-explicativo b {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.center-list {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-.center-list ul {
-    text-align: justify;
-    margin: 10px 0;
-}
-
-.backgroundMain{
-    background-color: #00a4a4; /* Light green */
-    color: rgb(0, 0, 0);
-    margin: 0;
-}
-
-.tituloPrincipal{
-    font-family: 'League Spartan';
-    font-weight: bold;
-    font-size: 3.2rem;
-    text-align: left;
-}
-
-.resize-image-title {
-    margin-right: 200px;
-    margin-top: 5px;
-    width: 1.3em; /* Slightly larger than the font size (2.5rem) */
-    height: auto; /* Maintain aspect ratio */
-}
-
-
-
-.redimensionar-imagem-Windows {
-    width: 100px; 
-    height: auto; /* Maintain aspect ratio */
-    text-align: center;
-}
-
 .botao-arredondado {
     background-color: #00adad; /* Cor de fundo */
     color: #ffffff; /* Cor do texto */
@@ -120,93 +25,6 @@ body {
     background-color: #008080; /* Cor de fundo ao passar o mouse */
 }
 
-
-.navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #006494; /* Light blue */
-    
-    gap: 20px; /* Espaçamento entre os itens da barra de navegação */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar div {
-    margin: 0 5px;
-}
-
-.alinharHorizontalEsquerdaCentro {
-    display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	padding-left: 10px;
-}
-
-.navbar h2 a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-.navbar h2 a:hover {
-    text-decoration: underline;
-}
-
-
-
-.entrada-personalizada {
-    width: 200px;
-    height: 35px;
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    box-sizing: border-box; /* Inclui padding e borda na largura e altura total do elemento */
-}
-
-.icone-input {
-    position: absolute; /* Posiciona o ícone dentro do container */
-    right: 15px; /* Posiciona o ícone a 10px da borda direita do container */
-    top: 50%; /* Centraliza verticalmente o ícone */
-    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
-    width: 30px; /* Tamanho do ícone (ajuste conforme necessário) */
-    height: 30px; /* Mantém a proporção */
-}
-
-.table-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-table {
-    width: 90%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: lightgrey;
-}
-
-tr:hover {
-    background-color: #f5f5f5;
-}
-
-div.esquerda {
-    text-align: left;
-}
-
 /*==================Separando==================*/
 
 .barra-superior {
@@ -215,7 +33,7 @@ div.esquerda {
     padding-bottom: 15px;
     background-color: #006494;
     color: white;
-    font-size: 1em;
+    font-size: 60px;
     font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -224,7 +42,7 @@ div.esquerda {
     /* Aplicar o gradiente que vai do azul para a imagem */
     background: linear-gradient(
         90deg, 
-        #006494 48%, /* Azul sólido na esquerda */
+        #006494 52%, /* Azul sólido na esquerda */
         rgba(0, 100, 148, 0) 70%, /* Transição para transparente */
         rgba(0, 0, 0, 0) 0%, /* Transição para a imagem */
         rgba(0, 0, 0, 0) 100%
@@ -237,7 +55,7 @@ div.esquerda {
 
 
 .imagem-titulo {
-    width: 2.1em;
+    width: 80px;
     margin-top: 0px;
     margin-left: 12px;
 }
