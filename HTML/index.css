@@ -27,106 +27,46 @@ body {
 
 /*==================Separando==================*/
 
-.barra-superior {
-    padding-left: 10px;
+.navbar {
+    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 15px;
+    padding-right: 20px;
+
     background-color: #006494;
-    color: white;
-    font-size: 60px;
-    font-family: 'Open Sans', sans-serif;
+    
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 
-    /* Aplicar o gradiente que vai do azul para a imagem */
-    background: linear-gradient(
-        90deg, 
-        #006494 52%, /* Azul sólido na esquerda */
-        rgba(0, 100, 148, 0) 70%, /* Transição para transparente */
-        rgba(0, 0, 0, 0) 0%, /* Transição para a imagem */
-        rgba(0, 0, 0, 0) 100%
-    ), url("../Imagens/antibioticos2.jpg"); /* Imagem de fundo */
+    .navbar-start{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 25px;
+        font-family: 'Open Sans', sans-serif;
+        gap: 15px;
+    
+        img {
+            width: 30px;
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+    }
 
-    background-position: right center; /* Posiciona a imagem no canto direito */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-    background-size: cover; /* Garante que a imagem cobre o espaço disponível */
-}
+    .navbar-end {
 
-
-.imagem-titulo {
-    width: 80px;
-    margin-top: 0px;
-    margin-left: 12px;
-}
-
-/*mudar isso aqui depois para um degrade ao invés de um shadow box*/
-.imagem-titulo2 {
-    width: 100%;
-    height: 170px;
-    margin-bottom: 0%;
-    object-fit: cover;
-    /*box-shadow: -30px -3px 30px #00202e;*/
-    background-image: linear-gradient( 90deg, #006494, #03030d);
-}
-
-.posicionar-barra-itens{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    right: 0;
-}
-
-/*Esse fixed vai ser usado pra fazer a barra de pesquisa aparecer sempre*/
-.fixed {
-    position: fixed;
-    top: 0;
-}
-
-.itens{
-    display: flex;
-    align-items: right;
-    justify-content: flex-end;
-    background-color: green;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding-left: 20px;
-    padding-bottom: 11px;
-    /*width: 34%;
-    position: absolute;
-    right: 500px;*/
-}
-
-.itens-link {
-    margin-left: 20px;
-    margin-top: 17px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-.itens-link:hover {
-    text-decoration: underline;
-}
-
-.pesquisar {
-    position: relative; /* Estabelece um contexto de posicionamento */
-    display: inline-block; /* Faz o container ter largura apenas do tamanho do seu conteúdo */
-    margin-top: 15px;
-    margin-left: 100px;
-    align-items: center;
-}
-
-.redimensionar-imagem-perfil {
-    width: 50px;
-    height: 50px;
-    padding-right: 11px;
-    margin-top: 7px;
-    margin-left: 20px;
-}
-
-.texto {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 20px;
+        a {
+            margin-left: 40px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+            font-family: 'Open Sans', sans-serif;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 }
