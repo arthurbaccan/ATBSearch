@@ -27,46 +27,59 @@ body {
 
 /*==================Separando==================*/
 
+/*fazer uma media query que faz o texto da navbar-start sumir e deixar só imagem quando diminuir*/
 .navbar {
-    padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-right: 20px;
 
-    background-color: #006494;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
 
-    .navbar-start{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 25px;
-        font-family: 'Open Sans', sans-serif;
-        gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    width: 100%;
+
+    background-color: #006494;
+}
+
+.navbar-start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
     
-        img {
-            width: 30px;
-            margin-top: 0px;
-            margin-left: 0px;
-        }
-    }
+    gap: 15px;
+    margin-left: 20px;
 
-    .navbar-end {
-
-        a {
-            margin-left: 40px;
-            color: white;
-            text-decoration: none;
-            font-size: 25px;
-            font-family: 'Open Sans', sans-serif;
-        }
-    
-        a:hover {
-            text-decoration: underline;
-        }
+    img {
+        width: 30px;
+        margin-top: 0px;
+        margin-left: 0px;
     }
 }
+
+.navbar-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: auto;
+    gap: 20px;
+    margin-right: 20px;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
