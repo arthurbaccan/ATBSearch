@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico-titulo.png" type="image/x-icon">
     <title>Pesquisador de Antibióticos</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         </div>    
         
         <div class="navbar-end">
-            <a href="index.html">Menu</a>
+            <a href="#">Menu</a>
             <a href="contato.html">Suporte</a>
             <a href="">Tabelas</a>
             <a href="cadastro.html">Cadastrar</a>
@@ -30,7 +31,7 @@
 
     <br><br>
 
-        <div class="texto">
+        <div class="text">
 
         <h2>Como Pesquisar:</h2>
         Se você já sabe o nome do antibiótico que está procurando, basta digitá-lo no campo de pesquisa e clicar em "Pesquisar". A tabela exibirá os resultados correspondentes à sua busca.
@@ -55,20 +56,22 @@
         <hr>
     
         
-    <h2 class="titulo-tabela">Tabela com antibióticos</h2>
-    <form>
-        <div class="pesquisar">
-            <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
-        </div>
-    </form>
+    
 
     <!-- Tabela de antibióticos -->
-    <!--<div class="table-container">
+    <div class="table-container">
+
+        <h2>Tabela com antibióticos</h2>
+        <form>
+            <div class="pesquisar">
+                <input class="entrada-personalizada" type="text" name="pesquisar" placeholder="Pesquisar">
+            </div>
+        </form>
         <table border="1px" width="100%">    
             <tr>
                 <th width="25%">Nome</th>
-                <th width="25%">Tipo de antibiótico</th>
-                <th width="25%">Tipo de bactéria</th>
+                <th width="20%">Tipo de antibiótico</th>
+                <th width="30%">Tipo de bactéria</th>
                 <th width="25%">Morfologia</th>
             </tr>
             <!-- Macrolídeos -->
