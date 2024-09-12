@@ -103,15 +103,16 @@ body {
     }
 
     li::before {
-        content: ''; /* O conteúdo é vazio porque vamos desenhar o disco com borda */
+        content: '';
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%); /* Centraliza verticalmente */
-        width: 7px; /* Tamanho do disco */
+
+        width: 7px; 
         height: 7px;
-        border: 2px solid black; /* Cor e espessura da borda do disco */
-        border-radius: 50%; /* Faz o disco ser redondo */
+        border: 2px solid black;
+        border-radius: 50%;
     }
 }
 
@@ -127,16 +128,25 @@ body {
     justify-content: none;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 40px;
 
     table {
-        width: 100%; /* Faz a tabela ocupar toda a largura disponível */
-        border-collapse: collapse; /* Remove espaçamento entre bordas das células */
+        width: 100%;
+        border-collapse: collapse;
     }
     th, td {
-        border: 2px solid #808080; /* Borda das células */
+        border: 2px solid #767676; /* Borda das células */
         padding: 8px; /* Espaçamento interno das células */
         text-align: left; /* Alinha o texto à esquerda */
-        font-size: 20px;
+        font-size: 21px;
+    }
+
+    th {
+        background-color: #a2a2a2;
+    }
+
+    td:hover {
+        background-color: #dddcdc;
     }
 }
 
