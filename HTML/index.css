@@ -252,3 +252,29 @@ body {
     padding-right: 1%;
   }
 }
+
+@media print {
+  .navbar {
+    display: none;
+  }
+
+  .navbar-end {
+    display: none;
+  }
+
+  .navbar-start {
+    display: none;
+  }
+
+  .botao-arredondado {
+    display: none;
+  }
+
+  .pesquisar {
+    display: none;
+  }
+
+  .text {
+    margin-top: 5px;
+  }
+}
