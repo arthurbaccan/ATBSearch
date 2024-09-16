@@ -14,6 +14,7 @@ body {
 
   margin-top: 15px;
   margin-left: 30px;
+  margin-bottom: 1%;
 
   border: none; /* Remove a borda padrão do botão */
   border-radius: 30px; /* Arredonda as bordas do botão */
@@ -166,7 +167,7 @@ body {
   margin-left: 0px;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 700px) {
   .navbar {
     justify-content: center;
   }
@@ -176,12 +177,12 @@ body {
   }
 
   .navbar-end {
-    gap: 3%;
-    padding-left: 5%;
+    gap: 5%;
+    padding-left: 12%;
     margin-right: 0;
 
     a {
-      font-size: 12px;
+      font-size: 15px;
     }
   }
 
@@ -190,6 +191,18 @@ body {
     td {
       font-size: 12px;
     }
+  }
+
+  .botao-arredondado {
+    margin-left: 15px;
+    font-size: 1.1em;
+    margin-bottom: 3%;
+  }
+
+  .text {
+    margin-top: 3%;
+    font-size: 13px;
+    padding-right: 3%;
   }
 }
 
@@ -202,10 +215,30 @@ body {
     display: none;
   }
 
+  .navbar-end {
+    gap: 2%;
+
+    a {
+      font-size: 12px;
+    }
+  }
+
   .table-container {
     th,
     td {
       font-size: 11px;
     }
+  }
+
+  .botao-arredondado {
+    margin-left: 9px;
+    font-size: 0.7em;
+    margin-bottom: 5%;
+  }
+
+  .text {
+    margin-top: 4%;
+    font-size: 11px;
+    padding-right: 1%;
   }
 }
