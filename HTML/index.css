@@ -1,155 +1,211 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
 .botao-arredondado {
-    background-color: #00adad; /* Cor de fundo */
-    color: #ffffff; /* Cor do texto */
-    font-size: 1.5em; /* Tamanho da fonte */
-    padding: 15px 30px; /* Aumenta o espaçamento interno (vertical | horizontal) */
+  background-color: #00adad; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  font-size: 1.5em; /* Tamanho da fonte */
+  padding: 15px 30px; /* Aumenta o espaçamento interno (vertical | horizontal) */
 
-    margin-top: 15px;
-    margin-left: 30px;
+  margin-top: 15px;
+  margin-left: 30px;
 
-    border: none; /* Remove a borda padrão do botão */
-    border-radius: 30px; /* Arredonda as bordas do botão */
-    cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-    font-family: 'Open Sans', sans-serif; /* Define a fonte como Open Sans */
-    font-weight: bold; /* Aplica o estilo bold */
-    background: linear-gradient(90deg, #20e63a, #009dcf); /* Gradiente linear da cor #20e63a para #009dcf */
+  border: none; /* Remove a borda padrão do botão */
+  border-radius: 30px; /* Arredonda as bordas do botão */
+  cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  font-family: "Open Sans", sans-serif; /* Define a fonte como Open Sans */
+  font-weight: bold; /* Aplica o estilo bold */
+  background: linear-gradient(
+    90deg,
+    #20e63a,
+    #009dcf
+  ); /* Gradiente linear da cor #20e63a para #009dcf */
 }
 
 .botao-arredondado:hover {
-    background-color: #008080; /* Cor de fundo ao passar o mouse */
+  background-color: #008080; /* Cor de fundo ao passar o mouse */
 }
 
 /*==================Separando==================*/
 
 /*fazer uma media query que faz o texto da navbar-start sumir e deixar só imagem quando diminuir*/
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
+  padding-top: 10px;
+  padding-bottom: 15px;
 
-    padding-top: 10px;
-    padding-bottom: 15px;
+  width: 100%;
 
-    width: 100%;
-
-    background-color: #006494;
+  background-color: #006494;
 }
 
-.navbar-start{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.navbar-start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    color: white;
-    font-size: 17px;
-    font-family: 'Open Sans', sans-serif;
-    
-    gap: 15px;
-    margin-left: 20px;
+  color: white;
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
 
-    img {
-        width: 30px;
-        margin-top: 0px;
-        margin-left: 0px;
-    }
+  gap: 15px;
+  margin-left: 20px;
+
+  img {
+    width: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
 }
 
 .navbar-end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-    width: auto;
-    gap: 20px;
-    margin-right: 20px;
+  width: auto;
+  gap: 20px;
+  margin-right: 20px;
 
-    a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        font-family: 'Open Sans', sans-serif;
-    }
-    
-    a:hover {
-        text-decoration: underline;
-    }
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:focus {
+    border-radius: 5px;
+    outline: 2px solid white;
+    padding: 0px;
+  }
+  flex-shrink: 1;
 }
 
 .text {
-    margin-left: 2%;
-    margin-top: 40px;
+  margin-left: 2%;
+  margin-top: 40px;
 
-    ul {
-        list-style-type: none;
-    }
+  ul {
+    list-style-type: none;
+  }
 
-    li {
-        position: relative; /* Necessário para posicionar o pseudo-elemento */
-        padding-left: 30px; /* Espaçamento para o marcador personalizado */
-        margin-bottom: 10px;
-        z-index: -1;
-    }
+  li {
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    padding-left: 30px; /* Espaçamento para o marcador personalizado */
+    margin-bottom: 10px;
+    z-index: -1;
+  }
 
-    li::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%); /* Centraliza verticalmente */
+  li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
 
-        width: 7px; 
-        height: 7px;
-        border: 2px solid black;
-        border-radius: 50%;
-    }
+    width: 7px;
+    height: 7px;
+    border: 2px solid black;
+    border-radius: 50%;
+  }
 }
 
 .title-table {
-    margin-left: 40px;
-    margin-top: 35px;
+  margin-left: 40px;
+  margin-top: 35px;
 }
 
 .table-container {
-    display: flex;
-    flex-direction: column;
-    align-items: none;
-    justify-content: none;
-    padding-left: 2%;
-    padding-right: 2%;
-    padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  flex-shrink: 1;
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-    th, td {
-        border: 2px solid #767676; /* Borda das células */
-        padding: 8px; /* Espaçamento interno das células */
-        text-align: left; /* Alinha o texto à esquerda */
-        font-size: 21px;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    flex-shrink: 1;
+  }
+  th,
+  td {
+    border: 2px solid #767676; /* Borda das células */
+    padding: 1%; /* Espaçamento interno das células */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 21px;
+  }
 
-    th {
-        background-color: #a2a2a2;
-    }
+  th {
+    background-color: #a2a2a2;
+  }
 
-    td:hover {
-        background-color: #dddcdc;
-    }
+  td:hover {
+    background-color: #dddcdc;
+  }
 }
 
 .pesquisar {
-    margin-left: 0px;
+  margin-left: 0px;
+}
+
+@media (max-width: 678px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar-start {
+    display: none;
+  }
+
+  .navbar-end {
+    gap: 3%;
+    padding-left: 5%;
+    margin-right: 0;
+
+    a {
+      font-size: 12px;
+    }
+  }
+
+  .table-container {
+    th,
+    td {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 358px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar-start {
+    display: none;
+  }
+
+  .table-container {
+    th,
+    td {
+      font-size: 11px;
+    }
+  }
 }
