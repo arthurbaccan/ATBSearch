@@ -10,16 +10,16 @@ body {
   background-color: #00adad; /* Cor de fundo */
   color: #ffffff; /* Cor do texto */
   font-size: 1.5em; /* Tamanho da fonte */
-  padding: 15px 30px; /* Aumenta o espaçamento interno (vertical | horizontal) */
+  padding: 15px 30px; /* Aumenta o espaÃ§amento interno (vertical | horizontal) */
 
   margin-top: 15px;
   margin-left: 30px;
   margin-bottom: 1%;
 
-  border: none; /* Remove a borda padrão do botão */
-  border-radius: 30px; /* Arredonda as bordas do botão */
-  cursor: pointer; /* Mostra o cursor de mão ao passar sobre o botão */
-  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+  border: none; /* Remove a borda padrÃ£o do botÃ£o */
+  border-radius: 30px; /* Arredonda as bordas do botÃ£o */
+  cursor: pointer; /* Mostra o cursor de mÃ£o ao passar sobre o botÃ£o */
+  transition: background-color 0.3s ease; /* TransiÃ§Ã£o suave para a cor de fundo */
   font-family: "Open Sans", sans-serif; /* Define a fonte como Open Sans */
   font-weight: bold; /* Aplica o estilo bold */
   background: linear-gradient(
@@ -45,7 +45,7 @@ body {
 
 /*==================Separando==================*/
 
-/*fazer uma media query que faz o texto da navbar-start sumir e deixar só imagem quando diminuir*/
+/*fazer uma media query que faz o texto da navbar-start sumir e deixar sÃ³ imagem quando diminuir*/
 .navbar {
   display: flex;
   align-items: center;
@@ -116,8 +116,8 @@ body {
   }
 
   li {
-    position: relative; /* Necessário para posicionar o pseudo-elemento */
-    padding-left: 30px; /* Espaçamento para o marcador personalizado */
+    position: relative; /* NecessÃ¡rio para posicionar o pseudo-elemento */
+    padding-left: 30px; /* EspaÃ§amento para o marcador personalizado */
     margin-bottom: 10px;
     z-index: -1;
   }
@@ -158,9 +158,9 @@ body {
   }
   th,
   td {
-    border: 2px solid #767676; /* Borda das células */
-    padding: 1%; /* Espaçamento interno das células */
-    text-align: left; /* Alinha o texto à esquerda */
+    border: 2px solid #767676; /* Borda das cÃ©lulas */
+    padding: 1%; /* EspaÃ§amento interno das cÃ©lulas */
+    text-align: left; /* Alinha o texto Ã  esquerda */
     font-size: 21px;
   }
 
@@ -277,4 +277,8 @@ body {
   .text {
     margin-top: 5px;
   }
+}
+
+.item-lista-exemplo{
+	font-weight: bold;
 }
