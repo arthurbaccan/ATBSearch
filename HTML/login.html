@@ -3,30 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../Imagens/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
 	<link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="defModel.css">
+    <link rel="stylesheet" href="position.css">
+    <link rel="stylesheet" href="style.css">
+
 	<title>Login - Pesquisador de antibióticos</title>
 </head>
-<body>
-    <div align="center">
-        <table>
-            <tr>
-                <td><form class="login" align="left">
-                    <img class="image" src="../Imagens/Logo.png" align="left"></img>
-                    <h2 class="title">PESQUISADOR DE ANTIBIÓTICOS</h2>
-                    <input id="email" class="elements" type="text" placeholder="Email ou telefone do usuário:" required>
-                    <br><br>
-                    <input id="password" class="elements" type="password" placeholder="Senha:" required>
-                    <br><br>
-                    <button id="entrar" class="enter" type="submit">Entrar</button>
-                    <br><br>
-                    <a class="links" href="">Esqueci minha senha</a>
-                    <br><br><br>
-                    <h5 class="text-elements">Não tem uma conta? <a class="links" href="cadastro.html">Cadastrar-se</a></h5>
-                    <br>
-                </form></td>
-            </tr>
-        </table>    
+<body class="body-form">
+    <div class="center-absolute">
+        <form class="form-default">
+
+            <div class="title-form">
+                <img src="../Imagens/lupa-com-antibiotico.png" align="left"></img>
+                <h2>PESQUISADOR DE ANTIBIÓTICOS</h2>
+            </div>
+
+            <input id="email" class="elements" type="text" placeholder="Email ou telefone do usuário:" required>
+            
+            <br><br>
+
+            <input id="password" class="elements" type="password" placeholder="Senha:" required>
+            
+            <br><br>
+            
+            <button id="entrar" class="btn-form" type="submit">Entrar</button>
+            
+            <br><br>
+            
+            <a class="link-blue" href="">Esqueci minha senha</a>
+            
+            <br><br><br>
+            
+            <h5 class="text-elements">Não tem uma conta? <a class="link-blue" href="cadastro.html">Cadastrar-se</a></h5>
+            
+        </form>          
     </div>
     <script src="login.js"></script>
 </body>

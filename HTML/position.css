@@ -1,0 +1,7 @@
+/* Centraliza totalmente um item em relação a tela ou elemento pai que ele é colocado */
+.center-absolute {
+    position: absolute; /* ou fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

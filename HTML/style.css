@@ -1,0 +1,21 @@
+/* Cores customizadas */
+:root {
+    --color-blue-default: #006494;
+    --color-blue-dark: #09008b;
+    --color-blue-dark-2: #040058;
+    --color-green-none: #17ac04;
+    --color-green-dark: #108101;
+    --color-grey-light: #ffffffe0;
+}
+
+/* Link Azul */
+a.link-blue {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--color-blue-dark);
+    text-decoration: none;
+}
+
+a.link-blue:hover {
+    color: var(--color-blue-dark-2);
+    text-decoration: underline;
+}
