@@ -1,3 +1,5 @@
+@import url(style.css);
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -25,7 +27,7 @@ body {
   background: linear-gradient(
     90deg,
     #20e63a,
-    #009dcf
+    var(--color-blue-default)
   ); /* Gradiente linear da cor #20e63a para #009dcf */
 }
 

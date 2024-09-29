@@ -29,6 +29,7 @@ FONT
 :root {
     --font-link-default: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --font-text-navbar: 17px "Open Sans", sans-serif;
+    --font-all-form: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
