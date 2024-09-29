@@ -1,4 +1,15 @@
-/* Cores customizadas */
+/* Custom itens:
+Color
+Font
+Link */
+
+
+
+
+/* 
+CUSTOM:
+COLOR
+ */
 :root {
     --color-blue-default: #006494;
     --color-blue-dark: #09008b;
@@ -8,14 +19,30 @@
     --color-grey-light: #ffffffe0;
 }
 
-/* Link Azul */
-a.link-blue {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--color-blue-dark);
-    text-decoration: none;
+
+
+
+/*
+CUSTOM:
+FONT
+*/
+:root {
+    --font-link-default: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-text-navbar: 17px "Open Sans", sans-serif;
 }
 
-a.link-blue:hover {
+
+
+
+/*
+CUSTOM:
+LINK
+*/
+a.link-blue {
+    font-family: var(--font-link-default);
+    color: var(--color-blue-dark);
+    text-decoration: none;
+}a.link-blue:hover {
     color: var(--color-blue-dark-2);
     text-decoration: underline;
 }

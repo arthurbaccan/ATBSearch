@@ -46,66 +46,9 @@ body {
 /*==================Separando==================*/
 
 /*fazer uma media query que faz o texto da navbar-start sumir e deixar sÃ³ imagem quando diminuir*/
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
 
-  padding-top: 10px;
-  padding-bottom: 15px;
 
-  width: 100%;
 
-  background-color: #006494;
-}
-
-.navbar-start {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: white;
-  font-size: 17px;
-  font-family: "Open Sans", sans-serif;
-
-  gap: 15px;
-  margin-left: 20px;
-
-  img {
-    width: 30px;
-    margin-top: 0px;
-    margin-left: 0px;
-  }
-}
-
-.navbar-end {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  width: auto;
-  gap: 20px;
-  margin-right: 20px;
-
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-family: "Open Sans", sans-serif;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  a:focus {
-    border-radius: 5px;
-    outline: 2px solid white;
-    padding: 0px;
-  }
-  flex-shrink: 1;
-}
 
 .text {
   margin-left: 2%;
@@ -177,24 +120,7 @@ body {
   margin-left: 0px;
 }
 
-@media (max-width: 700px) {
-  .navbar {
-    justify-content: center;
-  }
-
-  .navbar-start {
-    display: none;
-  }
-
-  .navbar-end {
-    gap: 5%;
-    padding-left: 12%;
-    margin-right: 0;
-
-    a {
-      font-size: 15px;
-    }
-  }
+@media (max-width: 705px) {
 
   .table-container {
     th,
@@ -217,21 +143,6 @@ body {
 }
 
 @media (max-width: 358px) {
-  .navbar {
-    justify-content: center;
-  }
-
-  .navbar-start {
-    display: none;
-  }
-
-  .navbar-end {
-    gap: 2%;
-
-    a {
-      font-size: 12px;
-    }
-  }
 
   .table-container {
     th,
