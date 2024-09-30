@@ -6,8 +6,3 @@
     transform: translate(-50%, -50%);
 }
 
-body.teste {
-    font: var(--font-text-navbar);
-    margin: 0;
-    padding: 0;
-}
