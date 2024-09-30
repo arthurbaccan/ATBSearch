@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
-  color: #333;
+  color: #000;
 }
 
 .botao-arredondado {
@@ -26,7 +26,7 @@ body {
   font-weight: bold; /* Aplica o estilo bold */
   background: linear-gradient(
     90deg,
-    #20e63a,
+    var(--color-green-none),
     var(--color-blue-default)
   ); /* Gradiente linear da cor #20e63a para #009dcf */
 }
