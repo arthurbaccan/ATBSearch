@@ -2,7 +2,10 @@
 Body
 Form
 Navbar
-Table (não concluido, vai dar trabalho pra caralho) */
+Table (Nota: não concluido, vai dar trabalho pra caralho)
+(Nota 2: vai dar ainda mais trabalho do que eu imaginei, não da pra fazer isso sem ter uma boa parte de javascript e php)
+(Nota 3: tem que deixar elas mais bonitas depois, e tem que decidir se o acesso as tabelas personalizadas vai ficar na navbar ou em cima da tabela normal do site)
+*/
 
 @import url(style.css);
 
@@ -171,7 +174,7 @@ div.navbar {
         }
     }
 
-    /* Links e outras coisas que pode ser adicionadas no futuro */
+    /* Links e outras coisas que pode ser adicionadas no futuro, ficam na direita */
     div.navbar-itens {
         display: flex;
         align-items: center;
