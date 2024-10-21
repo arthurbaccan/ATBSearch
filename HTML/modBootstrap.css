@@ -1,0 +1,16 @@
+@import url(style.css);
+
+.cor {
+    background-color: var(--color-blue-default);
+}
+
+.zero {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
