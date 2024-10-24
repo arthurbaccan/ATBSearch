@@ -6,3 +6,12 @@
     transform: translate(-50%, -50%);
 }
 
+
+/*provisório*/
+.limit-test {
+    width: 20%;
+    height: 100vh;
+
+    background-color: rgb(88, 88, 88);
+}
+
