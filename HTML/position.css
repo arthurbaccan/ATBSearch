@@ -11,6 +11,7 @@
 .limit-test {
     width: 20%;
     height: 100vh;
+    padding: 0%;
 
     background-color: rgb(88, 88, 88);
 }
@@ -20,3 +21,4 @@
         width: 30%;
     }
 }
+
