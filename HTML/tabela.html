@@ -12,84 +12,92 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="position.css">
     <link rel="stylesheet" href="defModel.css">
-    <link rel="stylesheet" href="modBootstrap.css">
 
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="modBootstrap.css">
+
+
     <title>Tabelas</title>
 </head>
 <body>
-      <div class="container-fluid"> <!--TEM QUE ZERAR A PORRA DE MARGIN DESSE CONTAINER DESGRAÇADO-->
+      <div class="container-fluid">
         <nav class="navbar navbar-expand-lg cor">
-            <div class="container-fluid">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <div class="navbar-text">
-                    <img src="../Imagens/lupa-com-antibiotico.png" alt="Título">
-                    Pesquisador de antibióticos
-                  </div>
-                </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Menu</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contato.html">Suporte</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria aria-disabled="true">Tabelas</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="cadastro.html">Cadastrar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="login.html">Login</a>
-                  </li>
-                </ul>
+          <div class="container-fluid">
+            <div class="navbar-text">
+              <img src="../Imagens/lupa-com-antibiotico.png" alt="Título">
+              Pesquisador de antibióticos
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              </ul>
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contato.html">Suporte</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria aria-disabled="true">Tabelas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro.html">Cadastrar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+              </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        
+        <div class="accordion limit-test" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Info
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                As tabelas de antibióticos podem ser personalizadas ao selecionar antibioticos especificos, que podem ser variados dependendo da disponibilidade e demnada deles na região
               </div>
             </div>
-      </div>
-      <div class="accordion limit-test" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Info
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              As tabelas de antibióticos podem ser personalizadas ao selecionar antibioticos especificos, que podem ser variados dependendo da disponibilidade e demnada deles na região
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Tabela Padrão
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Além das tabelas que você mesmo pode personalizar, existe também uma tabela padrão com todos os antibióticos disponíveis no Brasil
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Tabela Padrão
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Além das tabelas que você mesmo pode personalizar, existe também uma tabela padrão com todos os antibióticos disponíveis no Brasil
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Tabelas Personalizadas
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Para criar as tabelas personalizadas, basta criar elas
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Tabelas Perso
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Para criar as tabelas personalizadas, basta criar elas
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
