@@ -49,3 +49,14 @@ a.link-blue {
     color: var(--color-blue-dark-2);
     text-decoration: underline;
 }
+
+div.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    font-size: 32px;
+}
