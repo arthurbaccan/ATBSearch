@@ -1,3 +1,5 @@
+@import url(style.css);
+
 /* Centraliza totalmente um item em relação a tela ou elemento pai que ele é colocado */
 .center-absolute {
     position: absolute; /* ou fixed */
@@ -20,5 +22,12 @@
     .limit-test {
         width: 30%;
     }
+}
+
+/*prvisório - Esqueci minha senha*/
+.senha{
+    font-size: 90px;
+    font-family: var(--font-all-form);
+    background-color: white;
 }
 
