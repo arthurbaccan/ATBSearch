@@ -160,7 +160,7 @@ div.navbar-text {
     }
 }
 
-.nav-item {
+.nav-item-white {
     a {
         font: var(--font-text-navbar);
         color: white;
