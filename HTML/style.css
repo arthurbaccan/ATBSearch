@@ -60,3 +60,58 @@ div.flex {
     
     font-size: 32px;
 }
+
+/*
+CUSTOM:
+BUTTON-TABLE
+*/
+
+button.table-add {
+    margin: 25px 0 0 20px;
+    width: 350px;
+    height: 350px;
+    padding: 0px 0px 33px 0px;
+
+    background-color: white;
+    color: green;
+    font-size: 90px;
+    border-radius: 30px;
+    border: 5px solid green;
+
+    transition: 0.5s;
+}
+
+button.table-add:hover {
+    border: 5px solid darkgreen;
+    color: darkgreen;
+    background-color: rgb(236, 250, 255);
+
+    transition: 0.5s;
+}
+
+button.table-open {
+    margin: 25px 0 0 20px;
+    width: 350px;
+    height: 350px;
+    padding: 15px 15px 48px 15px;
+
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    border-radius: 30px;
+    border: 0px;
+
+    display: flex;
+    flex-wrap: wrap;            /* Permite que o conteúdo quebre em linha */
+    align-items: center;        /* Centraliza verticalmente o conteúdo */
+    justify-content: center;    /* Centraliza horizontalmente o conteúdo */
+    text-align: center;         /* Garante que o texto fique centralizado */
+
+    transition: 0.5s;
+}
+
+button.table-open:hover {
+    background-color: darkgreen;
+
+    transition: 0.5s;
+}
