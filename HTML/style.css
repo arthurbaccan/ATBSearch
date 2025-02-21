@@ -149,20 +149,12 @@ button.table-open:hover {
 /*item ativo da navbar*/
 .nav-item-active {
     color: black;
+
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 4px;
 }
-
-.nav-item-active::after {
-    width: 40px;
-
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 3px; /* Define a espessura do "underline" */
-    background-color: blue; /* Define a cor do "underline" */
-    border-radius: 3px; /* Define bordas arredondadas para a linha */
-  }
 
 
 .nav-height {
