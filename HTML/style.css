@@ -124,3 +124,47 @@ button.table-open:hover {
 
     transition: 0.5s;
 }
+
+/*itens da navbar das tabelas*/
+
+.nav-table {
+    padding: 0;
+    margin: 5px;
+
+    color: darkslategray;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.5s;
+}
+
+.nav-table:hover {
+    color: black;
+
+    transition: 0.5s;
+}
+
+
+/*item ativo da navbar*/
+.nav-item-active {
+    color: black;
+}
+
+.nav-item-active::after {
+    width: 40px;
+
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px; /* Define a espessura do "underline" */
+    background-color: blue; /* Define a cor do "underline" */
+    border-radius: 3px; /* Define bordas arredondadas para a linha */
+  }
+
+
+.nav-height {
+    height: 60px;
+}
