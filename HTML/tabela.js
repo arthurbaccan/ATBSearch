@@ -9,7 +9,7 @@ if (toastTrigger) {
 }
 
 
-/*Função para quberar palavras caso elas possuam mais de 12 caracteres*/ 
+/*Função para quebrar palavras dentro de um botão de classe table-open caso elas possuam mais de 12 caracteres*/ 
 document.addEventListener('DOMContentLoaded', function() {
   const btn = document.querySelector('button.table-open');
   btn.innerHTML = btn.innerHTML.split(' ').map(word => {

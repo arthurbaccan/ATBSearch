@@ -101,7 +101,7 @@ button.table-open {
     color: white;
     font-size: 30px;
     border-radius: 30px;
-    border: 2px solid green;
+    border: 2px solid green; /*não remover essa borda se não a confiuração de texto não funciona*/
 
     /*Configuração de texto*/
     display: flex;
