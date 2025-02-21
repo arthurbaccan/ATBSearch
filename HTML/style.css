@@ -90,28 +90,37 @@ button.table-add:hover {
 }
 
 button.table-open {
+    /*Tamanho do botão*/
     margin: 25px 0 0 20px;
     width: 350px;
     height: 350px;
     padding: 15px 15px 48px 15px;
 
+    /*Formatação do botão*/
     background-color: green;
     color: white;
     font-size: 30px;
     border-radius: 30px;
-    border: 0px;
+    border: 2px solid green;
 
+    /*Configuração de texto*/
     display: flex;
-    flex-wrap: wrap;            /* Permite que o conteúdo quebre em linha */
-    align-items: center;        /* Centraliza verticalmente o conteúdo */
-    justify-content: center;    /* Centraliza horizontalmente o conteúdo */
-    text-align: center;         /* Garante que o texto fique centralizado */
+    flex-wrap: wrap;            
+    align-items: center;     
+    justify-content: center;  
+    text-align: center;       
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: break-word;
 
+    /*Transição*/
     transition: 0.5s;
 }
 
 button.table-open:hover {
     background-color: darkgreen;
+    border: 2px solid darkgreen;
 
     transition: 0.5s;
 }
