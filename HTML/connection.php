@@ -13,17 +13,28 @@ Morfologia é igual o tipo de bacteria, 3 casos e dependendo do numero que ta no
 As tabelas personalizadas não rodam sem isso aqui, , então vou ter que atrbuir ao modelo defalt de tabelas os valores que precisar
 -->
 
-<?php 
-$host = '143.106.241.4';
-$db = 'Antibioticos';
-$user = 'cl203219';
-$pass = 'cl*25052007';
+<?php
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo 'Conexão falhou: ' . $e->getMessage();
+$host = '143.106.241.4';
+$db = 'cl203248';
+$user = 'cl203248';
+$pass = 'cl*07062008';
+$port = '3306';
+
+$conn = new mysqli($host, $db, $user, $pass, $port);
+
+if ($conn->connect_error) {
+    die(json_encode(["error" => "Falha na conexão: " . $conn->connect_error]));
 }
 
+$sql = "SELECT id, nome, tipo_antibiotico, gram_positiva, gram_negativa, morfologia FROM Antibiotico;";
+$result = $conn->query($sql);
+
+$dados = [];
+while ($row = $result->fetch_assoc()) {
+    $dados[] = $row;
+}
+
+echo json_encode($dados);
+$conn->close();
 ?>
