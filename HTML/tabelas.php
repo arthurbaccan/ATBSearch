@@ -1,4 +1,6 @@
 <?php
+
+include 'antibiotico-repository.php';
 // Parâmetros de conexão com o banco de dados
 $host = '143.106.241.4';
 $db = 'cl203248';
@@ -22,9 +24,9 @@ if ($resultado->num_rows > 0) {
     while($linha = $resultado->fetch_assoc()){
         echo "<tr>";
         echo "<td>" . $linha['nome'] . "</td>";
-        echo "<td>" . $linha['tipo_antibiotico'] . "</td>";
-        echo "<td>" . $linha['gram_positiva'] . "</td>";
-        echo "<td>" . $linha['gram_negativa'] . "</td>";
+        echo "<td>" . transforamTipoEmString($linha['tipo_antibiotico']) . "</td>";
+        echo "<td>" . transformaGramEmString($linha['gram_positiva']) . "</td>";
+        echo "<td>" . transformaGramEmString($linha['gram_negativa']) . "</td>";
         echo "<td>" . $linha['morfologia'] . "</td>";
         echo "</tr>";
     }
