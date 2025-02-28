@@ -27,7 +27,7 @@ if ($resultado->num_rows > 0) {
         echo "<td>" . transforamTipoEmString($linha['tipo_antibiotico']) . "</td>";
         echo "<td>" . transformaGramEmString($linha['gram_positiva']) . "</td>";
         echo "<td>" . transformaGramEmString($linha['gram_negativa']) . "</td>";
-        echo "<td>" . $linha['morfologia'] . "</td>";
+        echo "<td>" . transformaMorfologiaEmString($linha['morfologia']) . "</td>";
         echo "</tr>";
     }
 } else {

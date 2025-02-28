@@ -44,5 +44,16 @@ function transforamTipoEmString($numero) {
     }
 }
 
+function transformaMorfologiaEmString($numero) {
+    switch ($numero) {
+        case 1: return "Cocos";
+
+        case 2: return "Bacilos";
+
+        case 3: return "Cocos e Bacilos";
+    }
+}
+
+
 
 ?>
