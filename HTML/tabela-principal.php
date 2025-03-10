@@ -84,7 +84,7 @@
 
     
       <!--Tabela principal-->
-      <table>
+      <table class="table-default">
           <thead>
             <tr>
                 <th>Nome</th>
