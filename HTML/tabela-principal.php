@@ -85,19 +85,17 @@
     
       <!--Tabela principal-->
       <table class="table-default">
-          <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Tipo de antibiótico</th>
-                <th>Ataca gram positiva</th>
-                <th>Ataca gram negativa</th>
-                <th>Morfologia</th>
-              </tr>
-          </thead>
-          <tbody id="tabela-body">
-            <?php include 'tabelas.php'; ?>
-          </tbody>
-            
+      
+        <tr>
+          <th>Nome</th>
+          <th>Tipo de antibiótico</th>
+          <th>Ataca gram positiva</th>
+          <th>Ataca gram negativa</th>
+          <th>Morfologia</th>
+        </tr>
+                
+        <?php include 'tabelas.php'; ?>
+        
       </table>
 </body>
 </html>

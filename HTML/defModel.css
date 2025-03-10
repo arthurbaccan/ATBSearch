@@ -235,9 +235,17 @@ div.navbar {
 /*aaaaaaaaa*/
 
 .table-default{
-    border: 1px;
-    border-color: lightgray;
-    display: flex;
-    align-itens: center;
-    justify-content: center;
+    border: 1px solid gray;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    width: 80%;
+
+    tr{
+        border: 1px solid gray;
+        th, td{
+            border: 1px solid gray;
+            text-align: center;
+        }
+    }
 }
