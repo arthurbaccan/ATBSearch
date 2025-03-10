@@ -232,3 +232,12 @@ div.navbar {
 
 /*Tabela principal*/
 
+/*aaaaaaaaa*/
+
+.table-default{
+    border: 1px;
+    border-color: lightgray;
+    display: flex;
+    align-itens: center;
+    justify-content: center;
+}
