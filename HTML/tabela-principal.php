@@ -34,7 +34,7 @@
           <div class="container-fluid">
             <div class="navbar-text">
               <img src="../Imagens/lupa-com-antibiotico.png" alt="Título">
-              Pesquisador de antibióticos
+              ATBSearch
             </div>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
