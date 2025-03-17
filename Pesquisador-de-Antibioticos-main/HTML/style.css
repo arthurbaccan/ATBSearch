@@ -1,0 +1,162 @@
+/* Custom itens:
+Color
+Font
+Link
+*/
+
+
+
+
+/* 
+CUSTOM:
+COLOR
+ */
+:root {
+    --color-blue-default: #006494;
+    --color-blue-dark: #09008b;
+    --color-blue-dark-2: #040058;
+    --color-green-none: #17ac04;
+    --color-green-dark: #108101;
+    --color-grey-light: #ffffffe0;
+    --color-grey-light-2: #f4f4f9;
+}
+
+
+
+
+/*
+CUSTOM:
+FONT
+*/
+:root {
+    --font-link-default: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --font-text-navbar: 17px "Open Sans", sans-serif;
+    --font-all-form: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+/*
+CUSTOM:
+LINK
+*/
+a.link-blue {
+    font-family: var(--font-link-default);
+    color: var(--color-blue-dark);
+    text-decoration: none;
+}a.link-blue:hover {
+    color: var(--color-blue-dark-2);
+    text-decoration: underline;
+}
+
+div.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    font-size: 32px;
+}
+
+/*
+CUSTOM:
+BUTTON-TABLE
+*/
+
+button.table-add {
+    margin: 25px 0 0 20px;
+    width: 350px;
+    height: 350px;
+    padding: 0px 0px 33px 0px;
+
+    background-color: white;
+    color: green;
+    font-size: 90px;
+    border-radius: 30px;
+    border: 5px solid green;
+
+    transition: 0.5s;
+}
+
+button.table-add:hover {
+    border: 5px solid darkgreen;
+    color: darkgreen;
+    background-color: rgb(236, 250, 255);
+
+    transition: 0.5s;
+}
+
+button.table-open {
+    /*Tamanho do botão*/
+    margin: 25px 0 0 20px;
+    width: 350px;
+    height: 350px;
+    padding: 15px 15px 48px 15px;
+
+    /*Formatação do botão*/
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    border-radius: 30px;
+    border: 2px solid green; /*não remover essa borda se não a confiuração de texto não funciona*/
+
+    /*Configuração de texto*/
+    display: flex;
+    flex-wrap: wrap;            
+    align-items: center;     
+    justify-content: center;  
+    text-align: center;       
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    /*Transição*/
+    transition: 0.5s;
+}
+
+button.table-open:hover {
+    background-color: darkgreen;
+    border: 2px solid darkgreen;
+
+    transition: 0.5s;
+}
+
+/*itens da navbar das tabelas*/
+
+.nav-table {
+    padding: 0;
+    margin: 5px;
+
+    color: darkslategray;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.5s;
+}
+
+.nav-table:hover {
+    color: black;
+
+    transition: 0.5s;
+}
+
+
+/*item ativo da navbar*/
+.nav-item-active {
+    color: black;
+
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 4px;
+}
+
+
+.nav-height {
+    height: 60px;
+}

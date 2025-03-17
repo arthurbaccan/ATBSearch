@@ -1,0 +1,251 @@
+/* Default Models:
+Body
+Form
+Navbar
+Table (Nota: não concluido, vai dar trabalho pra caralho)
+(Nota 2: vai dar ainda mais trabalho do que eu imaginei, não da pra fazer isso sem ter uma boa parte de javascript e php)
+(Nota 3: tem que deixar elas mais bonitas depois, e tem que decidir se o acesso as tabelas personalizadas vai ficar na navbar ou em cima da tabela normal do site)
+*/
+
+@import url(style.css);
+
+
+
+
+/*
+DEFAULT MODEL:
+BODY
+*/
+
+/* Esse é o body padrão caso a página não tenha um exclusivo */
+body.body-default {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-grey-light-2);
+    color: #000;
+}
+
+
+
+
+/* 
+DEFAULT MODEL: 
+FORM 
+*/
+
+/* Body para caso a página não tenha nada além do formulário */
+body.body-form {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blue-default);
+}
+
+/* Modelo padrão de formulário pra tudo*/
+.form-default {
+    border: 0px;
+    border-radius: 12px;
+
+    background-color: var(--color-grey-light);
+
+    min-width: 380px;
+    padding: 1px 10px 20px 10px;
+
+    /* Usar na div do titulo */
+    div.title-form {
+        font-family: var(--font-all-form);
+        color: #000;
+        margin-top: 15px;
+
+        img {
+            width: 23px;
+            height: 23px;
+            margin-top: 3px;
+            margin-right: 7px;
+        }
+        
+    }
+
+    /* Usar nos campos de texto */
+    input.inp-form {
+        border: 2px solid #000;
+        border-radius: 10px;
+        height: 35px;
+        width: 100%;
+        background-color: white;
+        box-sizing: border-box;
+        color: #000;
+        font-family: var(--font-all-form);
+    
+    }
+    
+    input.inp-form :focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #000;
+    }
+
+    /* Botão para enviar o formulário */
+    button.btn-form {
+        margin: 0;
+        height: 40px;
+        width: 100%;
+        border: 0px;
+        border-radius: 10px;
+        background-color: var(--color-green-none);
+        font-size: 20px;
+        color: white;
+        transition: all 0.2s;
+    }
+    
+    button.btn-form:hover {
+        background-color: var(--color-green-dark);
+    }
+
+    /* Usar em qualquer texto extra que tenha no formulário */
+    .text-form {
+        margin: 0;
+        font-family: var(--font-all-form);
+        color: black;
+        font-size: 15px;
+    }
+
+    
+}
+
+/* Responsividade */
+@media (max-width: 405px) {
+    .form-default {
+        min-width: 230px;
+
+        div.title-form {
+            font-size: 9px;
+
+            img{
+                width: 15px;
+                height: 15px;
+                margin-left: 4px;
+                margin-top: 1px;
+            }
+        }
+
+        button.btn-form {
+            height: 36px;
+
+            font-size: 17px;
+        }
+    }
+}
+
+
+
+
+/*
+DEFAULT MODEL:
+NAVBAR
+*/
+
+div.navbar-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font: var(--font-text-navbar);
+    color: white;
+
+    gap: 10px;
+    margin-left: 20px;
+
+    img {
+        width: 23px;
+    }
+}
+
+.nav-item-white {
+    a {
+        font: var(--font-text-navbar);
+        color: white;
+        text-decoration: none;
+    }a:hover {
+        text-decoration: underline;
+        color: white; /*garante que o bootstrap não mude a cor*/
+    }a:focus {
+        color: white;
+        border-radius: 5px;
+        outline: 2px solid white;
+    }
+}
+
+/* Modelo padrão da navbar */
+div.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*div sem utilidade pratica a esquerda, div com itens a direita*/
+    position: fixed;
+
+    padding-top: 10px;
+    padding-bottom: 15px;
+
+    width: 100%;
+
+    background-color: var(--color-blue-default);
+
+    /* Texto e imagem da navbar, fica na esquerda */
+    
+
+    /* Links e outras coisas que pode ser adicionadas no futuro, ficam na direita */
+    
+}
+
+/* Responsividade */
+@media (max-width: 705px) {
+    div.navbar {
+      justify-content: center;
+
+      div.navbar-text {
+        display: none;
+      }
+    
+      div.navbar-itens {
+        gap: 5%;
+        padding-left: 10%;
+        margin-right: 0;
+    
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+}
+
+@media (max-width: 358px) {
+    div.navbar {
+
+        div.navbar-itens {
+    
+            a {
+                font-size: 12px;
+            }
+        } 
+    }
+}
+
+
+/*Tabela principal*/
+
+/*aaaaaaaaa*/
+
+.table-default{
+    border: 1px solid gray;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    width: 80%;
+
+    tr{
+        border: 1px solid gray;
+        th, td{
+            border: 1px solid gray;
+            text-align: center;
+        }
+    }
+}
