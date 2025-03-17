@@ -236,16 +236,19 @@ div.navbar {
 
 .table-default{
     border: 1px solid gray;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 13%;
+    margin-right: 13%;
 
-    width: 80%;
+    width: 74%;
 
     tr{
-        border: 1px solid gray;
+        border: 1px solid lightgray;
         th, td{
-            border: 1px solid gray;
+            border: 1px solid lightgray;
             text-align: center;
+        }
+        th{
+            background-color: white;
         }
     }
 }

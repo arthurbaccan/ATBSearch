@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="modBootstrap.css">
 
-    <title>Document</title>
+    <title>Personalizar tabela</title>
 </head>
 
 <style>
@@ -69,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-table nav-item-active" href="#" style="padding-left: 20px";>Filtrar Antibióticos</a>
+                  <a class="nav-table" href="#" style="padding-left: 20px";>Filtrar Antibióticos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-table" href="tabela.php" style="padding-left: 24px";>Tabelas Personalizadas</a>
@@ -84,7 +84,7 @@
 
     
       <!--Tabela principal-->
-      <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Filtrar Antibióticos</h1>
+      <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Criar Tabela Personalizada</h1>
       <table class="table-default">
       
         <tr>

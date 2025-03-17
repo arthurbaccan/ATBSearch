@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
+
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -17,19 +20,19 @@
 
     <link rel="stylesheet" href="modBootstrap.css">
 
-    <title>Document</title>
+    <title>Tabelas</title>
 </head>
 
 <style>
-    body {
-      overflow-x: hidden;
-      background-color: #dfdfdfee;
-    }
-  </style>
+  body {
+    overflow-x: hidden;
+    background-color: #dfdfdfee;
+  }
+</style>
 
 <body>
-    <!--Navbar-->
-    <div class="container-fluid">
+      <!--Navbar-->
+      <div class="container-fluid">
         <nav class="navbar navbar-expand-lg cor">
           <div class="container-fluid">
             <div class="navbar-text">
@@ -64,39 +67,43 @@
       </div>
 
       <!--<Itens de personalização-->
-        <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light nav-height">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-table nav-item-active" href="#" style="padding-left: 20px";>Filtrar Antibióticos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-table" href="tabela.php" style="padding-left: 24px";>Tabelas Personalizadas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-table" href="#" style="padding-left: 24px";>Gerenciar Nuvem</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-height">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-table" href="tabela-principal.php" style="padding-left: 20px";>Filtrar Antibióticos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-table nav-item-active" href="#" style="padding-left: 24px";>Tabelas Personalizadas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-table" href="#" style="padding-left: 24px";>Gerenciar Nuvem</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
-    
-      <!--Tabela principal-->
-      <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Filtrar Antibióticos</h1>
-      <table class="table-default">
-      
-        <tr>
-          <th>Nome</th>
-          <th>Tipo de antibiótico</th>
-          <th>Ataca gram positiva</th>
-          <th>Ataca gram negativa</th>
-          <th>Morfologia</th>
-        </tr>
-                
-        <?php include 'tabelas.php'; ?>
-        
-      </table>
+      <!--Adicionar um conteiner responsivo que adiciona novas tabelas personalizadas em fileiras da esquerda pra direita e quebra para a próxma linha ao chegar no fim,
+      Deve conter um botão de adicionar tabelar no canto superior esquerdo sempre,
+      Lembrar de colocar uma excessão de java script pra evitar que seja possivel abrir mais de uma tabela personalizada ao mesmo tempo ao clicar rápido no botão,
+      As tabelas personalizadas devem usar o mesmo banco de dados das tabelas convencionais-->
+      <div style="display: flex; align-items: center;">
+        <button id="add-table-button" class="table-add">
+          +
+        </button>
+
+        <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
+        <button class="table-open">
+          aaaaaaaaaaaa 
+          aaaaaaaaa 
+          aaaaaaaaaaaaa 
+        </button>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="tabela.js"></script>
+
 </body>
 </html>
