@@ -248,7 +248,19 @@ div.navbar {
             text-align: center;
         }
         th{
+            position: relative;
+
             background-color: white;
+            
+            button{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                border: none;
+                background-color: white;
+            }
         }
     }
 }

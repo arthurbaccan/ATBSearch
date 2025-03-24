@@ -69,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-table" href="#" style="padding-left: 20px";>Filtrar Antibióticos</a>
+                  <a class="nav-table" href="tabela-principal.php" style="padding-left: 20px";>Filtrar Antibióticos</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-table" href="tabela.php" style="padding-left: 24px";>Tabelas Personalizadas</a>
@@ -85,14 +85,15 @@
     
       <!--Tabela principal-->
       <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Criar Tabela Personalizada</h1>
+      
       <table class="table-default">
       
         <tr>
-          <th>Nome</th>
-          <th>Tipo de antibiótico</th>
-          <th>Ataca gram positiva</th>
-          <th>Ataca gram negativa</th>
-          <th>Morfologia</th>
+          <th>Nome <button type="button">...</button></th>
+          <th>Tipo de antibiótico <button type="button">...</button></th>
+          <th>Ataca gram positiva <button type="button">...</button></th>
+          <th>Ataca gram negativa <button type="button">...</button></th>
+          <th>Morfologia <button type="button">...</button></th>
         </tr>
                 
         <?php include 'tabelas.php'; ?>
