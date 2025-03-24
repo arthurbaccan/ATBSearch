@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="position.css">
     <link rel="stylesheet" href="defModel.css">
+    <link rel="stylesheet" href="personalizar-tabela.css">
 
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
@@ -83,9 +84,20 @@
         </div>
 
     
-      <!--Tabela principal-->
       <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Criar Tabela Personalizada</h1>
+
+
+      <div class="itens-pesquisa">
+        <button type="button">Marcar Todos</button>
+        <button type="button">Desmarcar Todos</button>
+        <button type="button">Criar Tabela</button>
+        <form>
+          <b>Nome da Tabela</b>
+          <input type="text" class="nome">
+        </form>
+      </div>
       
+      <!--Tabela Principal para selecionar os itens que estarão na tabela personalizada-->
       <table class="table-default">
       
         <tr>

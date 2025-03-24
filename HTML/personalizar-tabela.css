@@ -1,0 +1,27 @@
+div.itens-pesquisa{
+    display: flex;
+    margin-left: 13%;
+    margin-bottom: 10px;
+
+    button {
+        border: 1px solid lightgray;
+        margin-right: 13px;
+    }
+
+    input.nome{
+        border-radius: 3px;
+        border: 1px solid lightgray;
+        border-bottom: 1px solid black;
+        height: 27px;
+    }
+
+    input.nome:hover{
+        background-color: #dfdfdfee;
+    }
+
+    input.nome:focus{
+        outline: none;
+        border-bottom: 2px solid blue;
+        background-color: white;
+    }
+}
