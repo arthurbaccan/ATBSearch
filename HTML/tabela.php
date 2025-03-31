@@ -31,59 +31,29 @@
 </style>
 
 <body>
-      <!--Navbar-->
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg cor">
-          <div class="container-fluid">
-            <div class="navbar-text">
-              <img src="../Imagens/lupa-com-antibiotico.png" alt="Título">
-              ATBSearch
-            </div>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              </ul>
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item-white">
-                  <a class="nav-link" href="index.html">Menu</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria aria-disabled="true">Tabelas</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="cadastro.html">Cadastrar</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="login.html">Login</a>
-                </li>
-              </ul>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="../Imagens/lupa-com-antibiotico.png">
+            ATBSearch
+        </div>
 
-      <!--<Itens de personalização-->
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-height">
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-table" href="tabela-principal.php" style="padding-left: 20px";>Filtrar Antibióticos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-table nav-item-active" href="#" style="padding-left: 24px";>Tabelas Personalizadas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-table" href="#" style="padding-left: 24px";>Gerenciar Nuvem</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+        <div class="nav-right">
+            <a href="index.html">Menu</a>
+            <a href="contato.html">Contato</a>
+            <a href="tabela-principal.php">Tabelas</a>
+            <a href="cadastro.html">Cadastrar</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!--<Itens de personalização-->
+    <div class="navbar-table">
+        <a href="tabela-principal.php" class="nav-table-no-active">Filtrar Antibióticos</a>
+        <a href="#" class="nav-table-active">Tabelas Personalizadas</a>
+        <a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>
+    </div>
+
 
       <!--Adicionar um conteiner responsivo que adiciona novas tabelas personalizadas em fileiras da esquerda pra direita e quebra para a próxma linha ao chegar no fim,
       Deve conter um botão de adicionar tabelar no canto superior esquerdo sempre,

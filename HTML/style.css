@@ -67,7 +67,7 @@ BUTTON-TABLE
 */
 
 button.table-add {
-    margin: 25px 0 0 20px;
+    margin: 155px 0 0 220px;
     width: 350px;
     height: 350px;
     padding: 0px 0px 33px 0px;
@@ -91,7 +91,7 @@ button.table-add:hover {
 
 button.table-open {
     /*Tamanho do botão*/
-    margin: 25px 0 0 20px;
+    margin: 155px 0 0 20px;
     width: 350px;
     height: 350px;
     padding: 15px 15px 48px 15px;
@@ -149,7 +149,6 @@ button.table-open:hover {
 /*item ativo da navbar*/
 .nav-item-active {
     color: black;
-
     text-decoration: underline;
     text-decoration-color: blue;
     text-underline-offset: 8px;

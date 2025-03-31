@@ -30,39 +30,20 @@
 
 <body>
     <!--Navbar-->
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg cor">
-          <div class="container-fluid">
-            <div class="navbar-text">
-              <img src="../Imagens/lupa-com-antibiotico.png" alt="Título">
-              ATBSearch
-            </div>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              </ul>
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item-white">
-                  <a class="nav-link" href="index.html">Menu</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="contato.html">Contato</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria aria-disabled="true">Tabelas</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="cadastro.html">Cadastrar</a>
-                </li>
-                <li class="nav-item-white">
-                  <a class="nav-link" href="login.html">Login</a>
-                </li>
-              </ul>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="../Imagens/lupa-com-antibiotico.png">
+            ATBSearch
+        </div>
+
+        <div class="nav-right">
+            <a href="index.html">Menu</a>
+            <a href="contato.html">Contato</a>
+            <a href="tabela-principal.php">Tabelas</a>
+            <a href="cadastro.html">Cadastrar</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
 
       <!--<Itens de personalização-->
         <div>
