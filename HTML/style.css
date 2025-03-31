@@ -124,38 +124,3 @@ button.table-open:hover {
 
     transition: 0.5s;
 }
-
-/*itens da navbar das tabelas*/
-
-.nav-table {
-    padding: 0;
-    margin: 5px;
-
-    color: darkslategray;
-    font-size: 15px;
-    text-decoration: none;
-    font-weight: bold;
-
-    transition: 0.5s;
-}
-
-.nav-table:hover {
-    color: black;
-
-    transition: 0.5s;
-}
-
-
-/*item ativo da navbar*/
-.nav-item-active {
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: blue;
-    text-underline-offset: 8px;
-    text-decoration-thickness: 4px;
-}
-
-
-.nav-height {
-    height: 60px;
-}

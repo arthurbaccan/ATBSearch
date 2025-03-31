@@ -242,6 +242,7 @@ div.nav-right {
 /*aaaaaaaaa*/
 
 .table-default{
+
     border: 1px solid gray;
     margin-left: 13%;
     margin-right: 13%;
@@ -255,6 +256,7 @@ div.nav-right {
             text-align: center;
         }
         th{
+            z-index: -1;
             position: relative;
 
             background-color: white;

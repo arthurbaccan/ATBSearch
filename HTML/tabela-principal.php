@@ -49,22 +49,21 @@
         <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
         <a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>
     </div>
-
-    
-      <!--Tabela principal-->
-      <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Filtrar Antibióticos</h1>
-      <table class="table-default">
-      
-        <tr>
-          <th>Nome</th>
-          <th>Tipo de antibiótico</th>
-          <th>Ataca gram positiva</th>
-          <th>Ataca gram negativa</th>
-          <th>Morfologia</th>
-        </tr>
+    <br>
+    <!--Tabela principal-->
+    <h1 style="text-align: center; margin-top: 90px; margin-buttom: 8px">Filtrar Antibióticos</h1>
+    <table class="table-default">
+      <tr>
+        <th>Nome</th>
+        <th>Tipo de antibiótico</th>
+        <th>Ataca gram positiva</th>
+        <th>Ataca gram negativa</th>
+        <th>Morfologia</th>
+      </tr>
                 
-        <?php include 'tabelas.php'; ?>
+      <?php include 'tabelas.php'; ?>
         
-      </table>
+    </table>
+      
 </body>
 </html>

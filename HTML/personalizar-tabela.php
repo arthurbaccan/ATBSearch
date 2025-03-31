@@ -45,37 +45,32 @@
         </div>
     </div>
 
-      <!--<Itens de personalização-->
-        <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light nav-height">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-table" href="tabela-principal.php" style="padding-left: 20px";>Filtrar Antibióticos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-table" href="tabela.php" style="padding-left: 24px";>Tabelas Personalizadas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-table" href="#" style="padding-left: 24px";>Gerenciar Nuvem</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+    <!--<Itens de personalização-->
+    <div class="navbar-table">
+        <a href="tabela-principal.php" class="nav-table-no-active">Filtrar Antibióticos</a>
+        <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
+        <a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>
+    </div>
+    <br>
 
-    
-      <h1 style="text-align: center; margin-top: 8px; margin-buttom: 8px">Criar Tabela Personalizada</h1>
+    <h1 style="text-align: center; margin-top: 100px; margin-buttom: 0px"></h1>
 
 
       <div class="itens-pesquisa">
-        <button type="button">Marcar Todos</button>
-        <button type="button">Desmarcar Todos</button>
-        <button type="button">Criar Tabela</button>
-        <form>
-          <b>Nome da Tabela</b>
-          <input type="text" class="nome">
-        </form>
+        <div>
+          <form>
+            <b>Nome da Tabela</b>
+            <input type="text" class="nome">
+          </form>
+        </div>
+
+        <div>
+          <button type="button">Marcar Todos</button>
+          <button type="button">Desmarcar Todos</button>
+          <button type="button">Criar Tabela</button>
+        </div>
+        
+        
       </div>
       
       <!--Tabela Principal para selecionar os itens que estarão na tabela personalizada-->
@@ -92,5 +87,7 @@
         <?php include 'tabelas.php'; ?>
         
       </table>
+      
+
 </body>
 </html>
