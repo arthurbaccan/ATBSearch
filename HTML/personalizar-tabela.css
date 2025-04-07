@@ -28,3 +28,11 @@ div.itens-pesquisa{
         background-color: white;
     }
 }
+
+@media (max-width: 344px) {
+    button {
+        border: 1px solid lightgray;
+        margin-left: 13px;
+        display: none;
+    }
+}

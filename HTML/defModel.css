@@ -198,7 +198,7 @@ div.nav-right {
 }
 
 /*responsividade --- navbar*/
-@media (max-width: 630px) {
+@media (min-width: 511px) and (max-width: 630px) {
     div.nav-left {
         font-size: 15px;
 
@@ -247,8 +247,6 @@ div.nav-right {
     margin-left: 13%;
     margin-right: 13%;
 
-    width: 74%;
-
     tr{
         border: 1px solid lightgray;
         th, td{
@@ -270,6 +268,17 @@ div.nav-right {
                 border: none;
                 background-color: white;
             }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    tr{
+        border: 1px solid lightgray;
+        th, td{
+            border: 1px solid lightgray;
+            text-align: center;
+            font-size: 6px;
         }
     }
 }
@@ -337,21 +346,22 @@ a.nav-table-no-active {
         margin-top: 44px; /*NÃO MUDA ISSO*/
         margin-left: 0;
 
-        gap: 14px;
-        font-size: 12px;
+        gap: 13px;
+        font-size: 11px;
         height: 40px;
     }
 }
 
-@media (max-width: 368px) {
+@media (max-width: 378px) {
     div.navbar-table {
         justify-content: center;
+        align-items: center;
 
         margin-top: 44px; /*NÃO MUDA ISSO*/
         margin-left: 0;
 
         gap: 11px;
-        font-size: 11px;
+        font-size: 10px;
         height: 35px;
     }
 }
