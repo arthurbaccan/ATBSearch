@@ -78,16 +78,16 @@
       
         <tr>
           <th>Nome <button type="button">...</button></th>
-          <th>Tipo de antibiótico <button type="button">...</button></th>
-          <th>Ataca gram positiva <button type="button">...</button></th>
-          <th>Ataca gram negativa <button type="button">...</button></th>
-          <th>Morfologia <button type="button">...</button></th>
+          <th><label id="teste1">Tipo de Antibiótico</label> <button type="button">...</button></th>
+          <th><label id="teste2">Ataca Gram Positiva</label> <button type="button">...</button></th>
+          <th><label id="teste3">Ataca Gram Negativa</label> <button type="button">...</button></th>
+          <th><label id="teste4">Morfologia</label> <button type="button">...</button></th>
         </tr>
                 
         <?php include 'tabelas.php'; ?>
         
       </table>
       
-
+    <script src="personalizar-tabela.js"></script>
 </body>
 </html>

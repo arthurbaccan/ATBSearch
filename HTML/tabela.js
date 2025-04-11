@@ -13,3 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('add-table-button').addEventListener('click', function() {
   window.location.href = "personalizar-tabela.php"
 });
+

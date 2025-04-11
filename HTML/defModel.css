@@ -247,11 +247,14 @@ div.nav-right {
     margin-left: 13%;
     margin-right: 13%;
 
+    width: 74%;
+
     tr{
         border: 1px solid lightgray;
         th, td{
             border: 1px solid lightgray;
             text-align: center;
+            font-size: 16px;
         }
         th{
             z-index: -1;
@@ -272,13 +275,63 @@ div.nav-right {
     }
 }
 
-@media (max-width: 650px) {
-    tr{
-        border: 1px solid lightgray;
-        th, td{
+@media (max-width: 1449px) {
+    .table-default{
+        margin-left: 7%;
+        margin-right: 7%;
+
+        width: 86%;
+        tr{
+            th, td{
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1009px) {
+    .table-default{
+        margin-left: 0;
+        margin-right: 0;
+
+        width: 100%;
+        tr{
+            th, td{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 819px) {
+    .table-default{
+        width: 820px;
+        overflow-x: scroll;
+        border: 1px solid gray;
+
+        tr{
             border: 1px solid lightgray;
-            text-align: center;
-            font-size: 6px;
+            th, td{
+                border: 1px solid lightgray;
+                text-align: center;
+                font-size: 16px;
+            }
+            th{
+                z-index: -1;
+                position: relative;
+
+                background-color: white;
+                
+                button{
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    border: none;
+                    background-color: white;
+                }
+            }
         }
     }
 }
