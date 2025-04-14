@@ -53,7 +53,7 @@
     </div>
     <br>
 
-    <h1 style="text-align: center; margin-top: 100px; margin-buttom: 0px"></h1>
+    <h1 style="text-align: center;  margin-buttom: 0px"></h1>
 
 
       <div class="itens-pesquisa">

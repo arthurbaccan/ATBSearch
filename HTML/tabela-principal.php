@@ -52,18 +52,21 @@
     <br>
     <!--Tabela principal-->
     <h1 style="text-align: center; margin-top: 90px; margin-buttom: 8px">Filtrar Antibióticos</h1>
-    <table class="table-default">
-      <tr>
-        <th>Nome</th>
-        <th>Tipo de antibiótico</th>
-        <th>Ataca gram positiva</th>
-        <th>Ataca gram negativa</th>
-        <th>Morfologia</th>
-      </tr>
-                
-      <?php include 'tabelas.php'; ?>
-        
-    </table>
+    
+    <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
+      <table class="table-default">
+        <tr>
+          <th>Nome</th>
+          <th>Tipo de antibiótico</th>
+          <th>Ataca gram positiva</th>
+          <th>Ataca gram negativa</th>
+          <th>Morfologia</th>
+        </tr>
+                  
+        <?php include 'tabelas.php'; ?>
+          
+      </table>
+    </div>
       
 </body>
 </html>

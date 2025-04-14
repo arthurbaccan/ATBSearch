@@ -312,7 +312,7 @@ div.nav-right {
             th, td{
                 border: 1px solid lightgray;
                 text-align: center;
-                font-size: 16px;
+                font-size: 12px;
             }
             th{
                 z-index: -1;
@@ -380,7 +380,7 @@ a.nav-table-no-active {
 
 @media (max-width: 630px) {
     div.navbar-table {
-        margin-top: 47px; /*NÃO MUDA ISSO*/ 
+        margin-top: 44px; /*NÃO MUDA ISSO*/ 
 
         gap: 20px;
         font-size: 13px;
@@ -394,7 +394,7 @@ a.nav-table-no-active {
     div.navbar-table {
         justify-content: center;
 
-        margin-top: 44px; /*NÃO MUDA ISSO*/
+        margin-top: 43px; /*NÃO MUDA ISSO*/
         margin-left: 0;
 
         gap: 13px;
@@ -408,7 +408,7 @@ a.nav-table-no-active {
         justify-content: center;
         align-items: center;
 
-        margin-top: 44px; /*NÃO MUDA ISSO*/
+        margin-top: 43px; /*NÃO MUDA ISSO*/
         margin-left: 0;
         padding: 0;
 
