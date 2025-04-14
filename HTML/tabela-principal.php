@@ -24,7 +24,35 @@
       overflow-x: hidden;
       background-color: #dfdfdfee;
     }
+
+    .titulo {
+      text-align: center;
+      margin-top: 90px;
+      margin-bottom: 8px;
+    }
+    
+    @media (max-width: 630px) {
+      .titulo {
+        margin-top: 75px;
+      }
+    }
+
+    @media (max-width: 510px) {
+      .titulo {
+        margin-top: 68px;
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 378px) {
+      .titulo {
+        margin-top: 62px;
+        font-size: 23px;
+      }
+    }
   </style>
+
+   
 
 <body>
     <!--Navbar-->
@@ -51,7 +79,7 @@
     </div>
     <br>
     <!--Tabela principal-->
-    <h1 style="text-align: center; margin-top: 90px; margin-buttom: 8px">Filtrar Antibióticos</h1>
+    <h1 class="titulo">Filtrar Antibióticos</h1>
     
     <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
       <table class="table-default">

@@ -93,7 +93,7 @@ div.itens-pesquisa{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 75px;
+        margin-top: 70px;
 
         button{
             margin-top: 4px;
@@ -102,5 +102,11 @@ div.itens-pesquisa{
         input.nome {
             height: 16px;
         }
+    }
+}
+
+@media (max-width: 510px) {
+    div.itens-pesquisa {
+        margin-top: 65px;
     }
 }
