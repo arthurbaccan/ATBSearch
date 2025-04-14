@@ -307,7 +307,7 @@ div.nav-right {
     .table-default{
         width: 820px;
         overflow-x: scroll;
-        border: 1px solid gray;
+        -webkit-overflow-scrolling: touch;
 
         tr{
             border: 1px solid lightgray;
