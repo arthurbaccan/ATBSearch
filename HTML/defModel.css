@@ -306,8 +306,6 @@ div.nav-right {
 @media (max-width: 819px) {
     .table-default{
         width: 820px;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
 
         tr{
             border: 1px solid lightgray;
@@ -412,6 +410,7 @@ a.nav-table-no-active {
 
         margin-top: 44px; /*NÃO MUDA ISSO*/
         margin-left: 0;
+        padding: 0;
 
         gap: 11px;
         font-size: 10px;
