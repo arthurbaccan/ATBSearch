@@ -75,14 +75,16 @@
       
       <!--Tabela Principal para selecionar os itens que estarão na tabela personalizada-->
       <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
-        <table class="table-default">
+        <table id="tabela-personalizada" class="table-default">
         
           <tr>
-            <th>Nome <button type="button">...</button></th>
-            <th><label id="teste1">Tipo de Antibiótico</label> <button type="button">...</button></th>
-            <th><label id="teste2">Ataca Gram Positiva</label> <button type="button">...</button></th>
-            <th><label id="teste3">Ataca Gram Negativa</label> <button type="button">...</button></th>
-            <th><label id="teste4">Morfologia</label> <button type="button">...</button></th>
+            <thead>
+              <th>Nome <button type="button">...</button></th>
+              <th><label id="teste1">Tipo de Antibiótico</label> <button type="button">...</button></th>
+              <th><label id="teste2">Ataca Gram Positiva</label> <button type="button">...</button></th>
+              <th><label id="teste3">Ataca Gram Negativa</label> <button type="button">...</button></th>
+              <th><label id="teste4">Morfologia</label> <button type="button">...</button></th>
+            </thead> 
           </tr>
                   
           <?php include 'tabelas.php'; ?>

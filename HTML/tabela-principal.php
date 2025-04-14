@@ -84,11 +84,13 @@
     <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
       <table class="table-default">
         <tr>
-          <th>Nome</th>
-          <th>Tipo de antibiótico</th>
-          <th>Ataca gram positiva</th>
-          <th>Ataca gram negativa</th>
-          <th>Morfologia</th>
+        <thead>
+              <th>Nome <button type="button">...</button></th>
+              <th><label id="teste1">Tipo de Antibiótico</label> <button type="button">...</button></th>
+              <th><label id="teste2">Ataca Gram Positiva</label> <button type="button">...</button></th>
+              <th><label id="teste3">Ataca Gram Negativa</label> <button type="button">...</button></th>
+              <th><label id="teste4">Morfologia</label> <button type="button">...</button></th>
+            </thead> 
         </tr>
                   
         <?php include 'tabelas.php'; ?>
@@ -96,5 +98,6 @@
       </table>
     </div>
       
+    <script src="personalizar-tabela.js"></script>
 </body>
 </html>

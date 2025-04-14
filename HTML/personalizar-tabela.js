@@ -16,3 +16,4 @@ function verificarTamanhoTela() {
   
   window.addEventListener('resize', verificarTamanhoTela);
   verificarTamanhoTela(); 
+
