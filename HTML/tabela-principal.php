@@ -53,7 +53,6 @@
   </style>
 
    
-
 <body>
     <!--Navbar-->
     <div class="navbar">
@@ -84,13 +83,42 @@
     <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
       <table class="table-default">
         <tr>
-        <thead>
-              <th>Nome <button type="button">...</button></th>
-              <th><label id="teste1">Tipo de Antibiótico</label> <button type="button">...</button></th>
-              <th><label id="teste2">Ataca Gram Positiva</label> <button type="button">...</button></th>
-              <th><label id="teste3">Ataca Gram Negativa</label> <button type="button">...</button></th>
-              <th><label id="teste4">Morfologia</label> <button type="button">...</button></th>
-            </thead> 
+          <thead>
+            <th>
+
+              Nome
+              <!--Mostrar Filtros -->
+              <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
+              <!--Filtros: Nome-->
+              <div id="filNome" class="filtro">
+                <button type="button" onclick="">Ordem Alfabética (A a Z)</button>
+                <button type="button" onclick="">Ordem Alfabética (Z a A)</button>
+                <button type="button">a</button>
+                <button type="button">a</button>
+              </div>
+
+            </th>
+            
+            <th>
+              <label id="teste1">Tipo de Antibiótico</label>
+              <button type="button" class="btnFilter">...</button></th>
+
+            <th>
+              <label id="teste2">Ataca Gram Positiva</label>
+              <button type="button" class="btnFilter">...</button>
+            </th>
+
+            <th>
+              <label id="teste3">Ataca Gram Negativa</label>
+              <button type="button" class="btnFilter">...</button>
+            </th>
+            
+            <th>
+              <label id="teste4">Morfologia</label>
+              <button type="button" class="btnFilter">...</button>
+            </th>
+
+          </thead> 
         </tr>
                   
         <?php include 'tabelas.php'; ?>

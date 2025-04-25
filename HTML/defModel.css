@@ -157,6 +157,8 @@ div.navbar {
     width: 100%;
 
     background-color: var(--color-blue-default);
+
+    z-index: 5;
 }
 
 div.nav-left {
@@ -255,14 +257,15 @@ div.nav-right {
             border: 1px solid lightgray;
             text-align: center;
             font-size: 16px;
+
         }
         th{
-            z-index: -1;
+            z-index: 1;
             position: relative;
 
             background-color: white;
             
-            button{
+            button.btnFilter{
                 position: absolute;
                 right: 0;
                 top: 50%;
@@ -270,6 +273,29 @@ div.nav-right {
 
                 border: none;
                 background-color: white;
+            }
+
+            div.filtro {
+                position: absolute;
+                right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                width: 200px;
+
+                button {
+                    margin-top: 3px;
+                    margin-bottom: 3px;
+
+                    border-radius: 9px;
+                    border-color: white;
+                    background-color: white;
+                }
+
+                background-color: rgb(240, 240, 240);
+                border-radius: 9px 0px 9px 9px;
+
             }
         }
     }
@@ -315,12 +341,11 @@ div.nav-right {
                 font-size: 12px;
             }
             th{
-                z-index: -1;
                 position: relative;
 
                 background-color: white;
                 
-                button{
+                button.btnFilter{
                     position: absolute;
                     right: 0;
                     top: 50%;
@@ -357,6 +382,8 @@ div.navbar-table {
     font-weight: bold;
 
     background-color: white;
+
+    z-index: 5;
 }
 
 a.nav-table-active {

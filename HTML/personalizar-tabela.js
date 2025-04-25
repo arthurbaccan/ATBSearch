@@ -17,3 +17,17 @@ function verificarTamanhoTela() {
   window.addEventListener('resize', verificarTamanhoTela);
   verificarTamanhoTela(); 
 
+/*função para filtrar pelo nome*/
+var displayFlex = false;
+function mostrarFiltrosNome() {
+
+    if(displayFlex == false) {
+        document.getElementById("filNome").style.display = "flex";
+        displayFlex = true;
+    }
+    else {
+        document.getElementById("filNome").style.display = "none";
+        displayFlex = false;
+    }
+
+}

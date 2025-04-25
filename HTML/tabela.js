@@ -14,3 +14,5 @@ document.getElementById('add-table-button').addEventListener('click', function()
   window.location.href = "personalizar-tabela.php"
 });
 
+
+
