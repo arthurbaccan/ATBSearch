@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
     <link rel="stylesheet" href="modBootstrap.css">
 
@@ -80,7 +82,7 @@
     <!--Tabela principal-->
     <h1 class="titulo">Filtrar Antibióticos</h1>
     
-    <div style="overflow-x: scroll; -webkit-overflow-scrolling: touch;">
+    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
       <table class="table-default">
         <tr>
           <thead>
@@ -90,19 +92,36 @@
               <!--Mostrar Filtros -->
               <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
               <!--Filtros: Nome-->
-              <div id="filNome" class="filtro">
-                <button type="button" onclick="">Ordem Alfabética (A a Z)</button>
-                <button type="button" onclick="">Ordem Alfabética (Z a A)</button>
-                <button type="button">a</button>
-                <button type="button">a</button>
-              </div>
+              <form id="filNome" class="filtro">
+                <button type="button" onclick="">Ordem Alfabética (A-Z)</button>
+                <button type="button" onclick="">Ordem Alfabética (Z-A)</button>
+                <button type="button" onclick="">Limpar Ordem</button>
+                <button type="button" onclick="">Limpar Filtro</button>
+                <input type="text" class="inpText" placeholder="Pesquisar...">
+                <label style="display: flex; align-items: center; gap: 5px;">
+                  <input id="pesquisaNome" type="checkbox" class="inpCheck"> Selecionar Todos
+                </label>
+              </form>
 
             </th>
             
             <th>
               <label id="teste1">Tipo de Antibiótico</label>
-              <button type="button" class="btnFilter">...</button></th>
-
+              <!-- Mostrar Filtros -->
+              <button id="btnAntibiotico" type="button" class="btnFilter" onclick="mostrarFiltrosAntibiotico()">...</button>
+              <!-- Filtros: Tipo de Antibiótico -->
+              <form id="filAntibiotico" class="filtro">
+                <button type="button" onclick="">Ordem Alfabética (A-Z)</button>
+                <button type="button" onclick="">Ordem Alfabética (Z-A)</button>
+                <button type="button" onclick="">Limpar Ordem</button>
+                <button type="button" onclick="">Limpar Filtro</button>
+                <input type="text" class="inpText" placeholder="Pesquisar...">
+                <label style="display: flex; align-items: center; gap: 5px;">
+                  <input id="pesquisaAntibiotico" type="checkbox" class="inpCheck"> Selecionar Todos
+                </label>
+              </form>
+            </th>
+            
             <th>
               <label id="teste2">Ataca Gram Positiva</label>
               <button type="button" class="btnFilter">...</button>

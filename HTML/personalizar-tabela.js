@@ -18,16 +18,30 @@ function verificarTamanhoTela() {
   verificarTamanhoTela(); 
 
 /*função para filtrar pelo nome*/
-var displayFlex = false;
+var displayFlexNome = false;
 function mostrarFiltrosNome() {
 
-    if(displayFlex == false) {
+    if(displayFlexNome == false) {
         document.getElementById("filNome").style.display = "flex";
-        displayFlex = true;
+        displayFlexNome = true;
     }
     else {
         document.getElementById("filNome").style.display = "none";
-        displayFlex = false;
+        displayFlexNome = false;
+    }
+
+}
+
+var displayFlexAntibiotico = false;
+function mostrarFiltrosAntibiotico() {
+
+    if(displayFlexAntibiotico == false) {
+        document.getElementById("filAntibiotico").style.display = "flex";
+        displayFlexAntibiotico = true;
+    }
+    else {
+        document.getElementById("filAntibiotico").style.display = "none";
+        displayFlexAntibiotico = false;
     }
 
 }
