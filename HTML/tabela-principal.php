@@ -93,14 +93,21 @@
               <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
               <!--Filtros: Nome-->
               <form id="filNome" class="filtro">
-                <button type="button" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" onclick="">Limpar Ordem</button>
-                <button type="button" onclick="">Limpar Filtro</button>
+                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
                 <input type="text" class="inpText" placeholder="Pesquisar...">
                 <label style="display: flex; align-items: center; gap: 5px;">
                   <input id="pesquisaNome" type="checkbox" class="inpCheck"> Selecionar Todos
                 </label>
+
+                <!-- ok or cancel -->
+                <div class="okOrCancel">
+                  <button type="button" class="btnOk">OK</button>
+                  <button type="button" class="btnCancel">Cancelar</button>
+                </div> 
+
               </form>
 
             </th>
@@ -111,14 +118,85 @@
               <button id="btnAntibiotico" type="button" class="btnFilter" onclick="mostrarFiltrosAntibiotico()">...</button>
               <!-- Filtros: Tipo de Antibiótico -->
               <form id="filAntibiotico" class="filtro">
-                <button type="button" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" onclick="">Limpar Ordem</button>
-                <button type="button" onclick="">Limpar Filtro</button>
+                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
                 <input type="text" class="inpText" placeholder="Pesquisar...">
-                <label style="display: flex; align-items: center; gap: 5px;">
-                  <input id="pesquisaAntibiotico" type="checkbox" class="inpCheck"> Selecionar Todos
-                </label>
+
+                <div class="containerCheckBox">
+                <div class="selectChekBox">
+                  <input id="selecionarTodosAntibiotico" type="checkbox" class="inpCheck"> Selecionar Todos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkMacrolideos" type="checkbox" class="inpCheck"> Macrolídeos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkPenicilinas" type="checkbox" class="inpCheck"> Penicilinas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkCefalosporinas" type="checkbox" class="inpCheck"> Cefalosporinas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkCarbapenemicos" type="checkbox" class="inpCheck"> Carbapenêmicos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkAminoglicosideos" type="checkbox" class="inpCheck"> Aminoglicosídeos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkQuinolonas" type="checkbox" class="inpCheck"> Quinolonas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkAnfenicois" type="checkbox" class="inpCheck"> Anfenicóis
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkSulfonamidas" type="checkbox" class="inpCheck"> Sulfonamidas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkGlicopeptideos" type="checkbox" class="inpCheck"> Glicopeptídeos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkNitroimidazolicos" type="checkbox" class="inpCheck"> Nitroimdazólicos
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkLicosamidas" type="checkbox" class="inpCheck"> Licosamidas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkPolimixinas" type="checkbox" class="inpCheck"> Polimixinas
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkOxazolidinona" type="checkbox" class="inpCheck"> Oxazolidinona
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkGlicilciclina" type="checkbox" class="inpCheck"> Glicilciclina
+                </div>
+
+                <div class="selectChekBox">
+                  <input id="checkAntituberculosos" type="checkbox" class="inpCheck"> Antituberculosos
+                </div>
+
+                </div>
+
+                <!-- ok or cancel -->
+                <div class="okOrCancel">
+                  <button type="button" class="btnOk">OK</button>
+                  <button type="button" class="btnCancel">Cancelar</button>
+                </div> 
+
               </form>
             </th>
             

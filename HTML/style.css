@@ -13,11 +13,13 @@ COLOR
  */
 :root {
     --color-blue-default: #006494;
+    --color-blue-default-hover: #00415f;
     --color-blue-dark: #09008b;
     --color-blue-dark-2: #040058;
     --color-green-none: #17ac04;
     --color-green-dark: #108101;
     --color-grey-light: #ffffffe0;
+    --color-grey-light-hover: #cccccce0;
     --color-grey-light-2: #f4f4f9;
 }
 
