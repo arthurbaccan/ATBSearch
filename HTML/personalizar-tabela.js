@@ -17,7 +17,7 @@ function verificarTamanhoTela() {
   window.addEventListener('resize', verificarTamanhoTela);
   verificarTamanhoTela(); 
 
-/*função para filtrar pelo nome*/
+/*função para mostrar filtros: Nome*/
 var displayFlexNome = false;
 function mostrarFiltrosNome() {
 
@@ -44,6 +44,7 @@ function mostrarFiltrosNome() {
 
 }
 
+/*função para mostrar filtros: Antibiotico*/
 var displayFlexAntibiotico = false;
 function mostrarFiltrosAntibiotico() {
 
@@ -70,6 +71,7 @@ function mostrarFiltrosAntibiotico() {
 
 }
 
+/*função para mostrar filtros: Gram Positiva*/
 var displayFlexGramPositiva = false;
 function mostrarGramPositiva() {
 
@@ -96,6 +98,7 @@ function mostrarGramPositiva() {
 
 }
 
+/*função para mostrar filtros: Gram Negativa*/
 var displayFlexGramNegativa = false;
 function mostrarGramNegativa() {
 
@@ -122,6 +125,7 @@ function mostrarGramNegativa() {
 
 }
 
+/*função para mostrar filtros: Morfologia*/
 var displayFlexMorfologia = false;
 function mostrarMorfologia() {
 

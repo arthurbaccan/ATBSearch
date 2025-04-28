@@ -98,9 +98,7 @@
                 <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
                 <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
                 <input type="text" class="inpText" placeholder="Pesquisar...">
-                <label style="display: flex; align-items: center; gap: 5px;">
-                  <input id="pesquisaNome" type="checkbox" class="inpCheck"> Selecionar Todos
-                </label>
+                
 
                 <!-- ok or cancel -->
                 <div class="okOrCancel">
