@@ -24,6 +24,18 @@ function mostrarFiltrosNome() {
     if(displayFlexNome == false) {
         document.getElementById("filNome").style.display = "flex";
         displayFlexNome = true;
+
+        displayFlexAntibiotico = false;
+        document.getElementById("filAntibiotico").style.display = "none";
+
+        displayFlexGramPositiva = false;
+        document.getElementById("filGramPositiva").style.display = "none";
+
+        displayFlexGramNegativa = false;
+        document.getElementById("filGramNegativa").style.display = "none";
+
+        displayFlexMorfologia = false;
+        document.getElementById("filMorfologia").style.display = "none";
     }
     else {
         document.getElementById("filNome").style.display = "none";
@@ -38,10 +50,100 @@ function mostrarFiltrosAntibiotico() {
     if(displayFlexAntibiotico == false) {
         document.getElementById("filAntibiotico").style.display = "flex";
         displayFlexAntibiotico = true;
+
+        displayFlexNome = false;
+        document.getElementById("filNome").style.display = "none";
+
+        displayFlexGramPositiva = false;
+        document.getElementById("filGramPositiva").style.display = "none";
+
+        displayFlexGramNegativa = false;
+        document.getElementById("filGramNegativa").style.display = "none";
+
+        displayFlexMorfologia = false;
+        document.getElementById("filMorfologia").style.display = "none";
     }
     else {
         document.getElementById("filAntibiotico").style.display = "none";
         displayFlexAntibiotico = false;
+    }
+
+}
+
+var displayFlexGramPositiva = false;
+function mostrarGramPositiva() {
+
+    if(displayFlexGramPositiva == false) {
+        document.getElementById("filGramPositiva").style.display = "flex";
+        displayFlexGramPositiva = true;
+
+        displayFlexNome = false;
+        document.getElementById("filNome").style.display = "none";
+
+        displayFlexAntibiotico = false;
+        document.getElementById("filAntibiotico").style.display = "none";
+
+        displayFlexGramNegativa = false;
+        document.getElementById("filGramNegativa").style.display = "none";
+
+        displayFlexMorfologia = false;
+        document.getElementById("filMorfologia").style.display = "none";
+    }
+    else {
+        document.getElementById("filGramPositiva").style.display = "none";
+        displayFlexGramPositiva = false;
+    }
+
+}
+
+var displayFlexGramNegativa = false;
+function mostrarGramNegativa() {
+
+    if(displayFlexGramNegativa == false) {
+        document.getElementById("filGramNegativa").style.display = "flex";
+        displayFlexGramNegativa = true;
+
+        displayFlexNome = false;
+        document.getElementById("filNome").style.display = "none";
+
+        displayFlexAntibiotico = false;
+        document.getElementById("filAntibiotico").style.display = "none";
+
+        displayFlexGramPositiva = false;
+        document.getElementById("filGramPositiva").style.display = "none";
+
+        displayFlexMorfologia = false;
+        document.getElementById("filMorfologia").style.display = "none";
+    }
+    else {
+        document.getElementById("filGramNegativa").style.display = "none";
+        displayFlexGramNegativa = false;
+    }
+
+}
+
+var displayFlexMorfologia = false;
+function mostrarMorfologia() {
+
+    if(displayFlexMorfologia == false) {
+        document.getElementById("filMorfologia").style.display = "flex";
+        displayFlexMorfologia = true;
+
+        displayFlexNome = false;
+        document.getElementById("filNome").style.display = "none";
+
+        displayFlexAntibiotico = false;
+        document.getElementById("filAntibiotico").style.display = "none";
+
+        displayFlexGramPositiva = false;
+        document.getElementById("filGramPositiva").style.display = "none";
+
+        displayFlexGramNegativa = false;
+        document.getElementById("filGramNegativa").style.display = "none";
+    }
+    else {
+        document.getElementById("filMorfologia").style.display = "none";
+        displayFlexMorfologia = false;
     }
 
 }
