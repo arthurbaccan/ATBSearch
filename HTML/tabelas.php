@@ -16,13 +16,14 @@ if ($conn->connect_error) {
 }
 
 // Consulta SQL para obter os dados
-$sql = "SELECT nome, tipo_antibiotico, gram_positiva, gram_negativa, morfologia FROM Antibiotico";
+$sql = "SELECT id, nome, tipo_antibiotico, gram_positiva, gram_negativa, morfologia FROM Antibiotico";
 $resultado = $conn->query($sql);
 
 // Se houver resultados, percorre cada linha e imprime uma linha da tabela
 if ($resultado->num_rows > 0) {
     while($linha = $resultado->fetch_assoc()){
         echo "<tr>";
+        echo "<td><input type='checkbox' id='cod' value=" . $linha['id'] . "></td>";
         echo "<td>" . $linha['nome'] . "</td>";
         echo "<td>" . transforamTipoEmString($linha['tipo_antibiotico']) . "</td>";
         echo "<td>" . transformaGramEmString($linha['gram_positiva']) . "</td>";

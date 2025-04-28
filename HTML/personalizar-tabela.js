@@ -149,5 +149,4 @@ function mostrarMorfologia() {
         document.getElementById("filMorfologia").style.display = "none";
         displayFlexMorfologia = false;
     }
-
 }
