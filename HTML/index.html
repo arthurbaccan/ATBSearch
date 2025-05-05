@@ -19,6 +19,65 @@
     <title>Pesquisador de Antibióticos</title>
 </head>
 
+<style>
+    .image {
+        margin-top: 30px;
+        margin-left: 60px;
+        margin-right: 60px;
+
+        /*razão de 26px witdh por 15px hieght*/
+        width: 420px; /*26px*/
+        height: 240px; /*15px*/
+    }
+
+    .text {
+        margin-left: 10vw;
+        margin-top: 20px;
+        padding: 5px;
+        width: 52vw;
+    }
+    
+    .container-especial {
+        display: flex;
+    }
+
+    @media (max-width: 1229px) {
+        .image {
+            margin-left: 40px;
+            margin-right: 20px;
+
+            width: 336px;
+            height: 195px;  
+        }
+    }
+
+    @media (max-width: 974px) {
+        .image {
+            width: 280px;
+            height: 150px;
+        }
+
+        .text {
+            margin-left: 5vw;
+        }
+    }
+
+    @media (max-width: 704px) {
+
+        .image {
+            display: none;
+        }
+
+        .text{
+            width: 92vw;
+        }
+
+        .container-especial {
+            display: initial;
+        }
+    }
+</style>
+
 <body class="body-default">
 
     <div class="navbar">
@@ -38,8 +97,8 @@
 
     <br><br>
 
-    <div style="display: flex;">
-        <div class="text" style="margin-left: 10vw; margin-top: 20px; padding: 5px; width: 52vw;">
+    <div class="container-especial">
+        <div class="text">
             <h2>Bem-vindo ao nosso Portal de Pesquisa de Antibióticos</h2>
             <br>
             Este site foi desenvolvido com o objetivo de fornecer uma plataforma completa, confiável e de fácil navegação para consulta e estudo sobre antibióticos. Aqui, você encontrará informações detalhadas sobre os principais antimicrobianos utilizados na prática clínica, incluindo suas classes, mecanismos de ação, espectros de atividade, indicações terapêuticas, efeitos colaterais, contraindicações, interações medicamentosas e dados farmacocinéticos.
@@ -82,8 +141,8 @@
         </div>
 
         <div>
-            <div style="margin-top: 30px; margin-left: 10px;">
-                <iframe width="532" height="300"
+            <div class="image">
+                <iframe width="100%" height="100%"
                     src="https://www.youtube.com/embed/bhauokgjcdw?si=bNiwm-XSGZlctjq1"
                     title="YouTube video player"
                     frameborder="0"
@@ -92,8 +151,8 @@
                 </iframe>
             </div>
     
-            <div style="margin-top: 30px; margin-left: 10px;">
-                <iframe width="532" height="300"
+            <div class="image">
+                <iframe width="100%" height="100%"
                 src="https://www.youtube.com/embed/IxX_QHay02M?si=OflQJgT_crCLKISn"
                 title="YouTube video player"
                 frameborder="0"
@@ -103,7 +162,8 @@
         </div>
         
     </div>
-
 </body>
+
+
 
 </html>
