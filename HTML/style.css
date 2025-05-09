@@ -126,3 +126,24 @@ button.table-open:hover {
 
     transition: 0.5s;
 }
+
+button.table-open-menu {
+    position: relative;
+    margin-bottom: 134px;
+    right: 51px;
+    width: 40px;
+    height: 45px;
+
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 3px;
+    border: none;
+}
+
+button.table-open-menu:hover {
+    background-color: #85a187;
+    border-radius: 5px;
+
+}

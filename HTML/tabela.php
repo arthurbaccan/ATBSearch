@@ -51,7 +51,7 @@
     <div class="navbar-table">
         <a href="tabela-principal.php" class="nav-table-no-active">Filtrar Antibióticos</a>
         <a href="#" class="nav-table-active">Tabelas Personalizadas</a>
-        <a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>
+        <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
     </div>
 
 
@@ -65,15 +65,35 @@
         </button>
 
         <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
-        <button class="table-open">
-          aaaaaaaaaaaa 
-          aaaaaaaaa 
-          aaaaaaaaaaaaa 
-        </button>
+          <button id="botao1" class="table-open">
+            aaaaaaaaaaaa 
+            aaaaaaaaa 
+            aaaaaaaaaaaaa 
+
+            <button id="botao2" class="table-open-menu">
+              <b>...</b>
+            </button>
+          </button>
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="tabela.js"></script>
 
 </body>
+
+<script>
+document.getElementById("botao1").addEventListener("mouseover", hoverBom);
+function hoverBom() {
+  document.getElementById("botao2").style.transition = "0.5s"
+  document.getElementById("botao2").style.backgroundColor = "darkgreen";
+  
+}
+
+document.getElementById("botao1").addEventListener("mouseleave", hoverMau);
+function hoverMau() {
+  document.getElementById("botao2").style.backgroundColor = "green";
+  
+}
+</script>
+
 </html>

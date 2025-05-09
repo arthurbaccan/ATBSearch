@@ -76,7 +76,7 @@
     <div class="navbar-table">
         <a href="#" class="nav-table-active">Filtrar Antibióticos</a>
         <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
-        <a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>
+        <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
     </div>
     <br>
     <!--Tabela principal-->
@@ -311,7 +311,10 @@
           </thead> 
         </tr>
                   
-        <?php include 'tabelas.php'; ?>
+        <?php
+          include 'tabelas.php';
+          tabelaPrincipal($conn);
+        ?>
           
       </table>
     </div>
