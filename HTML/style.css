@@ -141,9 +141,3 @@ button.table-open-menu {
     letter-spacing: 3px;
     border: none;
 }
-
-button.table-open-menu:hover {
-    background-color: #85a187;
-    border-radius: 5px;
-
-}

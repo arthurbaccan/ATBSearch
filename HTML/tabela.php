@@ -82,17 +82,29 @@
 </body>
 
 <script>
-document.getElementById("botao1").addEventListener("mouseover", hoverBom);
-function hoverBom() {
+document.getElementById("botao1").addEventListener("mouseover", hoverDarkGreen);
+function hoverDarkGreen() {
   document.getElementById("botao2").style.transition = "0.5s"
   document.getElementById("botao2").style.backgroundColor = "darkgreen";
   
 }
 
-document.getElementById("botao1").addEventListener("mouseleave", hoverMau);
-function hoverMau() {
+document.getElementById("botao1").addEventListener("mouseleave", hoverDarkGreen2);
+function hoverDarkGreen2() {
   document.getElementById("botao2").style.backgroundColor = "green";
   
+}
+
+document.getElementById("botao2").addEventListener("mouseover", hoverGray);
+function hoverGray() {
+  document.getElementById("botao2").style.transition = "0.5s"
+  document.getElementById("botao2").style.backgroundColor = "#85a187";
+  document.getElementById("botao2").style.borderRadius = "5px";  
+}
+
+document.getElementById("botao2").addEventListener("mouseleave", hoverGray2);
+function hoverGray2() {
+  document.getElementById("botao2").style.backgroundColor = "green";
 }
 </script>
 
