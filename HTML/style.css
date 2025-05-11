@@ -69,7 +69,7 @@ BUTTON-TABLE
 */
 
 button.table-add {
-    margin: 155px 0 0 220px;
+    margin: 130px 0 0 20px;
     width: 350px;
     height: 350px;
     padding: 0px 0px 33px 0px;
@@ -93,7 +93,6 @@ button.table-add:hover {
 
 button.table-open {
     /*Tamanho do botão*/
-    margin: 155px 0 0 20px;
     width: 350px;
     height: 350px;
     padding: 15px 15px 48px 15px;
@@ -127,10 +126,18 @@ button.table-open:hover {
     transition: 0.5s;
 }
 
-button.table-open-menu {
+.div-teste {
     position: relative;
-    margin-bottom: 134px;
-    right: 51px;
+    margin: 130px 0 0 20px;
+    width: 350px;
+    height: 350px;
+}
+
+button.table-open-menu {
+    position: absolute;
+    right: 13px;
+    top: 13px;
+
     width: 40px;
     height: 45px;
 
@@ -140,4 +147,24 @@ button.table-open-menu {
     padding-bottom: 20px;
     letter-spacing: 3px;
     border: none;
+}
+
+div.menu-button {
+    position: absolute;
+    right: 13px;
+    top: 56px;
+
+    display: none;
+    flex-direction: column;
+    padding: 2px;
+    gap: 2px;
+
+    background-color: var(--color-grey-light-2);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    button {
+        border-radius: 5px;
+    }
 }

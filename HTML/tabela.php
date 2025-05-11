@@ -60,52 +60,32 @@
       Lembrar de colocar uma excessão de java script pra evitar que seja possivel abrir mais de uma tabela personalizada ao mesmo tempo ao clicar rápido no botão,
       As tabelas personalizadas devem usar o mesmo banco de dados das tabelas convencionais-->
       <div style="display: flex; align-items: center;">
+        <div>
         <button id="add-table-button" class="table-add">
           +
         </button>
+        </div>
 
         <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
+        <div class="div-teste">  
           <button id="botao1" class="table-open">
-            aaaaaaaaaaaa 
-            aaaaaaaaa 
-            aaaaaaaaaaaaa 
-
-            <button id="botao2" class="table-open-menu">
-              <b>...</b>
-            </button>
+            Tabela Personalizada
           </button>
+
+          <button id="botao2" type="button" class="table-open-menu" onclick="menuActive()">
+              <b>...</b>
+          </button>
+
+          <div id="menu-button" class="menu-button">
+            <button>Deletar</button>
+            <button>Renomear</button>
+          </div>
+
+        </div>
       </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="tabela.js"></script>
+      <script src="tabela.js"></script>
 
 </body>
-
-<script>
-document.getElementById("botao1").addEventListener("mouseover", hoverDarkGreen);
-function hoverDarkGreen() {
-  document.getElementById("botao2").style.transition = "0.5s"
-  document.getElementById("botao2").style.backgroundColor = "darkgreen";
-  
-}
-
-document.getElementById("botao1").addEventListener("mouseleave", hoverDarkGreen2);
-function hoverDarkGreen2() {
-  document.getElementById("botao2").style.backgroundColor = "green";
-  
-}
-
-document.getElementById("botao2").addEventListener("mouseover", hoverGray);
-function hoverGray() {
-  document.getElementById("botao2").style.transition = "0.5s"
-  document.getElementById("botao2").style.backgroundColor = "#85a187";
-  document.getElementById("botao2").style.borderRadius = "5px";  
-}
-
-document.getElementById("botao2").addEventListener("mouseleave", hoverGray2);
-function hoverGray2() {
-  document.getElementById("botao2").style.backgroundColor = "green";
-}
-</script>
 
 </html>
