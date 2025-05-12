@@ -195,3 +195,42 @@ body {
 .item-lista-exemplo{
 	font-weight: bold;
 }
+
+.fotos-grupo {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.foto1 {
+  height: 290px;
+  text-align: center;
+  padding: 15px;
+  background-color: #ecff9a;
+  border-radius: 15px;
+}
+
+.foto2 {
+  height: 290px;
+  text-align: center;
+  padding: 15px;
+  background-color: #317a5e;
+  border-radius: 15px;
+}
+
+.foto3 {
+  height: 290px;
+  text-align: center;
+  padding: 15px;
+  background-color: #e9781b;
+  border-radius: 15px;
+}
