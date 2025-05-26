@@ -123,6 +123,10 @@ function validar()  {
             },
             body: dados
         })
+        .then(response => response.json()) // Espera resposta JSON do PHP
+        .then(data => {
+            console.log(data.mensagem); // Exibe a mensagem recebida do PHP
+        })
         .catch(error => {
             console.error("Erro ao enviar:", error);
         });
