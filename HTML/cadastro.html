@@ -24,15 +24,18 @@
             </div>
             
 
-            <input id="nome" class="inp-form " type="text" placeholder="Nome: *" required>
+            <input id="nome" class="inp-form " type="text" placeholder="Nome: *" onfocus="teste()">
+            <label id="valNome"></label>
 
             <br><br>
 
-            <input id="email" class="inp-form " type="text" placeholder="Email: *" required>
+            <input id="email" class="inp-form " type="text" placeholder="Email: *">
+            <label id="valEmail"></label>
 
             <br><br>
 
-            <input id="password" class="inp-form " type="password" placeholder="Senha: *" required>
+            <input id="senha" class="inp-form " type="password" placeholder="Senha: *">
+            <label id="valSenha"></label>
 
             <br><br>
 
@@ -40,7 +43,7 @@
 
             <br><br>
 
-            <button id="cadastro" class="btn-form" type="submit">Cadastrar</button>
+            <button id="cadastro" class="btn-form" type="button" onclick="validar()">Cadastrar</button>
 
             <br><br>
 
@@ -52,3 +55,4 @@
     </div>
     <script src="cadastro.js"></script>
 </body>
+</html>
