@@ -15,12 +15,14 @@ function teste() {
     }
 }
 
-
-
 function validar() {
     var nome = document.getElementById("nome").value;
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
+
+    var certo1 = false;
+    var certo2 = false;
+    var certo3 = false;
 
     if(nome === "") {
         document.getElementById("valNome").textContent = "Por favor, preencha este campo";
@@ -42,9 +44,11 @@ function validar() {
             document.getElementById("nome").style.outline = "0px";
         }
         else{
-            document.getElementById("valNome").textContent = "";
+            document.getElementById("valNome").textContent = "teste";
             document.getElementById("nome").style.border = "2px solid black";
             document.getElementById("nome").style.outline = "0px";
+
+            certo1 = true;
         }
     }
 
@@ -72,6 +76,8 @@ function validar() {
 
             document.getElementById("email").style.borderColor = "red";
             document.getElementById("email").style.outline = "0px";
+
+            certo2 = true;
         }
     }
 
@@ -98,7 +104,28 @@ function validar() {
             document.getElementById("valSenha").textContent = "";
             document.getElementById("senha").style.border = "2px solid black";
             document.getElementById("senha").style.outline = "0px";
+
+            certo3 = true;
         }
     }
+    if (certo1 == true &&
+        certo2 == true &&
+        certo3 == true
+    ) {
+        document.getElementById("valSenha").textContent = "foi?";
+        //Deixa os dados no formato de formulario HTML
+        let dados = `nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`;
 
+        // Envia via POST para o PHP
+        fetch("cadastro.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"//faz um submit dos dados do formulario para o php
+            },
+            body: dados
+        })
+        .catch(error => {
+            console.error("Erro ao enviar:", error);
+        });
+    }
 }
