@@ -15,14 +15,14 @@ function teste() {
     }
 }
 
-function validar() {
+var certo1 = false;
+var certo2 = false;
+var certo3 = false;
+
+function validar()  {
     var nome = document.getElementById("nome").value;
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
-
-    var certo1 = false;
-    var certo2 = false;
-    var certo3 = false;
 
     if(nome === "") {
         document.getElementById("valNome").textContent = "Por favor, preencha este campo";
@@ -44,7 +44,7 @@ function validar() {
             document.getElementById("nome").style.outline = "0px";
         }
         else{
-            document.getElementById("valNome").textContent = "teste";
+            document.getElementById("valNome").textContent = "";
             document.getElementById("nome").style.border = "2px solid black";
             document.getElementById("nome").style.outline = "0px";
 
@@ -67,6 +67,8 @@ function validar() {
             document.getElementById("valEmail").textContent = "";
             document.getElementById("email").style.border = "2px solid black";
             document.getElementById("email").style.outline = "0px";
+
+            certo2 = true;
         }
         else {
             document.getElementById("valEmail").textContent = "Preencha este campo corretamente";
@@ -76,8 +78,6 @@ function validar() {
 
             document.getElementById("email").style.borderColor = "red";
             document.getElementById("email").style.outline = "0px";
-
-            certo2 = true;
         }
     }
 
@@ -112,7 +112,6 @@ function validar() {
         certo2 == true &&
         certo3 == true
     ) {
-        document.getElementById("valSenha").textContent = "foi?";
         //Deixa os dados no formato de formulario HTML
         let dados = `nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&senha=${encodeURIComponent(senha)}`;
 
