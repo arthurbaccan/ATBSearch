@@ -33,7 +33,7 @@ function validar() {
     }
     else {
         if(nome.length <3) {
-            document.getElementById("valNome").textContent = "A senha deve ter ao menos 8 caracteres";
+            document.getElementById("valNome").textContent = "O nome deve ter ao menos 3 caracteres";
             document.getElementById("valNome").style.color = "red";
             document.getElementById("valNome").style.fontFamily = "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif";
             document.getElementById("valNome").style.fontSize = "13px";
@@ -43,7 +43,7 @@ function validar() {
         }
         else{
             document.getElementById("valNome").textContent = "";
-            document.getElementById("valNome").style.border = "2px solid black";
+            document.getElementById("nome").style.border = "2px solid black";
             document.getElementById("nome").style.outline = "0px";
         }
     }
