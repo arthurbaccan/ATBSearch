@@ -1,18 +1,19 @@
 <?php
-
-include("connection.php"); // Faz conexão com o banco de dados
-
+// Recebe as informações do formulario de cadastro
 if (isset($_POST["submit"])) {
+
+    include_once ("connection.php"); // Faz conexão com o banco de dados
+
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $telefone = $_POST["telefone"];
 
-    print_r($nome);
-    print_r($email);
-    print_r($senha);
-    print_r($telefone);
+    // VERIFICAR ORDEM E NOME DA TABELA DEPOIS
+    $result = mysqli_query($conn, "INSERT INTO Usuario(nome, email, senha, telefone)");
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +61,7 @@ if (isset($_POST["submit"])) {
 
             <br><br>
 
-            <button id="cadastro" class="btn-form" type="submit" onclick="validar()">Cadastrar</button>
+            <button id="cadastro" class="btn-form" type="submit" name="submit">Cadastrar</button>
 
             <br><br>
 
