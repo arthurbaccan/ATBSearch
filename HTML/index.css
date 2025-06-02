@@ -212,7 +212,9 @@ body {
 }
 
 .foto1 {
+  font-weight: bold;
   height: 290px;
+  width: 235px;
   text-align: center;
   padding: 15px;
   background-color: #ecff9a;
@@ -220,7 +222,9 @@ body {
 }
 
 .foto2 {
+  font-weight: bold;
   height: 290px;
+  width: 235px;
   text-align: center;
   padding: 15px;
   background-color: #317a5e;
@@ -228,7 +232,9 @@ body {
 }
 
 .foto3 {
+  font-weight: bold;
   height: 290px;
+  width: 235px;
   text-align: center;
   padding: 15px;
   background-color: #e9781b;
