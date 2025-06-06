@@ -2,15 +2,12 @@
 // Recebe as informações do formulario de cadastro
 if (isset($_POST["submit"])) {
 
-    include_once ("connection.php"); // Faz conexão com o banco de dados
-
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $telefone = $_POST["telefone"];
 
-    // VERIFICAR ORDEM E NOME DA TABELA DEPOIS
-    $result = mysqli_query($conn, "INSERT INTO Usuario(nome, email, senha, telefone)");
+    
 }
 
 
@@ -41,29 +38,29 @@ if (isset($_POST["submit"])) {
                 <h2>ATBSearch</h2>
             </div>
             
+            <div class="itens-form">
+                <input id="nome" name="nome" class="inp-form " type="text" placeholder="Nome: *">
+                <label id="valNome" name="valNome" class="text-validation-form">Preencha esse campo</label>
+            </div>
 
-            <input id="nome" name="nome" class="inp-form " type="text" placeholder="Nome: *" onfocus="teste()">
-            <label id="valNome"></label>
+            <div class="itens-form">
+                <input id="email" name="email" class="inp-form " type="text" placeholder="Email: *">
+                <label id="valEmail" name="valEmail" class="text-validation-form">Preencha esse campo</label>
+            </div>
+            
+            <div class="itens-form">
+                <input id="senha" name="senha" class="inp-form " type="password" placeholder="Senha: *">
+                <label id="valSenha" name="valSenha" class="text-validation-form">Preencha esse campo</label>
+            </div>
 
-            <br><br>
-
-            <input id="email" name="email" class="inp-form " type="text" placeholder="Email: *">
-            <label id="valEmail"></label>
-
-            <br><br>
-
-            <input id="senha" name="senha" class="inp-form " type="password" placeholder="Senha: *">
-            <label id="valSenha"></label>
-
-            <br><br>
-
-            <input id="telefone" name="telefone" class="inp-form" type="text" placeholder="Telefone: (XX) XXXX-XXXX">
-
-            <br><br>
+            <div class="itens-form">
+                <input id="telefone" name="telefone" class="inp-form" type="text" placeholder="Telefone: (XX) XXXX-XXXX">
+                <label id="valTelefone" name="valTelefone" class="text-validation-form">Insira um telefone válido</label>
+            </div>
 
             <button id="cadastro" class="btn-form" type="submit" name="submit">Cadastrar</button>
 
-            <br><br>
+            
 
             <h5 class="text-form">Já tem uma conta? <a class="link-blue" href="login.html">Login</a></h5>
             
