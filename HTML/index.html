@@ -37,11 +37,21 @@
     .display-lado-lado {
         display: flex;
         flex-direction: row;
+        align-items: top;
+        justify-content: center;
     }
 
-    .limitar-accordion {
-        width: 50%;
+    .margem-inicio {
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
+
+    .div-inicial-accordion {
+        height: inherit;
+        width: 60%;
+    }
+
 
     .alinhamentoCentro {
         margin-left: 10vw;
@@ -76,7 +86,7 @@
         }
     }
 
-    @media (max-width: 704px) {
+    @media (max-width: 804px) {
 
         .image {
             display: none;
@@ -89,6 +99,24 @@
         .container-flex-corpo {
             display: initial;
         }
+
+        .margem-inicio {
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        .display-lado-lado {
+            flex-direction: column;
+        }
+
+        .div-inicial-accordion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+
     }
 </style>
 
@@ -113,10 +141,9 @@
 
     <div class="container-flex-corpo">
 
-        <div class="display-lado-lado">
+        <div class="display-lado-lado margem-inicio">
 
-
-            <div class="limitar-accordion">
+            <div class="div-inicial-accordion">
                 <div class="accordion" id="accordionInicio">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
@@ -128,13 +155,15 @@
                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    O uso inadequado de antibióticos é um dos grandes desafios enfrentados pela saúde
+                                    O uso inadequado de antibióticos é um dos grandes desafios enfrentados pela
+                                    saúde
                                     pública
                                     atual,
                                     contribuindo diretamente para o aumento da resistência microbiana e a redução da
                                     eficácia
                                     dos
-                                    tratamentos. Pensando nisso, esta plataforma foi desenvolvida para oferecer suporte
+                                    tratamentos. Pensando nisso, esta plataforma foi desenvolvida para oferecer
+                                    suporte
                                     a
                                     profissionais
                                     da
@@ -155,7 +184,8 @@
                             <div class="accordion-body">
 
                                 <p>
-                                    O ATBSearch é uma plataforma que reune, de forma organizada e acessível, informações
+                                    O ATBSearch é uma plataforma que reune, de forma organizada e acessível,
+                                    informações
                                     atualizadas sobre
                                     antibióticos disponíveis no mercado nacional, como sua classe farmacológica e
                                     espectro
