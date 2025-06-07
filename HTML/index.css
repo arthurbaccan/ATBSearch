@@ -277,7 +277,6 @@ body {
 }
 
 .image {
-  margin-top: 30px;
   margin-left: 60px;
   margin-right: 60px;
 
@@ -318,7 +317,7 @@ body {
   justify-content: space-between;
   
 
-  padding-top: 20px;
+  padding-top: 70px;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 100px;
@@ -330,7 +329,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   height: inherit;
   width: 60%;
   max-width: 635px;
