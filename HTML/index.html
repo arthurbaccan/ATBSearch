@@ -35,10 +35,14 @@
     }
 
     .carousel-container {
-        width: 70%;
+        width: 60%;
         margin-left: 15%;
         margin-right: 15%;
         margin-top: 60px;
+    }
+
+    .carousel-bg{
+        background-color: rgb(255, 255, 255);
     }
 
     .carousel-image-item-container {
@@ -95,11 +99,24 @@
         height: 510px;
     }
 
+    @media (max-width: 1400px) {
+
+        .carousel-container {
+            width: 70%;
+        }
+
+    }
+
     @media (max-width: 1330px) {
         .powerBi {
             width: 750px;
             height: 460px;
         }
+
+        .carousel-container {
+            width: 75%;
+        }
+
     }
 
     @media (max-width: 1229px) {
@@ -113,6 +130,10 @@
 
         .carousel-image {
             height: 390px
+        }
+
+        .carousel-container {
+            width: 80%;
         }
     }
 
@@ -213,7 +234,7 @@
         }
     }
 
-     @media (max-width: 732px) {
+    @media (max-width: 732px) {
         .powerBi {
             width: 550px;
             height: 360px;
@@ -404,7 +425,7 @@
 
         <div class="carousel-container">
 
-            <div id="carouselExample" class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel">
+            <div id="carouselExample" class="carousel slide carousel-bg" data-bs-theme="dark" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="carousel-image-item-container">
@@ -436,13 +457,16 @@
                 </button>
             </div>
 
+            <br>
+        
+            <iframe title="ApresentacaoTCC-BancaJunho" class="powerBi" id="powerbi"
+                src="https://app.powerbi.com/view?r=eyJrIjoiZWZiYzQ4N2QtNDVhMy00MTU4LWI1MzMtMmY1OGE2NmIwMjZlIiwidCI6ImI0NzQxYTgyLTZiNmUtNDNhNS1hZDZlLTEwNDQ1MTFhYWVkNiJ9"
+                frameborder="0" allowFullScreen="true"></iframe>
         </div>
 
         <div class="alinhamentoCentro">
 
-            <iframe title="ApresentacaoTCC-BancaJunho" class="powerBi" id="powerbi"
-                src="https://app.powerbi.com/view?r=eyJrIjoiZWZiYzQ4N2QtNDVhMy00MTU4LWI1MzMtMmY1OGE2NmIwMjZlIiwidCI6ImI0NzQxYTgyLTZiNmUtNDNhNS1hZDZlLTEwNDQ1MTFhYWVkNiJ9"
-                frameborder="0" allowFullScreen="true"></iframe>
+            
         </div>
 
         <h2 style="text-align: center;">Integrantes da Equipe</h2>
