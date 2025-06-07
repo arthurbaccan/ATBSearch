@@ -198,6 +198,7 @@ body {
 
 .fotos-grupo {
   display: flex;
+  flex-direction: row;
   gap: 60px;
   align-items: center;
   justify-content: center;
