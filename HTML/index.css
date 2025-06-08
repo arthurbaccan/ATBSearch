@@ -318,7 +318,7 @@ body {
   justify-content: space-between;
 
   position: relative;
-  top: -10px;
+  top: 0px;
 
   padding-top: 80px;
   padding-left: 5%;
@@ -330,6 +330,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(7px);
+}
+
+@media (max-width: 630px) {
+  .container-inicio {
+    top: -10px;
+  }
 }
 
 .div-inicial-accordion {
