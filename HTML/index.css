@@ -533,13 +533,11 @@ body {
 @media (max-width: 600px) {
 
   .carousel-image {
-    height: 250px
+    height: 240px
   }
 
   .carousel-container {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 90%;
   }
 }
 
@@ -559,7 +557,7 @@ body {
 
 @media (max-width: 450px) {
   .carousel-image {
-    height: 200px
+    height: 190px
   }
 
   .powerBi {
@@ -586,6 +584,6 @@ body {
 
 @media (max-width: 370px) {
   .carousel-image {
-    height: 180px
+    height: 170px
   }
 }
