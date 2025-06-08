@@ -398,6 +398,22 @@ body {
 
 }
 
+.bottom-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #002B3F;
+  color: white;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.trademark-bottom{
+  font-size: small;
+  color: #767676;
+}
+
 @media (max-width: 1400px) {
 
   .carousel-container {
