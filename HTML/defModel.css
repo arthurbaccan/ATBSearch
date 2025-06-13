@@ -24,6 +24,7 @@ body.body-default {
     padding: 0;
     background-color: var(--color-grey-light-2);
     color: #000;
+
 }
 
 
@@ -49,6 +50,7 @@ body.body-form {
     background-color: var(--color-grey-light);
 
     min-width: 380px;
+    max-width: 420px;
     padding: 1px 10px 20px 10px;
 
     /* Usar na div do titulo */
@@ -66,22 +68,36 @@ body.body-form {
         
     }
 
-    /* Usar nos campos de texto */
-    input.inp-form {
-        border: 2px solid #000;
-        border-radius: 10px;
-        height: 35px;
-        width: 100%;
-        background-color: white;
-        box-sizing: border-box;
-        color: #000;
-        font-family: var(--font-all-form);
-    
-    }
-    
-    input.inp-form :focus {
-        outline: none;
-        box-shadow: 0 0 0 1px #000;
+    div.itens-form {
+        margin-bottom: 18px;
+
+        /* Usar nos campos de texto */
+        input.inp-form {
+            border: 2px solid #000;
+            border-radius: 10px;
+            height: 35px;
+            width: 100%;
+            background-color: white;
+            box-sizing: border-box;
+            color: #000;
+            font-family: var(--font-all-form);
+        }
+        
+        input.inp-form :focus {
+            outline: none;
+            box-shadow: 0 0 0 1px #000;
+        }
+
+        /* Texto de validação do formulario*/
+        .text-validation-form {
+            display: none;
+            margin: 0;
+            padding: 0;
+
+            color: red;
+            font-family: var(--font-all-form);
+            font-size: 15px;
+        }
     }
 
     /* Botão para enviar o formulário */
@@ -109,7 +125,6 @@ body.body-form {
         font-size: 15px;
     }
 
-    
 }
 
 /* Responsividade */
@@ -183,7 +198,7 @@ div.nav-right {
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    gap: 20px;
     margin-right: 20px;
     
     a {

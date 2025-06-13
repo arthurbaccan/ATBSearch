@@ -1,4 +1,4 @@
-/*Função para quebrar palavras dentro de um botão de classe table-open caso elas possuam mais de 12 caracteres*/ 
+// Função para quebrar palavras dentro de um botão de classe table-open caso elas possuam mais de 12 caracteres
 document.addEventListener('DOMContentLoaded', function() {
   const btn = document.querySelector('button.table-open');
   btn.innerHTML = btn.innerHTML.split(' ').map(word => {
@@ -14,7 +14,7 @@ document.getElementById('add-table-button').addEventListener('click', function()
   window.location.href = "personalizar-tabela.php"
 });
 
-/*Hover dos botões de acesso a uma tabela personalizada já pronta*/
+// Hover dos botões de acesso a uma tabela personalizada já pronta
 var menuActiveVar = true;
 
 function hoverDarkGreen() {

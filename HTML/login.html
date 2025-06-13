@@ -18,23 +18,24 @@
 </head>
 <body class="body-form">
     <div class="center-absolute">
-        <form class="form-default">
+        <form class="form-default" id="form-log-usuario">
             <div class="title-form">
                 <img src="../Imagens/lupa-com-antibiotico.png" align="left"></img>
                 <h2>ATBSearch</h2>
             </div>
 
-            <input id="email" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *">
-            <label id="valEmail"></label>
+            <div class="itens-form">
+                <input id="emailOrPhone" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *">
+                <label id="valEmailorPhone" name="valEmailorPhone" class="text-validation-form">Insira um email ou telefone (com DDD) válido</label>
+            </div>
 
-            <br><br>
 
-            <input id="password" class="inp-form " type="password" placeholder="Senha: *">
-            <label id="valSenha"></label>
+            <div class="itens-form">
+                <input id="senha" class="inp-form " type="password" placeholder="Senha: *">
+                <label id="valSenha" name="valSenha" class="text-validation-form">Insira uma senha válida </label>
+            </div>
 
-            <br><br>
-
-            <button id="cadastro" class="btn-form" type="button" onclick="validar()">Entrar</button>
+            <button id="cadastro" class="btn-form" type="button" onclick="validation()">Entrar</button>
 
             <br><br>
 
@@ -42,7 +43,7 @@
 
             <br><br>
 
-            <h5 class="text-form">Não tem uma conta? <a class="link-blue" href="cadastro.html">Cadastrar-se</a></h5>
+            <h5 class="text-form">Não tem uma conta? <a class="link-blue" href="cadastro.php">Cadastrar-se</a></h5>
             
         </form>
 

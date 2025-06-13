@@ -37,10 +37,10 @@
         </div>
 
         <div class="nav-right">
-            <a href="index.html">Menu</a>
+            <a href="index.html">Início</a>
             <a href="contato.html">Contato</a>
             <a href="tabela-principal.php">Tabelas</a>
-            <a href="cadastro.html">Cadastrar</a>
+            <a href="cadastro.php">Cadastrar</a>
             <a href="login.html">Login</a>
         </div>
     </div>
