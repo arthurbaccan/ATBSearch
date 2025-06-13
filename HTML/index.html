@@ -42,6 +42,11 @@
         display: flex;
     }
 
+    .powerBi {
+        width: 100%;
+        height: 500px;
+    }
+
     @media (max-width: 1229px) {
         .image {
             margin-left: 40px;
@@ -49,6 +54,10 @@
 
             width: 336px;
             height: 195px;  
+        }
+
+        .powerBi {
+             height: 300px;
         }
     }
 
@@ -119,14 +128,9 @@
             </p>
 
 
-            <iframe title="ApresentacaoTCC-BancaJunho" width="90%" height=1000px id="powerbi"
+            <iframe title="ApresentacaoTCC-BancaJunho" class="powerBi" width="100%" height=auto id="powerbi"
              src="https://app.powerbi.com/view?r=eyJrIjoiZWZiYzQ4N2QtNDVhMy00MTU4LWI1MzMtMmY1OGE2NmIwMjZlIiwidCI6ImI0NzQxYTgyLTZiNmUtNDNhNS1hZDZlLTEwNDQ1MTFhYWVkNiJ9"
               frameborder="0" allowFullScreen="true"></iframe>
-
-            <script>
-                document.getElementById("powerbi").height = document.getElementById("powerbi").offsetWidth * 0.9 + "px";
-                console.log(document.getElementById("powerbi").offsetWidth * 2 + "px");
-            </script>
             
             <h2 style="text-align: center;">Integrantes da Equipe</h2>
             <div class="fotos-grupo">
