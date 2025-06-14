@@ -42,7 +42,7 @@ body.body-form {
     background-color: var(--color-blue-default);
 }
 
-/* Modelo padrão de formulário pra tudo*/
+/* Modelo padrão de formulário para cadastro e login */
 .form-default {
     border: 0px;
     border-radius: 12px;
