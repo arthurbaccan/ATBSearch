@@ -15,6 +15,25 @@ if (isset($_COOKIE['usuario'])) {
         $nomeUsuario = htmlspecialchars($usuario['nome']);
     }
 }
+
+$emailUsuario = '';
+if (isset($_COOKIE['usuario'])) {
+    $usuario = json_decode($_COOKIE['usuario'], true);
+    if (isset($usuario['email'])) {
+        $emailUsuario = htmlspecialchars($usuario['email']);
+    }
+}
+
+$telefoneUsuario = '';
+if (isset($_COOKIE['usuario'])) {
+    $usuario = json_decode($_COOKIE['usuario'], true);
+    if (isset($usuario['telefone']) && $usuario["telefone"] !== "") {
+        $telefoneUsuario = htmlspecialchars($usuario['telefone']);
+    }
+    else{ 
+        $telefoneUsuario = 'Não cadastrado';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +74,79 @@ if (isset($_COOKIE['usuario'])) {
         text-align: center;
         margin-top: 40px;
     }
+    .info{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .buttons{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 430px;
+        gap: 30px;
+
+        button {
+            width: 200px;
+            height: 70px;
+
+            font-size: 24px;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--color-gray-light-hover);
+        }
+    }
+
+    @media (max-width: 450px) {
+        .buttons {
+            width:280px;
+            gap: 30px;
+
+            button {
+                width: 120px;
+                height: 70px;
+
+                font-size: 20px;
+                border-radius: 5px;
+                border: 1px solid gray;
+
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .buttons2 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        gap: 20px;
+
+        button {
+            margin-left: 5%;
+            width: 90%;
+            height: 70px;
+
+            font-size: 24px;
+            border-radius: 5px;
+            border: 1px solid gray;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--color-gray-light-hover);
+        }
+    }
 </style>
 
 <body>
@@ -87,6 +179,28 @@ if (isset($_COOKIE['usuario'])) {
         </h1>
     </div>
 
+    <div class="info">
+        <div style="margin-bottom: 15px;">Email: <?= $emailUsuario ?></div>
+        <div>Telefone: <?= $telefoneUsuario ?></div>
+    </div>
+
+    <div class="buttons">
+        <button type="button">Trocar de conta</button>
+        <button type="button">Mudar nome</button>
+        <button type="button">Mudar senha</button>
+        <button type="button">Mudar Telefone</button>
+    </div>
+
+    <div class="info" style="margin-top: 220px">
+        <div>Número de tabelas personalizadas: 3</div>
+    </div>
+
+    <div class="buttons2">
+        <button>teste</button>
+        <button>teste2</button>
+    </div>
+
+    <br>
 
 </body>
 </html>
