@@ -1,3 +1,14 @@
+<?php
+// Verifica se o cookie 'usuarios' existe e não está vazio
+$logado = false;
+if (isset($_COOKIE['usuarios'])) {
+    $usuarios = json_decode($_COOKIE['usuarios'], true);
+    if (!empty($usuarios)) {
+        $logado = true;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -52,8 +63,15 @@
             <a href="index.php">Início</a>
             <a href="contato.php">Contato</a>
             <a href="tabela-principal.php">Tabelas</a>
-            <a href="cadastro.php">Cadastrar</a>
-            <a href="login.php">Login</a>
+            
+            <!-- Modifica a navbar dependendo do usuário estar ou não logado-->
+            <?php if ($logado): ?>
+                <a href="trocar-conta.php">Trocar Conta</a>
+                <a href="logout.php">Sair</a>
+            <?php else: ?>
+                <a href="cadastro.php">Cadastrar</a>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
         </div>
     </div>
 

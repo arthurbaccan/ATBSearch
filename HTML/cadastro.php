@@ -1,17 +1,3 @@
-<?php
-// Recebe as informações do formulario de cadastro
-if (isset($_POST["submit"])) {
-
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
-    $telefone = $_POST["telefone"];
-
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +17,7 @@ if (isset($_POST["submit"])) {
 </head>
 <body class="body-form">
     <div class="center-absolute">
-        <form class="form-default" id="form-cad-usuario" method="POST" action=""><!-- No action, colocar a pagina php que vai fazer o cadastro do usuário no banco de dados-->
+        <form class="form-default" id="form-cad-usuario" method="POST" action="salvar-cadastro.php"><!-- No action, colocar a pagina php que vai fazer o cadastro do usuário no banco de dados-->
             <div class="title-form">
                 <img src="../Imagens/lupa-com-antibiotico.png" align="left"></img>
                 <h2>ATBSearch</h2>
@@ -58,8 +44,6 @@ if (isset($_POST["submit"])) {
             </div>
 
             <button id="cadastro" class="btn-form" type="button" name="button" onclick="validation()">Cadastrar</button>
-
-            
 
             <h5 class="text-form">Já tem uma conta? <a class="link-blue" href="login.html">Login</a></h5>
             

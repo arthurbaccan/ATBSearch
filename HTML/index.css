@@ -253,7 +253,7 @@ body {
   width: 235px;
   text-align: center;
   padding: 15px;
-  background-color: #00994A;
+  background: linear-gradient(135deg, #00994A, #008199);
   border-radius: 15px;
 }
 
@@ -263,7 +263,7 @@ body {
   width: 235px;
   text-align: center;
   padding: 15px;
-  background-color: #008199;
+  background-color: #00994A;
   border-radius: 15px;
 }
 
@@ -273,7 +273,7 @@ body {
   width: 235px;
   text-align: center;
   padding: 15px;
-  background-color: #368A99;
+  background-color: #008199;
   border-radius: 15px;
 }
 
