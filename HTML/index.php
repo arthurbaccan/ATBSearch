@@ -33,7 +33,7 @@ if (isset($_COOKIE['usuarios'])) {
     <title>ATBSearch</title>
 </head>
 
-<body class="body-default">
+<body class="body-default" style="background: #dfdfdfee;">
 
     <style>
         h1,
@@ -66,7 +66,7 @@ if (isset($_COOKIE['usuarios'])) {
             
             <!-- Modifica a navbar dependendo do usuário estar ou não logado-->
             <?php if ($logado): ?>
-                <a href="trocar-conta.php">Trocar Conta</a>
+                <a href="gerenciar-conta.php">Conta</a>
                 <a href="logout.php">Sair</a>
             <?php else: ?>
                 <a href="cadastro.php">Cadastrar</a>
