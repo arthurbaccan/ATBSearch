@@ -45,7 +45,8 @@
 
             <button id="cadastro" class="btn-form" type="button" name="button" onclick="validation()">Cadastrar</button>
 
-            <h5 class="text-form">Já tem uma conta? <a class="link-blue" href="login.html">Login</a></h5>
+            <h5 class="text-form">Já tem uma conta? <a class="link-blue" href="login.php">Login</a></h5>
+            <h5 class="text-form"><a class="link-blue" href="index.php">Pagina Inicial</a></h5>
             
         </form>
 

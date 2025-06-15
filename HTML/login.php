@@ -44,6 +44,7 @@
             <br><br>
 
             <h5 class="text-form">Não tem uma conta? <a class="link-blue" href="cadastro.php">Cadastrar-se</a></h5>
+            <h5 class="text-form"><a class="link-blue" href="index.php">Pagina Inicial</a></h5>
             
         </form>
 
