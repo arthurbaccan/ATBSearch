@@ -39,11 +39,11 @@
         </div>
 
         <div class="nav-right">
-            <a href="index.html">Início</a>
-            <a href="contato.html">Contato</a>
+            <a href="index.php">Início</a>
+            <a href="contato.php">Contato</a>
             <a href="tabela-principal.php">Tabelas</a>
             <a href="cadastro.php">Cadastrar</a>
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
         </div>
     </div>
 
