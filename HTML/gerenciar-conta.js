@@ -47,18 +47,33 @@ function mudarNome() {
 }
 
 function mudarSenha() {
-    Swal.fire({
-        title: 'Alterar senha',
-        input: 'password',
-        inputPlaceholder: 'Nova senha',
-        showCancelButton: true,
-        confirmButtonText: 'Enviar',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            enviarParaCookie('senha', result.value);
-        }
-    });
+  Swal.fire({
+    title: 'Alterar senha',
+    html: `
+      <input id="novaSenha" type="password" class="swal2-input" placeholder="Nova senha">
+      <input id="senhaAtual" type="password" class="swal2-input" placeholder="Senha atual">
+    `,
+    focusConfirm: false,
+    showCancelButton: true,
+    confirmButtonText: 'Enviar',
+    cancelButtonText: 'Cancelar',
+    preConfirm: () => {
+      const novaSenha = document.getElementById('novaSenha').value.trim();
+      const senhaAtual = document.getElementById('senhaAtual').value.trim();
+
+      if (!novaSenha || !senhaAtual) {
+        Swal.showValidationMessage('Preencha os dois campos.');
+        return false;
+      }
+
+      return { novaSenha, senhaAtual };
+    }
+  }).then((result) => {
+    if (result.isConfirmed) {
+      console.log("Nova senha:", result.value.novaSenha);
+      console.log("Senha atual:", result.value.senhaAtual);
+    }
+  });
 }
 
 function mudarTelefone() {
