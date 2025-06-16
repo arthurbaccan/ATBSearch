@@ -52,6 +52,9 @@ if (isset($_COOKIE['usuario'])) {
     <link rel="stylesheet" href="defModel.css">
     <link rel="stylesheet" href="teste.css">
 
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
@@ -149,6 +152,7 @@ if (isset($_COOKIE['usuario'])) {
             background-color: var(--color-gray-light-hover);
         }
     }
+
 </style>
 
 <body>
@@ -187,10 +191,10 @@ if (isset($_COOKIE['usuario'])) {
     </div>
 
     <div class="buttons">
-        <button type="button">Trocar de conta</button>
-        <button type="button">Mudar nome</button>
-        <button type="button">Mudar senha</button>
-        <button type="button">Mudar Telefone</button>
+        <button onclick="trocarConta()">Trocar Conta</button>
+        <button onclick="mudarNome()">Mudar nome</button>
+        <button onclick="mudarSenha()">Mudar senha</button>
+        <button onclick="mudarTelefone()">Mudar Telefone</button>
     </div>
 
     <div class="info" style="margin-top: 220px">
@@ -205,6 +209,7 @@ if (isset($_COOKIE['usuario'])) {
     <br>
 
     <script src="gerenciar-conta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
