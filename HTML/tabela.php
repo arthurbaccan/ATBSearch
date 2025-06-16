@@ -72,16 +72,52 @@ if (isset($_COOKIE['usuarios'])) {
         <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
     </div>
 
+    <br><br><br><br>
+
 
       <!--Adicionar um conteiner responsivo que adiciona novas tabelas personalizadas em fileiras da esquerda pra direita e quebra para a próxma linha ao chegar no fim,
       Deve conter um botão de adicionar tabelar no canto superior esquerdo sempre,
       Lembrar de colocar uma excessão de java script pra evitar que seja possivel abrir mais de uma tabela personalizada ao mesmo tempo ao clicar rápido no botão,
       As tabelas personalizadas devem usar o mesmo banco de dados das tabelas convencionais-->
-      <div style="display: flex; align-items: center;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0; align-itens: center; justify-content: center;">
         <div>
         <button id="add-table-button" class="table-add">
           +
         </button>
+        </div>
+
+        <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
+        <div class="div-teste">  
+          <button id="botao1" class="table-open">
+            Tabela Personalizada
+          </button>
+
+          <button id="botao2" type="button" class="table-open-menu" onclick="menuActive()">
+              <b>...</b>
+          </button>
+
+          <div id="menu-button" class="menu-button">
+            <button>Deletar</button>
+            <button>Renomear</button>
+          </div>
+
+        </div>
+
+        <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
+        <div class="div-teste">  
+          <button id="botao1" class="table-open">
+            Tabela Personalizada
+          </button>
+
+          <button id="botao2" type="button" class="table-open-menu" onclick="menuActive()">
+              <b>...</b>
+          </button>
+
+          <div id="menu-button" class="menu-button">
+            <button>Deletar</button>
+            <button>Renomear</button>
+          </div>
+
         </div>
 
         <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
