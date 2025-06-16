@@ -194,7 +194,7 @@ if (isset($_COOKIE['usuario'])) {
     </div>
 
     <div class="info" style="margin-top: 220px">
-        <div>Número de tabelas personalizadas: 3</div>
+        <div>Número de tabelas personalizadas: 1</div>
     </div>
 
     <div class="buttons2">

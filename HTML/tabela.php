@@ -103,39 +103,6 @@ if (isset($_COOKIE['usuarios'])) {
 
         </div>
 
-        <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
-        <div class="div-teste">  
-          <button id="botao1" class="table-open">
-            Tabela Personalizada
-          </button>
-
-          <button id="botao2" type="button" class="table-open-menu" onclick="menuActive()">
-              <b>...</b>
-          </button>
-
-          <div id="menu-button" class="menu-button">
-            <button>Deletar</button>
-            <button>Renomear</button>
-          </div>
-
-        </div>
-
-        <!-- Depois de cada palavra SEMPRE COLOCAR UM ESPAÇO, mesmo que a próxima palavra seja colocada na próxma linha-->
-        <div class="div-teste">  
-          <button id="botao1" class="table-open">
-            Tabela Personalizada
-          </button>
-
-          <button id="botao2" type="button" class="table-open-menu" onclick="menuActive()">
-              <b>...</b>
-          </button>
-
-          <div id="menu-button" class="menu-button">
-            <button>Deletar</button>
-            <button>Renomear</button>
-          </div>
-
-        </div>
       </div>
 
       <script src="tabela.js"></script>

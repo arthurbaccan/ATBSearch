@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $isPhoneMatch = $telSalvo === $entLimpa;
 
     if ($isEmailMatch || $isPhoneMatch) {
-        if ($u['senha'] === $senha) {
+        if ($u['senha'] === sha1($senha)) {
             $usuarioEncontrado = $u;
             break;
         }

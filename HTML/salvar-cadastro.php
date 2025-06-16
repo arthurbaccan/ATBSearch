@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $usuario = [
             'nome' => $nome,
             'email' => $email,
-            'senha' => $senha,
+            'senha' => sha1($senha),
             'telefone' => $telefone
         ];
 

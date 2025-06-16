@@ -15,6 +15,13 @@
 
 
 	<title>Login - Pesquisador de antibióticos</title>
+
+    <style>
+        .password-like {
+            -webkit-text-security: disc;
+            /* Chrome, Safari */
+        }
+    </style>
 </head>
 <body class="body-form">
     <div class="center-absolute">
@@ -25,13 +32,13 @@
             </div>
 
             <div class="itens-form">
-                <input id="emailOrPhone" name="emailOrPhone" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *">
+                <input id="emailOrPhone" name="emailOrPhone" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *" value="natan@email.com">
                 <label id="valEmailorPhone" name="valEmailOrPhone" class="text-validation-form">Insira um email ou telefone (com DDD) válido</label>
             </div>
 
 
             <div class="itens-form">
-                <input id="senha" name="senha" class="inp-form " type="password" placeholder="Senha: *">
+                <input id="senha" name="senha" class="inp-form password-like" type="text" placeholder="Senha: *" value="123456">
                 <label id="valSenha" name="valSenha" class="text-validation-form">Insira uma senha válida </label>
             </div>
 
