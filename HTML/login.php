@@ -18,20 +18,20 @@
 </head>
 <body class="body-form">
     <div class="center-absolute">
-        <form class="form-default" id="form-log-usuario">
+        <form class="form-default" id="form-log-usuario" method="POST" action="salvar-login.php">
             <div class="title-form">
                 <img src="../Imagens/lupa-com-antibiotico.png" align="left"></img>
                 <h2>ATBSearch</h2>
             </div>
 
             <div class="itens-form">
-                <input id="emailOrPhone" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *">
-                <label id="valEmailorPhone" name="valEmailorPhone" class="text-validation-form">Insira um email ou telefone (com DDD) válido</label>
+                <input id="emailOrPhone" name="emailOrPhone" class="inp-form " type="text" placeholder="Email ou telefone do usuário: *">
+                <label id="valEmailorPhone" name="valEmailOrPhone" class="text-validation-form">Insira um email ou telefone (com DDD) válido</label>
             </div>
 
 
             <div class="itens-form">
-                <input id="senha" class="inp-form " type="password" placeholder="Senha: *">
+                <input id="senha" name="senha" class="inp-form " type="password" placeholder="Senha: *">
                 <label id="valSenha" name="valSenha" class="text-validation-form">Insira uma senha válida </label>
             </div>
 
@@ -44,6 +44,11 @@
             <br><br>
 
             <h5 class="text-form">Não tem uma conta? <a class="link-blue" href="cadastro.php">Cadastrar-se</a></h5>
+
+            <?php if (isset($_GET['erro'])): ?>
+                <p class="erro-login" style="color: red; font-family: arial">E-mail, telefone ou senha incorretos.</p>
+            <?php endif; ?>
+
             <h5 class="text-form"><a class="link-blue" href="index.php">Pagina Inicial</a></h5>
             
         </form>

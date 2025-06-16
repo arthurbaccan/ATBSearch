@@ -37,6 +37,5 @@ function validation() {
     // Cadastro do usuario ao enviar o formulario de maneira correta
     if(validationCheck == 2) {
         document.getElementById('form-log-usuario').submit();
-        window.location.href = "index.php";
     }
 }

@@ -1,9 +1,10 @@
 <?php
-// Verifica se o cookie 'usuarios' existe e não está vazio
-$logado = false;
-if (isset($_COOKIE['usuarios'])) {
-    $usuarios = json_decode($_COOKIE['usuarios'], true);
-    if (!empty($usuarios)) {
+$logado  = false;
+$usuario = null;
+
+if (isset($_COOKIE['usuario'])) {
+    $usuario = json_decode($_COOKIE['usuario'], true);
+    if (!empty($usuario)) {
         $logado = true;
     }
 }

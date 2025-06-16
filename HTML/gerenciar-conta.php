@@ -1,9 +1,11 @@
 <?php
 // Verifica se o cookie 'usuarios' existe e não está vazio
-$logado = false;
-if (isset($_COOKIE['usuarios'])) {
-    $usuarios = json_decode($_COOKIE['usuarios'], true);
-    if (!empty($usuarios)) {
+$logado  = false;
+$usuario = null;
+
+if (isset($_COOKIE['usuario'])) {
+    $usuario = json_decode($_COOKIE['usuario'], true);
+    if (!empty($usuario)) {
         $logado = true;
     }
 }
@@ -196,11 +198,13 @@ if (isset($_COOKIE['usuario'])) {
     </div>
 
     <div class="buttons2">
-        <button>teste</button>
-        <button>teste2</button>
+        <button type="button" onclick="logout()">Sair</button>
+        <button style="color: red">Deletar Conta</button>
     </div>
 
     <br>
+
+    <script src="gerenciar-conta.js"></script>
 
 </body>
 </html>

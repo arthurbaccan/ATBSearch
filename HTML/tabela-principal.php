@@ -1,14 +1,15 @@
-
 <?php
-// Verifica se o cookie 'usuarios' existe e não está vazio
-$logado = false;
-if (isset($_COOKIE['usuarios'])) {
-    $usuarios = json_decode($_COOKIE['usuarios'], true);
-    if (!empty($usuarios)) {
+$logado  = false;
+$usuario = null;
+
+if (isset($_COOKIE['usuario'])) {
+    $usuario = json_decode($_COOKIE['usuario'], true);
+    if (!empty($usuario)) {
         $logado = true;
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
@@ -93,7 +94,13 @@ if (isset($_COOKIE['usuarios'])) {
     <!--<Itens de personalização-->
     <div class="navbar-table">
         <a href="#" class="nav-table-active">Filtrar Antibióticos</a>
-        <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
+
+        <?php if ($logado): ?>
+                <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
+        <?php else: ?>
+                <label></label>
+        <?php endif; ?>
+        
         <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
     </div>
     <br>

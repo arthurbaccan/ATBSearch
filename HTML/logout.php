@@ -1,8 +1,8 @@
 <?php
-// Apaga o cookie do usuário
-setcookie('usuarios', '', time() - 3600, "/");
+// Remove apenas o cookie do usuário logado
+setcookie('usuario', '', time() - 3600, "/");
 
-// Redireciona para a página inicial ou login
+// Redireciona para a página inicial
 header("Location: index.php");
 exit;
 ?>
