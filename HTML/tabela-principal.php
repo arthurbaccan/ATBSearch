@@ -122,7 +122,7 @@ if (isset($_COOKIE['usuario'])) {
             <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
             <!--Filtros: Nome-->
             <form id="filNome" class="filtro">
-              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="filtraOrdemAZ()">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
               <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
@@ -350,9 +350,6 @@ if (isset($_COOKIE['usuario'])) {
           var jsonDados = <?php obterDadosAntibioticos($conn2); ?>
           // Não remover esta linha!!!!!! Vai quebrar o código!!!!
           console.log(jsonDados)
-          jsonDados = filtraOrdemAZ(jsonDados)
-
-          
 
           gerarTabelaAntibioticos(jsonDados, "tabela");
 

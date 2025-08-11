@@ -183,7 +183,9 @@ function gerarTabelaAntibioticos(dados, tbodyId) {
     });
 }
 
-function filtraLista(antibioticosLista) {
+function filtraOrdemAZ(antibioticosLista) {
+
+
     return antibioticosLista.sort((a, b) => {
         if (a.nome < b.nome) {
             return -1;  // A vem antes de B
