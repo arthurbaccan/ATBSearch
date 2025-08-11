@@ -182,3 +182,15 @@ function gerarTabelaAntibioticos(dados, tbodyId) {
       tbody.appendChild(linha);
     });
 }
+
+function filtraLista(antibioticosLista) {
+    return antibioticosLista.sort((a, b) => {
+        if (a.nome < b.nome) {
+            return -1;  // A vem antes de B
+        }
+        if (a.nome > b.nome) {
+            return 1;   // B vem antes de A
+        }
+        return 0;  // A e B são iguais
+    });
+}

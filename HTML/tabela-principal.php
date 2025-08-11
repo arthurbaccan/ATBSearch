@@ -349,6 +349,8 @@ if (isset($_COOKIE['usuario'])) {
         <script>
           var jsonDados = <?php obterDadosAntibioticos($conn2); ?>
           // Não remover esta linha!!!!!! Vai quebrar o código!!!!
+          console.log(jsonDados)
+          jsonDados = filtraOrdemAZ(jsonDados)
 
           
 
