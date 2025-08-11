@@ -58,7 +58,7 @@ function menuActive() {
     document.getElementById("botao2").style.background = "#f4f4f9";
     document.getElementById("botao2").style.color = "black";
 
-    document.getElementById("menu-button").style.display = "flex"
+    document.getElementById("menu-button").style.display = "flex";
 
     menuActiveVar = true;
   }
@@ -75,7 +75,7 @@ function menuActive() {
     document.getElementById("botao2").style.background = "#85a187";
     document.getElementById("botao2").style.color = "white";
 
-    document.getElementById("menu-button").style.display = "none"
+    document.getElementById("menu-button").style.display = "none";
 
     menuActiveVar = false;
   }

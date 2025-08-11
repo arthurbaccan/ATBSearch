@@ -150,3 +150,35 @@ function mostrarMorfologia() {
         displayFlexMorfologia = false;
     }
 }
+
+function gerarTabelaAntibioticos(dados, tbodyId) {
+    const tbody = document.getElementById(tbodyId);
+    if (!tbody) {
+      console.error(`Elemento com id "${tbodyId}" não encontrado.`);
+      return;
+    }
+
+    // Limpa o conteúdo anterior do tbody
+    tbody.innerHTML = '';
+
+    if (dados.length === 0) {
+      const linha = document.createElement('tr');
+      linha.innerHTML = `<td colspan="6">Nenhum registro encontrado</td>`;
+      tbody.appendChild(linha);
+      return;
+    }
+
+    dados.forEach((item, index) => {
+      const linha = document.createElement('tr');
+
+      linha.innerHTML = `
+        <td>${item.nome}</td>
+        <td>${item.tipo_antibiotico}</td>
+        <td>${item.gram_positiva}</td>
+        <td>${item.gram_negativa}</td>
+        <td>${item.morfologia}</td>
+      `;
+
+      tbody.appendChild(linha);
+    });
+}

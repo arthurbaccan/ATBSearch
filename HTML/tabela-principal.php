@@ -1,153 +1,158 @@
 <?php
-$logado  = false;
+$logado = false;
 $usuario = null;
 
 if (isset($_COOKIE['usuario'])) {
-    $usuario = json_decode($_COOKIE['usuario'], true);
-    if (!empty($usuario)) {
-        $logado = true;
-    }
+  $usuario = json_decode($_COOKIE['usuario'], true);
+  if (!empty($usuario)) {
+    $logado = true;
+  }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="position.css">
-    <link rel="stylesheet" href="defModel.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="position.css">
+  <link rel="stylesheet" href="defModel.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../Imagens/lupa-com-antibiotico.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 
-    <link rel="stylesheet" href="modBootstrap.css">
+  <link rel="stylesheet" href="modBootstrap.css">
 
-    <title>ATBSearch - Tabela Princpal</title>
+  <script src="personalizar-tabela.js"></script>
+
+  <title>ATBSearch - Tabela Princpal</title>
 </head>
 
 <style>
-    body {
-      overflow-x: hidden;
-      background-color: #dfdfdfee;
-    }
+  body {
+    overflow-x: hidden;
+    background-color: #dfdfdfee;
+  }
 
+  .titulo {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 630px) {
     .titulo {
-      text-align: center;
-      margin-top: 90px;
-      margin-bottom: 8px;
+      margin-top: 75px;
     }
-    
-    @media (max-width: 630px) {
-      .titulo {
-        margin-top: 75px;
-      }
-    }
+  }
 
-    @media (max-width: 510px) {
-      .titulo {
-        margin-top: 68px;
-        font-size: 25px;
-      }
+  @media (max-width: 510px) {
+    .titulo {
+      margin-top: 68px;
+      font-size: 25px;
     }
+  }
 
-    @media (max-width: 378px) {
-      .titulo {
-        margin-top: 62px;
-        font-size: 23px;
-      }
+  @media (max-width: 378px) {
+    .titulo {
+      margin-top: 62px;
+      font-size: 23px;
     }
-  </style>
+  }
+</style>
 
-   
+
 <body>
-    <!--Navbar-->
-    <div class="navbar">
-        <div class="nav-left">
-            <img src="../Imagens/lupa-com-antibiotico.png">
-            ATBSearch
-        </div>
-
-        <div class="nav-right">
-            <a href="index.php">Início</a>
-            <a href="contato.php">Contato</a>
-            <a href="tabela-principal.php">Tabelas</a>
-            
-            <!-- Modifica a navbar dependendo do usuário estar ou não logado-->
-            <?php if ($logado): ?>
-                <a href="gerenciar-conta.php">Conta</a>
-                <a href="logout.php">Sair</a>
-            <?php else: ?>
-                <a href="cadastro.php">Cadastrar</a>
-                <a href="login.php">Login</a>
-            <?php endif; ?>
-        </div>
+  <!--Navbar-->
+  <div class="navbar">
+    <div class="nav-left">
+      <img src="../Imagens/lupa-com-antibiotico.png">
+      ATBSearch
     </div>
 
-    <!--<Itens de personalização-->
-    <div class="navbar-table">
-        <a href="#" class="nav-table-active">Filtrar Antibióticos</a>
+    <div class="nav-right">
+      <a href="index.php">Início</a>
+      <a href="contato.php">Contato</a>
+      <a href="tabela-principal.php">Tabelas</a>
 
-        <?php if ($logado): ?>
-                <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
-        <?php else: ?>
-                <label></label>
-        <?php endif; ?>
-        
-        <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
+      <!-- Modifica a navbar dependendo do usuário estar ou não logado-->
+      <?php if ($logado): ?>
+        <a href="gerenciar-conta.php">Conta</a>
+        <a href="logout.php">Sair</a>
+      <?php else: ?>
+        <a href="cadastro.php">Cadastrar</a>
+        <a href="login.php">Login</a>
+      <?php endif; ?>
     </div>
-    <br>
-    <!--Tabela principal-->
-    <h1 class="titulo">Filtrar Antibióticos</h1>
-    
-    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
-      <table class="table-default">
-        <tr>
-          <thead>
-            <th>
+  </div>
 
-              Nome
-              <!--Mostrar Filtros -->
-              <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
-              <!--Filtros: Nome-->
-              <form id="filNome" class="filtro">
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
-                <input type="text" class="inpText" placeholder="Pesquisar...">
-                
+  <!--<Itens de personalização-->
+  <div class="navbar-table">
+    <a href="#" class="nav-table-active">Filtrar Antibióticos</a>
 
-                <!-- ok or cancel -->
-                <div class="okOrCancel">
-                  <button type="button" class="btnOk">OK</button>
-                  <button type="button" class="btnCancel">Cancelar</button>
-                </div> 
+    <?php if ($logado): ?>
+      <a href="tabela.php" class="nav-table-no-active">Tabelas Personalizadas</a>
+    <?php else: ?>
+      <label></label>
+    <?php endif; ?>
 
-              </form>
+    <!--<a href="#" class="nav-table-no-active">Gerenciar Nuvem</a>-->
+  </div>
+  <br>
+  <!--Tabela principal-->
+  <h1 class="titulo">Filtrar Antibióticos</h1>
 
-            </th>
-            
-            <th>
-              <label id="teste1">Tipo de Antibiótico</label>
-              <!-- Mostrar Filtros -->
-              <button id="btnAntibiotico" type="button" class="btnFilter" onclick="mostrarFiltrosAntibiotico()">...</button>
-              <!-- Filtros: Tipo de Antibiótico -->
-              <form id="filAntibiotico" class="filtro">
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
-                <input type="text" class="inpText" placeholder="Pesquisar...">
+  <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+    <table class="table-default">
+      <tr>
+        <thead>
+          <th>
 
-                <div class="containerCheckBox">
+            Nome
+            <!--Mostrar Filtros -->
+            <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
+            <!--Filtros: Nome-->
+            <form id="filNome" class="filtro">
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <input type="text" class="inpText" placeholder="Pesquisar...">
+
+
+              <!-- ok or cancel -->
+              <div class="okOrCancel">
+                <button type="button" class="btnOk">OK</button>
+                <button type="button" class="btnCancel">Cancelar</button>
+              </div>
+
+            </form>
+
+          </th>
+
+          <th>
+            <label id="teste1">Tipo de Antibiótico</label>
+            <!-- Mostrar Filtros -->
+            <button id="btnAntibiotico" type="button" class="btnFilter"
+              onclick="mostrarFiltrosAntibiotico()">...</button>
+            <!-- Filtros: Tipo de Antibiótico -->
+            <form id="filAntibiotico" class="filtro">
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <input type="text" class="inpText" placeholder="Pesquisar...">
+
+              <div class="containerCheckBox">
                 <div class="selectChekBox">
                   <input id="selecionarTodosAntibiotico" type="checkbox" class="inpCheck"> Selecionar Todos
                 </div>
@@ -212,29 +217,29 @@ if (isset($_COOKIE['usuario'])) {
                   <input id="checkAntibioticoAntituberculosos" type="checkbox" class="inpCheck"> Antituberculosos
                 </div>
 
-                </div>
+              </div>
 
-                <!-- ok or cancel -->
-                <div class="okOrCancel">
-                  <button type="button" class="btnOk">OK</button>
-                  <button type="button" class="btnCancel">Cancelar</button>
-                </div> 
+              <!-- ok or cancel -->
+              <div class="okOrCancel">
+                <button type="button" class="btnOk">OK</button>
+                <button type="button" class="btnCancel">Cancelar</button>
+              </div>
 
-              </form>
-            </th>
-            
-            <th>
-              <label id="teste2">Ataca Gram Positiva</label>
-              <!-- Mostrar Filtros -->
-              <button id="btnGramPositiva" type="button" class="btnFilter" onclick="mostrarGramPositiva()">...</button>
-              <!-- Filtros: Gram Positiva -->
-              <form id="filGramPositiva" class="filtro">
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+            </form>
+          </th>
 
-                <div class="containerCheckBox">
+          <th>
+            <label id="teste2">Ataca Gram Positiva</label>
+            <!-- Mostrar Filtros -->
+            <button id="btnGramPositiva" type="button" class="btnFilter" onclick="mostrarGramPositiva()">...</button>
+            <!-- Filtros: Gram Positiva -->
+            <form id="filGramPositiva" class="filtro">
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+
+              <div class="containerCheckBox">
                 <div class="selectChekBox">
                   <input id="selecionarTodosGramPositiva" type="checkbox" class="inpCheck"> Selecionar Todos
                 </div>
@@ -247,30 +252,30 @@ if (isset($_COOKIE['usuario'])) {
                   <input id="checkGramPositivaNo" type="checkbox" class="inpCheck"> ❌
                 </div>
 
-                </div>
+              </div>
 
-                <!-- ok or cancel -->
-                <div class="okOrCancel">
-                  <button type="button" class="btnOk">OK</button>
-                  <button type="button" class="btnCancel">Cancelar</button>
-                </div> 
+              <!-- ok or cancel -->
+              <div class="okOrCancel">
+                <button type="button" class="btnOk">OK</button>
+                <button type="button" class="btnCancel">Cancelar</button>
+              </div>
 
-              </form>
+            </form>
 
-            </th>
+          </th>
 
-            <th>
-              <label id="teste3">Ataca Gram Negativa</label>
-              <!-- Mostrar Filtros -->
-              <button id="btnGramNegativa" type="button" class="btnFilter" onclick="mostrarGramNegativa()">...</button>
-              <!-- Filtros: Gram Negativa -->
-              <form id="filGramNegativa" class="filtro">
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+          <th>
+            <label id="teste3">Ataca Gram Negativa</label>
+            <!-- Mostrar Filtros -->
+            <button id="btnGramNegativa" type="button" class="btnFilter" onclick="mostrarGramNegativa()">...</button>
+            <!-- Filtros: Gram Negativa -->
+            <form id="filGramNegativa" class="filtro">
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
 
-                <div class="containerCheckBox">
+              <div class="containerCheckBox">
                 <div class="selectChekBox">
                   <input id="selecionarTodosGramNegativa" type="checkbox" class="inpCheck"> Selecionar Todos
                 </div>
@@ -283,29 +288,29 @@ if (isset($_COOKIE['usuario'])) {
                   <input id="checkGramNegativaNo" type="checkbox" class="inpCheck"> ❌
                 </div>
 
-                </div>
+              </div>
 
-                <!-- ok or cancel -->
-                <div class="okOrCancel">
-                  <button type="button" class="btnOk">OK</button>
-                  <button type="button" class="btnCancel">Cancelar</button>
-                </div> 
+              <!-- ok or cancel -->
+              <div class="okOrCancel">
+                <button type="button" class="btnOk">OK</button>
+                <button type="button" class="btnCancel">Cancelar</button>
+              </div>
 
-              </form>
-            </th>
-            
-            <th>
-              <label id="teste4">Morfologia</label>
-              <!-- Mostrar Filtros -->
-              <button id="btnMorfologia" type="button" class="btnFilter" onclick="mostrarMorfologia()">...</button>
-              <!-- Filtros: Morfologia -->
-              <form id="filMorfologia" class="filtro">
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
-                <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-                <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+            </form>
+          </th>
 
-                <div class="containerCheckBox">
+          <th>
+            <label id="teste4">Morfologia</label>
+            <!-- Mostrar Filtros -->
+            <button id="btnMorfologia" type="button" class="btnFilter" onclick="mostrarMorfologia()">...</button>
+            <!-- Filtros: Morfologia -->
+            <form id="filMorfologia" class="filtro">
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
+              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+
+              <div class="containerCheckBox">
                 <div class="selectChekBox">
                   <input id="selecionarTodosMorfologia" type="checkbox" class="inpCheck"> Selecionar Todos
                 </div>
@@ -322,28 +327,39 @@ if (isset($_COOKIE['usuario'])) {
                   <input id="checkMorfologiaCocosEBacilos" type="checkbox" class="inpCheck"> Cocos e Bacilos
                 </div>
 
-                </div>
+              </div>
 
-                <!-- ok or cancel -->
-                <div class="okOrCancel">
-                  <button type="button" class="btnOk">OK</button>
-                  <button type="button" class="btnCancel">Cancelar</button>
-                </div> 
+              <!-- ok or cancel -->
+              <div class="okOrCancel">
+                <button type="button" class="btnOk">OK</button>
+                <button type="button" class="btnCancel">Cancelar</button>
+              </div>
 
-              </form>
-            </th>
+            </form>
+          </th>
 
-          </thead> 
-        </tr>
-                  
+        </thead>
+      </tr>
+      <tbody id="tabela">
         <?php
-          include 'tabelas.php';
-          tabelaPrincipal($conn);
+        include 'tabelas.php';
+        //tabelaPrincipal($conn);
         ?>
+
+        <script>
+          var jsonDados = <?php obterDadosAntibioticos($conn2); ?>
+          // Não remover esta linha!!!!!! Vai quebrar o código!!!!
+
           
-      </table>
-    </div>
-      
-    <script src="personalizar-tabela.js"></script>
+
+          gerarTabelaAntibioticos(jsonDados, "tabela");
+
+        </script>
+
+      </tbody>
+    </table>
+  </div>
+
 </body>
+
 </html>

@@ -10,7 +10,7 @@ $port = '3306';
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 
-function tabelaPersonalizada ($conn) {
+function tabelaPersonalizada ($conn): void {
     // Verifica se houve erro na conexão
     if ($conn->connect_error) {
         die("Conexão falhou: " . $conn->connect_error);
@@ -70,4 +70,39 @@ function tabelaPrincipal ($conn) {
     // Fecha a conexão com o banco de dados
     $conn->close();
 }
+
+$conn2 = new mysqli($host, $user, $pass, $db, $port);
+
+function obterDadosAntibioticos($conn) {
+    // Verifica se houve erro na conexão
+    if ($conn->connect_error) {
+        die(json_encode(["erro" => "Conexão falhou: " . $conn->connect_error]));
+    }
+
+    // Consulta SQL para obter os dados
+    $sql = "SELECT nome, tipo_antibiotico, gram_positiva, gram_negativa, morfologia FROM Antibiotico";
+    $resultado = $conn->query($sql);
+
+    $dados = [];
+
+    if ($resultado->num_rows > 0) {
+        while ($linha = $resultado->fetch_assoc()) {
+            $dados[] = [
+                "nome" => $linha['nome'],
+                "tipo_antibiotico" => transforamTipoEmString($linha['tipo_antibiotico']),
+                "gram_positiva" => transformaGramEmString($linha['gram_positiva']),
+                "gram_negativa" => transformaGramEmString($linha['gram_negativa']),
+                "morfologia" => transformaMorfologiaEmString($linha['morfologia'])
+            ];
+        }
+    }
+
+    // Fecha a conexão com o banco de dados
+    $conn->close();
+
+    // Retorna os dados em formato JSON
+    echo json_encode($dados);
+}
+
 ?>
+
