@@ -1,0 +1,19 @@
+@import url(style.css);
+
+.cor {
+    background-color: var(--color-blue-default);
+}
+
+.container-fluid {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*.icon-pro {
+    width: auto;
+    height: 30px;
+}*/
