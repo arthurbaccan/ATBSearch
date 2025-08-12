@@ -151,10 +151,10 @@ function mostrarMorfologia() {
     }
 }
 
-function gerarTabelaAntibioticos(dados, tbodyId) {
-    const tbody = document.getElementById(tbodyId);
+function gerarTabelaAntibioticos(dados) {
+    const tbody = document.getElementById("tabela");
     if (!tbody) {
-      console.error(`Elemento com id "${tbodyId}" não encontrado.`);
+      console.error(`Elemento com id "${"tabela"}" não encontrado.`);
       return;
     }
 
@@ -183,8 +183,7 @@ function gerarTabelaAntibioticos(dados, tbodyId) {
     });
 }
 
-function filtraOrdemAZ(antibioticosLista) {
-
+function filtrarNomeAZ(antibioticosLista) {
 
     return antibioticosLista.sort((a, b) => {
         if (a.nome < b.nome) {
@@ -195,4 +194,50 @@ function filtraOrdemAZ(antibioticosLista) {
         }
         return 0;  // A e B são iguais
     });
+}
+
+function clickAZNome(antibioticosLista)
+{
+    filtrarNomeAZ(antibioticosLista);
+    aplicaFiltroCheckboxes(antibioticosLista)
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function filtrarNomeZA(antibioticosLista) {
+
+    return antibioticosLista.sort((a, b) => {
+        if (a.nome > b.nome) {
+            return -1;  // A vem antes de B
+        }
+        if (a.nome < b.nome) {
+            return 1;   // A vem antes de B
+        }
+        return 0;  // A e B são iguais
+    });
+}
+
+function clickZANome(antibioticosLista) {
+    filtrarNomeZA(antibioticosLista);
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function limparOrdemNome (antibioticosListaOriginal, antibioticosLista) {
+    gerarTabelaAntibioticos(antibioticosListaOriginal);
+    antibioticosLista = Array.from(antibioticosListaOriginal);
+    aplicaFiltroCheckboxes(antibioticosLista)
+    return antibioticosLista;
+}
+
+function pesquisarNome (antibioticosLista, valorTexto) {
+    antibioticosLista.forEach(element => {
+        
+    });
+    if (texto.tolowerCase().startsWith(valorTexto)) {
+        
+    }
+
+}
+
+function aplicaFiltroCheckboxes(antibioticosLista) {
+
 }

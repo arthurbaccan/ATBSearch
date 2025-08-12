@@ -14,6 +14,15 @@ if (isset($_COOKIE['usuario'])) {
 <html lang="PT-BR">
 
 <head>
+  <script>
+    <?php
+    include 'tabelas.php';
+    //tabelaPrincipal($conn);
+    ?>
+    var jsonDados = <?php obterDadosAntibioticos($conn2); ?>;
+    const jsonDadosOriginal = Array.from(jsonDados);
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -122,18 +131,10 @@ if (isset($_COOKIE['usuario'])) {
             <button id="btnNome" type="button" class="btnFilter" onclick="mostrarFiltrosNome()">...</button>
             <!--Filtros: Nome-->
             <form id="filNome" class="filtro">
-              <button type="button" class="btnFilter2" onclick="filtraOrdemAZ()">Ordem Alfabética (A-Z)</button>
-              <button type="button" class="btnFilter2" onclick="">Ordem Alfabética (Z-A)</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Ordem</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
-              <input type="text" class="inpText" placeholder="Pesquisar...">
-
-
-              <!-- ok or cancel -->
-              <div class="okOrCancel">
-                <button type="button" class="btnOk">OK</button>
-                <button type="button" class="btnCancel">Cancelar</button>
-              </div>
+              <button type="button" class="btnFilter2" onclick="clickAZNome(jsonDados)">Ordem Alfabética (A-Z)</button>
+              <button type="button" class="btnFilter2" onclick="clickZANome(jsonDados)">Ordem Alfabética (Z-A)</button>
+              <button type="button" class="btnFilter2" onclick="limparOrdemNome(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
+              <input type="text" id="pesquisarNome" class="inpText" oninput="pesquisarNome(jsonDados, document.getElementById(pesquisarNome))" placeholder="Pesquisar...">
 
             </form>
 
@@ -341,23 +342,20 @@ if (isset($_COOKIE['usuario'])) {
         </thead>
       </tr>
       <tbody id="tabela">
-        <?php
-        include 'tabelas.php';
-        //tabelaPrincipal($conn);
-        ?>
+
 
         <script>
-          var jsonDados = <?php obterDadosAntibioticos($conn2); ?>
           // Não remover esta linha!!!!!! Vai quebrar o código!!!!
           console.log(jsonDados)
 
-          gerarTabelaAntibioticos(jsonDados, "tabela");
-
+          gerarTabelaAntibioticos(jsonDados);
         </script>
 
       </tbody>
     </table>
   </div>
+
+  <script src="personalizar-tabela.js"></script>
 
 </body>
 
