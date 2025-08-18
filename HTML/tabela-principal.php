@@ -134,7 +134,7 @@ if (isset($_COOKIE['usuario'])) {
               <button type="button" class="btnFilter2" onclick="clickAZNome(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZANome(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdemNome(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <input type="text" id="pesquisarNome" class="inpText" oninput="pesquisarNome(jsonDados, document.getElementById(pesquisarNome))" placeholder="Pesquisar...">
+              <input type="text" id="pesquisarNome" class="inpText" oninput="filtrarNomeInput(jsonDados)" placeholder="Pesquisar...">
 
             </form>
 

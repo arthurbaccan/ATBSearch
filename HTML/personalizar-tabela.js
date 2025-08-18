@@ -228,14 +228,23 @@ function limparOrdemNome (antibioticosListaOriginal, antibioticosLista) {
     return antibioticosLista;
 }
 
-function pesquisarNome (antibioticosLista, valorTexto) {
-    antibioticosLista.forEach(element => {
-        
-    });
-    if (texto.tolowerCase().startsWith(valorTexto)) {
-        
-    }
+function pesquisarNome (antibioticosLista, texto) {
 
+    const valorTexto = texto.toLowerCase().trim();
+
+    return antibioticosLista.filter(item => 
+        item.nome.toLowerCase().startsWith(valorTexto)
+    );
+}
+
+function filtrarNomeInput(antibioticosLista) {
+  const input = document.getElementById("pesquisarNome");
+  const texto = input.value;
+
+  const filtrados = pesquisarNome(antibioticosLista, texto);
+
+  aplicaFiltroCheckboxes(filtrados);
+  gerarTabelaAntibioticos(filtrados);
 }
 
 function aplicaFiltroCheckboxes(antibioticosLista) {
