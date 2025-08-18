@@ -134,7 +134,7 @@ if (isset($_COOKIE['usuario'])) {
               <button type="button" class="btnFilter2" onclick="clickAZNome(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZANome(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdemNome(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <input type="text" id="pesquisarNome" class="inpText" oninput="filtrarNomeInput(jsonDados)" placeholder="Pesquisar...">
+               <input type="text" id="pesquisarNome" class="inpText" oninput="filtrarNomeInput(jsonDados)" placeholder="Pesquisar...">
 
             </form>
 
@@ -155,67 +155,67 @@ if (isset($_COOKIE['usuario'])) {
 
               <div class="containerCheckBox">
                 <div class="selectChekBox">
-                  <input id="selecionarTodosAntibiotico" type="checkbox" class="inpCheck"> Selecionar Todos
+                  <input id="selecionarTodosAntibiotico" type="checkbox" class="inpCheck" onchange=""> Selecionar Todos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoMacrolideos" type="checkbox" class="inpCheck"> Macrolídeos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.MACROLIDEOS type="checkbox" class="inpCheck" onchange="macrolideosClicked()"> Macrolídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoPenicilinas" type="checkbox" class="inpCheck"> Penicilinas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.PENICILINAS type="checkbox" class="inpCheck"> Penicilinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoCefalosporinas" type="checkbox" class="inpCheck"> Cefalosporinas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.CEFALOSPORINAS type="checkbox" class="inpCheck"> Cefalosporinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoCarbapenemicos" type="checkbox" class="inpCheck"> Carbapenêmicos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.CARBAPENEMICOS type="checkbox" class="inpCheck"> Carbapenêmicos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoAminoglicosideos" type="checkbox" class="inpCheck"> Aminoglicosídeos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.AMINOGLICOSIDEOS type="checkbox" class="inpCheck"> Aminoglicosídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoQuinolonas" type="checkbox" class="inpCheck"> Quinolonas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.QUINOLONAS type="checkbox" class="inpCheck"> Quinolonas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoAnfenicois" type="checkbox" class="inpCheck"> Anfenicóis
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.ANFENICOIS type="checkbox" class="inpCheck"> Anfenicóis
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoSulfonamidas" type="checkbox" class="inpCheck"> Sulfonamidas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.SULFONAMIDAS type="checkbox" class="inpCheck"> Sulfonamidas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoGlicopeptideos" type="checkbox" class="inpCheck"> Glicopeptídeos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.GLICOPEPTIDEOS type="checkbox" class="inpCheck"> Glicopeptídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoNitroimidazolicos" type="checkbox" class="inpCheck"> Nitroimdazólicos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.NITROIMIDAZOLICOS type="checkbox" class="inpCheck"> Nitroimdazólicos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoLicosamidas" type="checkbox" class="inpCheck"> Licosamidas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.LICOSAMIDAS type="checkbox" class="inpCheck"> Licosamidas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoPolimixinas" type="checkbox" class="inpCheck"> Polimixinas
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.POLIMIXINAS type="checkbox" class="inpCheck"> Polimixinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoOxazolidinona" type="checkbox" class="inpCheck"> Oxazolidinona
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.OXAZOLIDINONA type="checkbox" class="inpCheck"> Oxazolidinona
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoGlicilciclina" type="checkbox" class="inpCheck"> Glicilciclina
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.GLICILCICLINA type="checkbox" class="inpCheck"> Glicilciclina
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkAntibioticoAntituberculosos" type="checkbox" class="inpCheck"> Antituberculosos
+                  <input id=${checkBoxFiltroComecoId}+TipoAntibiotico.ANTITUBERCULOSOS type="checkbox" class="inpCheck"> Antituberculosos
                 </div>
 
               </div>
@@ -345,7 +345,6 @@ if (isset($_COOKIE['usuario'])) {
 
 
         <script>
-          // Não remover esta linha!!!!!! Vai quebrar o código!!!!
           console.log(jsonDados)
 
           gerarTabelaAntibioticos(jsonDados);
@@ -354,8 +353,6 @@ if (isset($_COOKIE['usuario'])) {
       </tbody>
     </table>
   </div>
-
-  <script src="personalizar-tabela.js"></script>
 
 </body>
 

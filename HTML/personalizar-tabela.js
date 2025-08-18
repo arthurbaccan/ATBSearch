@@ -1,3 +1,23 @@
+const TipoAntibiotico = Object.freeze({
+    MACROLIDEOS: "Macrolídeos",
+    PENICILINAS: "Penicilinas",
+    CEFALOSPORINAS: "Cefalosporinas",
+    CARBAPENEMICOS: "Carbapenêmicos",
+    AMINOGLICOSIDEOS: "Aminoglicosídeos",
+    QUINOLONAS: "Quinolonas",
+    ANFENICOIS: "Anfenicóis",
+    SULFONAMIDAS: "Sulfonamidas",
+    GLICOPEPTIDEOS: "Glicopeptídeos",
+    NITROIMIDAZOLICOS: "Nitroimdazólicos",
+    LICOSAMIDAS: "Licosamidas",
+    POLIMIXINAS: "Polimixinas",
+    OXAZOLIDINONA: "Oxazolidinona",
+    GLICILCICLINA: "Glicilciclina",
+    ANTITUBERCULOSOS: "Antituberculosos"
+});
+
+const checkBoxFiltroComecoId = "checkAntibiotico"
+
 /*responsividade da tabela*/
 function verificarTamanhoTela() {
     if (window.innerWidth < 1300) {
@@ -199,7 +219,6 @@ function filtrarNomeAZ(antibioticosLista) {
 function clickAZNome(antibioticosLista)
 {
     filtrarNomeAZ(antibioticosLista);
-    aplicaFiltroCheckboxes(antibioticosLista)
     gerarTabelaAntibioticos(antibioticosLista);
 }
 
@@ -228,6 +247,17 @@ function limparOrdemNome (antibioticosListaOriginal, antibioticosLista) {
     return antibioticosLista;
 }
 
+function pesquisarNome (antibioticosLista, valorTexto) {
+    antibioticosLista.forEach(element => {
+        
+    });
+    if (texto.tolowerCase().startsWith(valorTexto)) {
+        
+    }
+
+}
+
+
 function pesquisarNome (antibioticosLista, texto) {
 
     const valorTexto = texto.toLowerCase().trim(); 
@@ -251,5 +281,23 @@ function filtrarNomeInput(antibioticosLista) {
 }
 
 function aplicaFiltroCheckboxes(antibioticosLista) {
-    //vai ser um "return antibioticosLista.filter" com várias condições de true or false que vão ser verificadas antes do return
+
+}
+
+function macrolideosChangeFilter(antibioticosLista)
+{
+    let checked = document.getElementById("${checkBoxFiltroComecoId}+TipoAntibiotico.MACROLIDEOS").checked
+
+    antibioticosLista.forEach(element => {
+        if (element.nome == TipoAntibiotico.MACROLIDEOS)
+        {
+
+        }
+    });
+}
+
+function macrolideosClicked()
+{
+    let checkbox = document.getElementById("${checkBoxFiltroComecoId}+TipoAntibiotico.MACROLIDEOS")
+    console.log(checkbox.checked);
 }
