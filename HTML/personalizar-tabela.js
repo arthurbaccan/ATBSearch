@@ -243,8 +243,11 @@ function filtrarNomeInput(antibioticosLista) {
 
   const filtrados = pesquisarNome(antibioticosLista, texto);
 
-  aplicaFiltroCheckboxes(filtrados);
-  gerarTabelaAntibioticos(filtrados);
+  if(filtrados.length > 0) {
+    aplicaFiltroCheckboxes(filtrados);
+    gerarTabelaAntibioticos(filtrados);
+  }
+  
 }
 
 function aplicaFiltroCheckboxes(antibioticosLista) {
