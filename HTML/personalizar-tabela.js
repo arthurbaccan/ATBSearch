@@ -230,7 +230,7 @@ function limparOrdemNome (antibioticosListaOriginal, antibioticosLista) {
 
 function pesquisarNome (antibioticosLista, texto) {
 
-    const valorTexto = texto.toLowerCase().trim();
+    const valorTexto = texto.toLowerCase().trim(); 
 
     return antibioticosLista.filter(item => 
         item.nome.toLowerCase().startsWith(valorTexto)
@@ -251,5 +251,5 @@ function filtrarNomeInput(antibioticosLista) {
 }
 
 function aplicaFiltroCheckboxes(antibioticosLista) {
-
+    //vai ser um "return antibioticosLista.filter" com várias condições de true or false que vão ser verificadas antes do return
 }
