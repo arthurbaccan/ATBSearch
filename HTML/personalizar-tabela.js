@@ -1,23 +1,3 @@
-const TipoAntibiotico = Object.freeze({
-    MACROLIDEOS: "Macrolídeos",
-    PENICILINAS: "Penicilinas",
-    CEFALOSPORINAS: "Cefalosporinas",
-    CARBAPENEMICOS: "Carbapenêmicos",
-    AMINOGLICOSIDEOS: "Aminoglicosídeos",
-    QUINOLONAS: "Quinolonas",
-    ANFENICOIS: "Anfenicóis",
-    SULFONAMIDAS: "Sulfonamidas",
-    GLICOPEPTIDEOS: "Glicopeptídeos",
-    NITROIMIDAZOLICOS: "Nitroimdazólicos",
-    LICOSAMIDAS: "Licosamidas",
-    POLIMIXINAS: "Polimixinas",
-    OXAZOLIDINONA: "Oxazolidinona",
-    GLICILCICLINA: "Glicilciclina",
-    ANTITUBERCULOSOS: "Antituberculosos"
-});
-
-const checkBoxFiltroComecoId = "checkAntibiotico"
-
 /*responsividade da tabela*/
 function verificarTamanhoTela() {
     if (window.innerWidth < 1300) {
@@ -25,23 +5,23 @@ function verificarTamanhoTela() {
         document.getElementById("teste2").textContent = "Gram Positiva";
         document.getElementById("teste3").textContent = "Gram Negativa";
         document.getElementById("teste4").textContent = "Moforlogia";
-    } 
+    }
     else {
         document.getElementById("teste1").textContent = "Tipo de Antibiótico";
         document.getElementById("teste2").textContent = "Ataca Gram Positiva";
         document.getElementById("teste3").textContent = "Ataca Gram Negativa";
         document.getElementById("teste4").textContent = "Moforlogia";
     }
-  }
-  
-  window.addEventListener('resize', verificarTamanhoTela);
-  verificarTamanhoTela(); 
+}
+
+window.addEventListener('resize', verificarTamanhoTela);
+verificarTamanhoTela();
 
 /*função para mostrar filtros: Nome*/
 var displayFlexNome = false;
 function mostrarFiltrosNome() {
 
-    if(displayFlexNome == false) {
+    if (displayFlexNome == false) {
         document.getElementById("filNome").style.display = "flex";
         displayFlexNome = true;
 
@@ -68,7 +48,7 @@ function mostrarFiltrosNome() {
 var displayFlexAntibiotico = false;
 function mostrarFiltrosAntibiotico() {
 
-    if(displayFlexAntibiotico == false) {
+    if (displayFlexAntibiotico == false) {
         document.getElementById("filAntibiotico").style.display = "flex";
         displayFlexAntibiotico = true;
 
@@ -95,7 +75,7 @@ function mostrarFiltrosAntibiotico() {
 var displayFlexGramPositiva = false;
 function mostrarGramPositiva() {
 
-    if(displayFlexGramPositiva == false) {
+    if (displayFlexGramPositiva == false) {
         document.getElementById("filGramPositiva").style.display = "flex";
         displayFlexGramPositiva = true;
 
@@ -122,7 +102,7 @@ function mostrarGramPositiva() {
 var displayFlexGramNegativa = false;
 function mostrarGramNegativa() {
 
-    if(displayFlexGramNegativa == false) {
+    if (displayFlexGramNegativa == false) {
         document.getElementById("filGramNegativa").style.display = "flex";
         displayFlexGramNegativa = true;
 
@@ -149,7 +129,7 @@ function mostrarGramNegativa() {
 var displayFlexMorfologia = false;
 function mostrarMorfologia() {
 
-    if(displayFlexMorfologia == false) {
+    if (displayFlexMorfologia == false) {
         document.getElementById("filMorfologia").style.display = "flex";
         displayFlexMorfologia = true;
 
@@ -174,24 +154,24 @@ function mostrarMorfologia() {
 function gerarTabelaAntibioticos(dados) {
     const tbody = document.getElementById("tabela");
     if (!tbody) {
-      console.error(`Elemento com id "${"tabela"}" não encontrado.`);
-      return;
+        console.error(`Elemento com id "${"tabela"}" não encontrado.`);
+        return;
     }
 
     // Limpa o conteúdo anterior do tbody
     tbody.innerHTML = '';
 
     if (dados.length === 0) {
-      const linha = document.createElement('tr');
-      linha.innerHTML = `<td colspan="6">Nenhum registro encontrado</td>`;
-      tbody.appendChild(linha);
-      return;
+        const linha = document.createElement('tr');
+        linha.innerHTML = `<td colspan="6">Nenhum registro encontrado</td>`;
+        tbody.appendChild(linha);
+        return;
     }
 
     dados.forEach((item, index) => {
-      const linha = document.createElement('tr');
+        const linha = document.createElement('tr');
 
-      linha.innerHTML = `
+        linha.innerHTML = `
         <td>${item.nome}</td>
         <td>${item.tipo_antibiotico}</td>
         <td>${item.gram_positiva}</td>
@@ -199,7 +179,7 @@ function gerarTabelaAntibioticos(dados) {
         <td>${item.morfologia}</td>
       `;
 
-      tbody.appendChild(linha);
+        tbody.appendChild(linha);
     });
 }
 
@@ -216,8 +196,7 @@ function filtrarNomeAZ(antibioticosLista) {
     });
 }
 
-function clickAZNome(antibioticosLista)
-{
+function clickAZNome(antibioticosLista) {
     filtrarNomeAZ(antibioticosLista);
     gerarTabelaAntibioticos(antibioticosLista);
 }
@@ -240,64 +219,169 @@ function clickZANome(antibioticosLista) {
     gerarTabelaAntibioticos(antibioticosLista);
 }
 
-function limparOrdemNome (antibioticosListaOriginal, antibioticosLista) {
-    gerarTabelaAntibioticos(antibioticosListaOriginal);
-    antibioticosLista = Array.from(antibioticosListaOriginal);
-    aplicaFiltroCheckboxes(antibioticosLista)
-    return antibioticosLista;
+function limparOrdemNome(antibioticosListaOriginal, antibioticosLista) {
+    antibioticosLista.splice(0, antibioticosLista.length);
+    aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
+    gerarTabelaAntibioticos(antibioticosLista);
+
+    return antibioticosLista; // opcional, já que o array original foi modificado
 }
 
-function pesquisarNome (antibioticosLista, valorTexto) {
-    antibioticosLista.forEach(element => {
-        
-    });
-    if (texto.tolowerCase().startsWith(valorTexto)) {
-        
-    }
+function pesquisarNome(antibioticosLista, texto) {
 
-}
+    const valorTexto = texto.toLowerCase().trim();
 
-
-function pesquisarNome (antibioticosLista, texto) {
-
-    const valorTexto = texto.toLowerCase().trim(); 
-
-    return antibioticosLista.filter(item => 
+    return antibioticosLista.filter(item =>
         item.nome.toLowerCase().startsWith(valorTexto)
     );
 }
 
-function filtrarNomeInput(antibioticosLista) {
-  const input = document.getElementById("pesquisarNome");
-  const texto = input.value;
+function filtrarNomeInput(antibioticosLista, antibioticosListaOriginal) {
+    const input = document.getElementById("pesquisarNome");
+    const texto = input.value;
 
-  const filtrados = pesquisarNome(antibioticosLista, texto);
+    const filtrado = Array.from(pesquisarNome(antibioticosLista, texto));
 
-  if(filtrados.length > 0) {
-    aplicaFiltroCheckboxes(filtrados);
-    gerarTabelaAntibioticos(filtrados);
-  }
-  
+    // Clear the original array
+    antibioticosLista.splice(0, antibioticosLista.length, ...filtrado);
+
+    if (antibioticosLista.length > 0) {
+        aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
+        gerarTabelaAntibioticos(antibioticosLista);
+    }
 }
 
-function aplicaFiltroCheckboxes(antibioticosLista) {
 
+function aplicaFiltroCheckboxes(antibioticosLista, listaOriginal) {
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.MACROLIDEOS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.PENICILINAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.CEFALOSPORINAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.CARBAPENEMICOS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.AMINOGLICOSIDEOS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.QUINOLONAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.ANFENICOIS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.SULFONAMIDAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.GLICOPEPTIDEOS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.NITROIMIDAZOLICOS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.LICOSAMIDAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.POLIMIXINAS);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.OXAZOLIDINONA);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.GLICILCICLINA);
+    aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, TipoAntibiotico.ANTITUBERCULOSOS);
 }
 
-function macrolideosChangeFilter(antibioticosLista)
-{
-    let checked = document.getElementById("${checkBoxFiltroComecoId}+TipoAntibiotico.MACROLIDEOS").checked
+function adicionarAntibioticosDoTipo(antibioticosLista, tipo, listaOriginal) {
+    const antibioticosDoTipo = listaOriginal.filter(item => item.tipo_antibiotico === tipo);
+    //console.log("Adicionando antibióticos do tipo:", tipo, antibioticosDoTipo);
+    //console.log("antibioticos adiocionando: ", antibioticosDoTipo);
+    antibioticosLista.push(...antibioticosDoTipo);
+}
+
+function aplicarFiltroCheckboxTipo(antibioticosLista, listaOriginal, tipoAFiltrar) {
+    let checked = document.getElementById(checkBoxFiltroComecoId + tipoAFiltrar).checked
 
     antibioticosLista.forEach(element => {
-        if (element.nome == TipoAntibiotico.MACROLIDEOS)
-        {
-
-        }
+            if (element.tipo_antibiotico == tipoAFiltrar) {
+                if (!checked) {
+                    antibioticosLista.splice(antibioticosLista.indexOf(element), 1)
+                    console.log("Removendo ", element.nome);
+                }
+                
+                //console.log(checked);
+            }
     });
+
+    if (checked) {
+        adicionarAntibioticosDoTipo(antibioticosLista, tipoAFiltrar, listaOriginal);
+    }
 }
 
-function macrolideosClicked()
-{
-    let checkbox = document.getElementById("${checkBoxFiltroComecoId}+TipoAntibiotico.MACROLIDEOS")
+
+function macrolideosClicked() {
+    let checked = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.MACROLIDEOS).checked
+    console.log(checked);
+}
+
+function penicilinasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.PENICILINAS)
     console.log(checkbox.checked);
+}
+
+function cefalosporinasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.CEFALOSPORINAS);
+    console.log(checkbox.checked);
+}
+
+function carbapenemicosClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.CARBAPENEMICOS);
+    console.log(checkbox.checked);
+}
+
+function aminoglicosideosClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.AMINOGLICOSIDEOS);
+    console.log(checkbox.checked);
+}
+
+function quinolonasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.QUINOLONAS);
+    console.log(checkbox.checked);
+}
+
+function anfenicoisClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.ANFENICOIS);
+    console.log(checkbox.checked);
+}
+
+function sulfonamidasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.SULFONAMIDAS);
+    console.log(checkbox.checked);
+}
+
+function glicopeptideosClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.GLICOPEPTIDEOS);
+    console.log(checkbox.checked);
+}
+
+function nitroimidazolicosClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.NITROIMIDAZOLICOS);
+    console.log(checkbox.checked);
+}
+
+function licosamidasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.LICOSAMIDAS);
+    console.log(checkbox.checked);
+}
+
+function polimixinasClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.POLIMIXINAS);
+    console.log(checkbox.checked);
+}
+
+function oxazolidinonaClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.OXAZOLIDINONA);
+    console.log(checkbox.checked);
+}
+
+function glicilciclinaClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.GLICILCICLINA);
+    console.log(checkbox.checked);
+}
+
+function antituberculososClicked() {
+    let checkbox = document.getElementById(checkBoxFiltroComecoId + TipoAntibiotico.ANTITUBERCULOSOS);
+    console.log(checkbox.checked);
+}
+
+function okClicked(antibioticosLista, antibioticosListaOriginal) {
+    aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function cancelarClicked(antibioticosLista)
+{
+    // reseta o checked de acordo com o que tem na tabela atual
+    antibioticosLista.forEach(element => {
+        let checkbox = document.getElementById(checkBoxFiltroComecoId + element.tipo_antibiotico);
+        checkbox.checked = true;
+    });
 }
