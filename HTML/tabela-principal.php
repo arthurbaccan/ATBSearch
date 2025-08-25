@@ -28,6 +28,10 @@ $TipoAntibiotico = array(
 );
 
 $checkBoxFiltroComecoId = "checkAntibiotico";
+$checkGramPositivaYesId = "checkGramPositivaYes";
+$checkGramPositivaNoId = "checkGramPositivaNo";
+$checkGramNegativaYesId = "checkGramNegativaYes";
+$checkGramNegativaNoId = "checkGramNegativaNo";
 
 ?>
 
@@ -44,6 +48,10 @@ $checkBoxFiltroComecoId = "checkAntibiotico";
     ?>
     var jsonDados = <?php obterDadosAntibioticos($conn2); ?>;
     const jsonDadosOriginal = Array.from(jsonDados);
+    const checkGramPositivaYesId = "<?php echo $checkGramPositivaYesId; ?>";
+    const checkGramPositivaNoId = "<?php echo $checkGramPositivaNoId; ?>";
+    const checkGramNegativaYesId = "<?php echo $checkGramNegativaYesId; ?>";
+    const checkGramNegativaNoId = "<?php echo $checkGramNegativaNoId; ?>";
 
   </script>
 
@@ -144,7 +152,7 @@ $checkBoxFiltroComecoId = "checkAntibiotico";
   <!--Tabela principal-->
   <h1 class="titulo">Filtrar Antibióticos</h1>
 
-  <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+  <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; min-height: 350px;">
     <table class="table-default">
       <tr>
         <thead>
@@ -183,70 +191,70 @@ $checkBoxFiltroComecoId = "checkAntibiotico";
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["MACROLIDEOS"]; ?>" checked type="checkbox" class="inpCheck" onchange="macrolideosClicked()"> Macrolídeos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["MACROLIDEOS"]; ?>" checked type="checkbox" class="inpCheck"> Macrolídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["PENICILINAS"]; ?>" checked type="checkbox" class="inpCheck" onchange="penicilinasClicked()"> Penicilinas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["PENICILINAS"]; ?>" checked type="checkbox" class="inpCheck"> Penicilinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["CEFALOSPORINAS"]; ?>" checked type="checkbox" class="inpCheck" onchange="cefalosporinasClicked()"> Cefalosporinas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["CEFALOSPORINAS"]; ?>" checked type="checkbox" class="inpCheck"> Cefalosporinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["CARBAPENEMICOS"]; ?>" checked type="checkbox" class="inpCheck" onchange="carbapenemicosClicked()"> Carbapenêmicos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["CARBAPENEMICOS"]; ?>" checked type="checkbox" class="inpCheck"> Carbapenêmicos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["AMINOGLICOSIDEOS"]; ?>" checked type="checkbox" class="inpCheck" onchange="aminoglicosideosClicked()"> Aminoglicosídeos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["AMINOGLICOSIDEOS"]; ?>" checked type="checkbox" class="inpCheck"> Aminoglicosídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["QUINOLONAS"]; ?>" type="checkbox" checked class="inpCheck" onchange="quinolonasClicked()"> Quinolonas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["QUINOLONAS"]; ?>" type="checkbox" checked class="inpCheck"> Quinolonas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["ANFENICOIS"]; ?>" type="checkbox" checked class="inpCheck" onchange="anfenicoisClicked()"> Anfenicóis
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["ANFENICOIS"]; ?>" type="checkbox" checked class="inpCheck"> Anfenicóis
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["SULFONAMIDAS"]; ?>" type="checkbox" checked class="inpCheck" onchange="sulfonamidasClicked()"> Sulfonamidas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["SULFONAMIDAS"]; ?>" type="checkbox" checked class="inpCheck"> Sulfonamidas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["GLICOPEPTIDEOS"]; ?>" type="checkbox" checked class="inpCheck" onchange="glicopeptideosClicked()"> Glicopeptídeos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["GLICOPEPTIDEOS"]; ?>" type="checkbox" checked class="inpCheck"> Glicopeptídeos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["NITROIMIDAZOLICOS"]; ?>" type="checkbox" checked class="inpCheck" onchange="nitroimidazolicosClicked()"> Nitroimdazólicos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["NITROIMIDAZOLICOS"]; ?>" type="checkbox" checked class="inpCheck"> Nitroimdazólicos
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["LICOSAMIDAS"]; ?>" type="checkbox" checked class="inpCheck" onchange="licosamidasClicked()"> Licosamidas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["LICOSAMIDAS"]; ?>" type="checkbox" checked class="inpCheck"> Licosamidas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["POLIMIXINAS"]; ?>" type="checkbox" checked class="inpCheck" onchange="polimixinasClicked()"> Polimixinas
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["POLIMIXINAS"]; ?>" type="checkbox" checked class="inpCheck"> Polimixinas
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["OXAZOLIDINONA"]; ?>" type="checkbox" checked class="inpCheck" onchange="oxazolidinonaClicked()"> Oxazolidinona
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["OXAZOLIDINONA"]; ?>" type="checkbox" checked class="inpCheck"> Oxazolidinona
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["GLICILCICLINA"]; ?>" type="checkbox" checked class="inpCheck" onchange="glicilciclinaClicked()"> Glicilciclina
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["GLICILCICLINA"]; ?>" type="checkbox" checked class="inpCheck"> Glicilciclina
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["ANTITUBERCULOSOS"]; ?>" type="checkbox" checked class="inpCheck" onchange="antituberculososClicked()"> Antituberculosos
+                  <input id="<?php echo $checkBoxFiltroComecoId.$TipoAntibiotico["ANTITUBERCULOSOS"]; ?>" type="checkbox" checked class="inpCheck"> Antituberculosos
                 </div>
               </div>
 
               <!-- ok or cancel -->
               <div class="okOrCancel">
-                <button type="button" class="btnOk" onclick="okClicked(jsonDados, jsonDadosOriginal)">OK</button>
-                <button type="button" class="btnCancel" onclick="cancelarClicked(jsonDados)">Cancelar</button>
+                <button type="button" class="btnOk" onclick="okClickedTipo(jsonDados, jsonDadosOriginal)">OK</button>
+                <button type="button" class="btnCancel" onclick="cancelarClickedTipo(jsonDados)">Cancelar</button>
               </div>
 
             </form>
@@ -269,19 +277,19 @@ $checkBoxFiltroComecoId = "checkAntibiotico";
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkGramPositivaYes" type="checkbox" class="inpCheck"> ✅
+                  <input id="<?php echo $checkGramPositivaYesId; ?>" type="checkbox" checked class="inpCheck"> ✅
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkGramPositivaNo" type="checkbox" class="inpCheck"> ❌
+                  <input id="<?php echo $checkGramPositivaNoId; ?>" type="checkbox" checked class="inpCheck"> ❌
                 </div>
 
               </div>
 
               <!-- ok or cancel -->
               <div class="okOrCancel">
-                <button type="button" class="btnOk">OK</button>
-                <button type="button" class="btnCancel">Cancelar</button>
+                <button type="button" class="btnOk" onclick="okClickedGramPositiva(jsonDados, jsonDadosOriginal)">OK</button>
+                <button type="button" class="btnCancel" onclick="cancelarClickedGramPositiva(jsonDados)">Cancelar</button>
               </div>
 
             </form>
@@ -305,19 +313,19 @@ $checkBoxFiltroComecoId = "checkAntibiotico";
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkGramNegativaYes" type="checkbox" class="inpCheck"> ✅
+                  <input id="<?php echo $checkGramNegativaYesId; ?>" checked type="checkbox" class="inpCheck"> ✅
                 </div>
 
                 <div class="selectChekBox">
-                  <input id="checkGramNegativaNo" type="checkbox" class="inpCheck"> ❌
+                  <input id="<?php echo $checkGramNegativaNoId; ?>" checked type="checkbox" class="inpCheck"> ❌
                 </div>
 
               </div>
 
               <!-- ok or cancel -->
               <div class="okOrCancel">
-                <button type="button" class="btnOk">OK</button>
-                <button type="button" class="btnCancel">Cancelar</button>
+                <button type="button" class="btnOk" onclick="okClickedGramNegativa(jsonDados, jsonDadosOriginal)">OK</button>
+                <button type="button" class="btnCancel" onclick="cancelarClickedGramNegativa(jsonDados)">Cancelar</button>
               </div>
 
             </form>
