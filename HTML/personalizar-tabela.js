@@ -183,13 +183,13 @@ function gerarTabelaAntibioticos(dados) {
     });
 }
 
-function filtrarNomeAZ(antibioticosLista) {
+function filtrarAZ(antibioticosLista, param) {
 
     return antibioticosLista.sort((a, b) => {
-        if (a.nome < b.nome) {
+        if (a[param] < b[param]) {
             return -1;  // A vem antes de B
         }
-        if (a.nome > b.nome) {
+        if (a[param] > b[param]) {
             return 1;   // B vem antes de A
         }
         return 0;  // A e B são iguais
@@ -197,17 +197,17 @@ function filtrarNomeAZ(antibioticosLista) {
 }
 
 function clickAZNome(antibioticosLista) {
-    filtrarNomeAZ(antibioticosLista);
+    filtrarAZ(antibioticosLista, 'nome');
     gerarTabelaAntibioticos(antibioticosLista);
 }
 
-function filtrarNomeZA(antibioticosLista) {
+function filtrarZA(antibioticosLista, param) {
 
     return antibioticosLista.sort((a, b) => {
-        if (a.nome > b.nome) {
+        if (a[param] > b[param]) {
             return -1;  // A vem antes de B
         }
-        if (a.nome < b.nome) {
+        if (a[param] < b[param]) {
             return 1;   // A vem antes de B
         }
         return 0;  // A e B são iguais
@@ -215,11 +215,53 @@ function filtrarNomeZA(antibioticosLista) {
 }
 
 function clickZANome(antibioticosLista) {
-    filtrarNomeZA(antibioticosLista);
+    filtrarZA(antibioticosLista, 'nome');
     gerarTabelaAntibioticos(antibioticosLista);
 }
 
-function limparOrdemNome(antibioticosListaOriginal, antibioticosLista) {
+function clickAZGramPositiva(antibioticosLista) {
+    filtrarAZ(antibioticosLista, 'gram_positiva');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickZAGramPositiva(antibioticosLista) {
+    filtrarZA(antibioticosLista, 'gram_positiva');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickAZGramNegativa(antibioticosLista) {
+    filtrarAZ(antibioticosLista, 'gram_negativa');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickZAGramNegativa(antibioticosLista) {
+    filtrarZA(antibioticosLista, 'gram_negativa');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickAZMorfologia(antibioticosLista) {
+    filtrarAZ(antibioticosLista, 'morfologia');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickZAMorfologia(antibioticosLista) {
+    filtrarZA(antibioticosLista, 'morfologia');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickAZTipoAntibiotico(antibioticosLista) {
+    filtrarAZ(antibioticosLista, 'tipo_antibiotico');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+function clickZATipoAntibiotico(antibioticosLista) {
+    filtrarZA(antibioticosLista, 'tipo_antibiotico');
+    gerarTabelaAntibioticos(antibioticosLista);
+}
+
+
+
+function limparOrdem(antibioticosListaOriginal, antibioticosLista) {
     aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
     gerarTabelaAntibioticos(antibioticosLista);
 
@@ -241,11 +283,13 @@ function filtrarNomeInput(antibioticosLista, antibioticosListaOriginal) {
 
     const filtrado = Array.from(pesquisarNome(antibioticosLista, texto));
 
-    // Clear the original array
-    antibioticosLista.splice(0, antibioticosLista.length, ...filtrado);
-
     if (antibioticosLista.length > 0) {
         aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
+        
+        // Clear the original array
+        antibioticosLista.splice(0, antibioticosLista.length, ...filtrado);
+
+        console.log(filtrado);
         gerarTabelaAntibioticos(antibioticosLista);
     }
 }
@@ -272,6 +316,9 @@ function aplicaFiltroCheckboxes(antibioticosLista, listaOriginal) {
     aplicarFiltroCheckboxGramPositiva(antibioticosLista, "❌", checkGramPositivaNoId);
     aplicarFiltroCheckboxGramNegativa(antibioticosLista, "✅", checkGramNegativaYesId);
     aplicarFiltroCheckboxGramNegativa(antibioticosLista, "❌", checkGramNegativaNoId);
+    filtraMorfologia(antibioticosLista, "Cocos", checkCoccosId);
+    filtraMorfologia(antibioticosLista, "Bacilos", checkBacilosId);
+    filtraMorfologia(antibioticosLista, "Cocos e Bacilos", checkCoccosBacilosId);
 }
 
 function adicionarAntibioticosDoTipo(antibioticosLista, tipo, listaOriginal) {
@@ -360,6 +407,11 @@ function okClickedGramNegativa(antibioticosLista, antibioticosListaOriginal) {
     mostrarGramNegativa();
 }
 
+function okClickedMorfologia(antibioticosLista, antibioticosListaOriginal) {
+    okApply(antibioticosLista, antibioticosListaOriginal);
+    mostrarMorfologia();
+}
+
 function resetarCheckedCancel(antibioticosLista) {
     // Reseta o checked de acordo com o que tem na tabela atual
     antibioticosLista.forEach(element => {
@@ -398,6 +450,45 @@ function resetarCheckedCancel(antibioticosLista) {
         gramNegativaNo.checked = true;
     }
 
+    // Verifica se há algum morfologia marcado com os tipos específicos
+    const morfologiaCocos = document.getElementById(checkCoccosId);
+    const morfologiaBacilos = document.getElementById(checkBacilosId);
+    const morfologiaCocosBacilos = document.getElementById(checkCoccosBacilosId);
+
+    const hasMorfologiaCocos = antibioticosLista.some(item => item.morfologia === "Cocos");
+    const hasMorfologiaBacilos = antibioticosLista.some(item => item.morfologia === "Bacilos");
+    const hasMorfologiaCocosBacilos = antibioticosLista.some(item => item.morfologia === "Cocos e Bacilos");
+
+    // Marca ou desmarca os checkboxes de morfologia
+    if (hasMorfologiaCocos) {
+        morfologiaCocos.checked = true;
+    }
+
+    if (hasMorfologiaBacilos) {
+        morfologiaBacilos.checked = true;
+    }
+
+    if (hasMorfologiaCocosBacilos) {
+        morfologiaCocosBacilos.checked = true;
+    }
+
+}
+
+function filtraMorfologia(listaAntibioticos, tipo, idCheckBox) {
+    // Coleta os índices dos elementos a serem removidos
+    const indicesParaRemover = [];
+    const checked = document.getElementById(idCheckBox).checked;
+    listaAntibioticos.forEach((element, idx) => {
+        if (element.morfologia == tipo && !checked) {
+            indicesParaRemover.push(idx);
+            console.log("Removendo ", element.nome);
+        }
+    });
+
+    // Remove do fim para o começo para não bagunçar os índices
+    for (let i = indicesParaRemover.length - 1; i >= 0; i--) {
+        listaAntibioticos.splice(indicesParaRemover[i], 1);
+    }
 }
 
 function cancelarClickedTipo(antibioticosLista)
@@ -416,4 +507,10 @@ function cancelarClickedGramNegativa(antibioticosLista)
 {
     resetarCheckedCancel(antibioticosLista);
     mostrarGramNegativa();
+}
+
+function cancelarClickMorfologia(antibioticosLista)
+{
+    resetarCheckedCancel(antibioticosLista);
+    mostrarMorfologia();
 }
