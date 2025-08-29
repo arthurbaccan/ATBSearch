@@ -171,7 +171,7 @@ $checkBacilosId = "checkBacilos";
               <button type="button" class="btnFilter2" onclick="clickAZNome(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZANome(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdem(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <input type="text" id="pesquisarNome" class="inpText" oninput="filtrarNomeInput(jsonDados, jsonDadosOriginal)" placeholder="Pesquisar...">
+              <input type="text" id="pesquisarNome" class="inpText" oninput="aplicaFiltroCheckboxes(jsonDados, jsonDadosOriginal)" placeholder="Pesquisar...">
 
             </form>
 
@@ -196,12 +196,12 @@ $checkBacilosId = "checkBacilos";
               <button type="button" class="btnFilter2" onclick="clickAZTipoAntibiotico(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZATipoAntibiotico(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdem(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <button type="button" class="btnFilter2" onclick="limparFiltro('filAntibiotico')">Limpar Filtro</button>
               <input type="text" class="inpText" placeholder="Pesquisar..." onkeydown="asteca(event)">
 
               <div class="containerCheckBox">
                 <div class="selectChekBox">
-                  <input id="selecionarTodosAntibiotico" type="checkbox" class="inpCheck" onchange=""> Selecionar Todos
+                  <input id="selecionarTodosAntibiotico" checked type="checkbox" class="inpCheck" onchange="selecionarTodos('filAntibiotico', 'selecionarTodosAntibiotico')"> Selecionar Todos
                 </div>
 
                 <div class="selectChekBox">
@@ -294,11 +294,11 @@ $checkBacilosId = "checkBacilos";
               <button type="button" class="btnFilter2" onclick="clickAZGramPositiva(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZAGramPositiva(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdem(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <button type="button" class="btnFilter2" onclick="limparFiltro('filGramPositiva')">Limpar Filtro</button>
 
               <div class="containerCheckBox">
                 <div class="selectChekBox">
-                  <input id="selecionarTodosGramPositiva" type="checkbox" class="inpCheck"> Selecionar Todos
+                  <input id="selecionarTodosGramPositiva" checked type="checkbox" onchange="selecionarTodos('filGramPositiva', 'selecionarTodosGramPositiva')" class="inpCheck"> Selecionar Todos
                 </div>
 
                 <div class="selectChekBox">
@@ -330,11 +330,11 @@ $checkBacilosId = "checkBacilos";
               <button type="button" class="btnFilter2" onclick="clickAZGramNegativa(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZAGramNegativa(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdem(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <button type="button" class="btnFilter2" onclick="limparFiltro('filGramNegativa')">Limpar Filtro</button>
 
               <div class="containerCheckBox">
                 <div class="selectChekBox">
-                  <input id="selecionarTodosGramNegativa" type="checkbox" class="inpCheck"> Selecionar Todos
+                  <input id="selecionarTodosGramNegativa" checked type="checkbox" class="inpCheck" onchange="selecionarTodos('filGramNegativa', 'selecionarTodosGramNegativa')"> Selecionar Todos
                 </div>
 
                 <div class="selectChekBox">
@@ -365,11 +365,11 @@ $checkBacilosId = "checkBacilos";
               <button type="button" class="btnFilter2" onclick="clickAZMorfologia(jsonDados)">Ordem Alfabética (A-Z)</button>
               <button type="button" class="btnFilter2" onclick="clickZAMorfologia(jsonDados)">Ordem Alfabética (Z-A)</button>
               <button type="button" class="btnFilter2" onclick="limparOrdem(jsonDadosOriginal, jsonDados)">Limpar Ordem</button>
-              <button type="button" class="btnFilter2" onclick="">Limpar Filtro</button>
+              <button type="button" class="btnFilter2" onclick="limparFiltro('filMorfologia')">Limpar Filtro</button>
 
               <div class="containerCheckBox">
                 <div class="selectChekBox">
-                  <input id="selecionarTodosMorfologia" type="checkbox" class="inpCheck"> Selecionar Todos
+                  <input id="selecionarTodosMorfologia" type="checkbox" class="inpCheck" onchange="selecionarTodos('filMorfologia', 'selecionarTodosMorfologia')"> Selecionar Todos
                 </div>
 
                 <div class="selectChekBox">

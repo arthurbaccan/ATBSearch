@@ -259,7 +259,14 @@ function clickZATipoAntibiotico(antibioticosLista) {
     gerarTabelaAntibioticos(antibioticosLista);
 }
 
-
+function limparFiltro(formId) {
+    const form = document.getElementById(formId);
+    if (form) {
+        form.querySelectorAll("input[type=checkbox]").forEach(checkbox => {
+            checkbox.checked = true;
+        });
+    }
+}
 
 function limparOrdem(antibioticosListaOriginal, antibioticosLista) {
     aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
@@ -284,8 +291,6 @@ function filtrarNomeInput(antibioticosLista, antibioticosListaOriginal) {
     const filtrado = Array.from(pesquisarNome(antibioticosLista, texto));
 
     if (antibioticosLista.length > 0) {
-        aplicaFiltroCheckboxes(antibioticosLista, antibioticosListaOriginal);
-        
         // Clear the original array
         antibioticosLista.splice(0, antibioticosLista.length, ...filtrado);
 
@@ -319,6 +324,7 @@ function aplicaFiltroCheckboxes(antibioticosLista, listaOriginal) {
     filtraMorfologia(antibioticosLista, "Cocos", checkCoccosId);
     filtraMorfologia(antibioticosLista, "Bacilos", checkBacilosId);
     filtraMorfologia(antibioticosLista, "Cocos e Bacilos", checkCoccosBacilosId);
+    filtrarNomeInput(antibioticosLista, listaOriginal);
 }
 
 function adicionarAntibioticosDoTipo(antibioticosLista, tipo, listaOriginal) {
@@ -488,6 +494,21 @@ function filtraMorfologia(listaAntibioticos, tipo, idCheckBox) {
     // Remove do fim para o começo para não bagunçar os índices
     for (let i = indicesParaRemover.length - 1; i >= 0; i--) {
         listaAntibioticos.splice(indicesParaRemover[i], 1);
+    }
+}
+
+function selecionarTodos(divId, selecionarTodosId) {
+    // Encontra a div pelo ID
+    const div = document.getElementById(divId);
+    
+    // Se a div existir, encontra todos os checkboxes dentro dela
+    if (div) {
+        const checkboxes = div.querySelectorAll('input[type="checkbox"]');
+        
+        // Marca todos os checkboxes como checked
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = document.getElementById(selecionarTodosId).checked;
+        });
     }
 }
 
